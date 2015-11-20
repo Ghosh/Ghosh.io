@@ -4,11 +4,13 @@
   "description": "Personal Website",
   "main": "build/index.html",
   "scripts": {
+    "serve": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Indrashish Ghosh",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.6.5",
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-cheerio": "^0.6.2",

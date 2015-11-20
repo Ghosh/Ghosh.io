@@ -1,0 +1,125 @@
+$accent-color: c('accent', 'primary');
+$hr-color: #eaeaea;
+
+$display-font-family: ff(display);
+$body-font-family: ff(body);
+$monospace-font-family: ff(code);
+
+$display-font-weight: bold;
+$body-font-weight: normal;
+$monospace-font-weight: normal;
+
+$body-text-color: c('text', 'body');
+$display-text-color: c('text', 'headings');
+
+$paragraph-margin-top: 0;
+$paragraph-margin-bottom: 20px;
+$list-margin-bottom: 20px;
+$pre-margin-top: 0;
+$pre-margin-bottom: 20px;
+
+body {
+	@include set-font-scale('base', 'body');
+	font-family: $body-font-family;
+	font-weight: $body-font-weight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include font-smoothing();
+	font-family: $display-font-family;
+	font-weight: $display-font-weight;
+	color: $display-text-color;
+}
+
+p {
+	color: $body-text-color;
+	margin-top: $paragraph-margin-top;
+	margin-bottom: $paragraph-margin-bottom;
+}
+
+dl, ol, ul {
+	color: $body-text-color;
+	margin-bottom: $list-margin-bottom;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+	color: $accent-color;
+}
+
+pre, code, samp {
+	font-family: $monospace-font-family;
+	font-weight: $monospace-font-weight;
+}
+
+pre code {
+  word-wrap: normal;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: scroll;
+  margin-top: $pre-margin-top;
+  margin-bottom: $pre-margin-bottom;
+}
+
+code {
+  white-space: pre;
+  font-family: $monospace-font-family;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.0);
+  border-bottom: 1px solid $hr-color;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+mark {
+	background-color: #fbf6bb;
+	color: $body-text-color;
+}
+
+sub,
+sup {
+	font-size: smaller;
+}
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+abbr[title]:hover {
+  cursor: help; /* cursor changed to a question mark when it has a title */
+}

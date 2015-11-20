@@ -1,0 +1,17 @@
+$grid: (
+	grid: (
+		columns: 12,
+		gutter: 38px,
+		margin: 19px,
+		max-width: 1140px
+	),
+	breakpoints: (
+	  small : map-get($breakpoints, 'small'),
+	  medium: map-get($breakpoints, 'medium'),
+	  large : map-get($breakpoints, 'large'),
+	),
+	settings: (
+		reset-body: true,
+		silent-classes: false
+	)
+);

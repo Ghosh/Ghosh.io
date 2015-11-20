@@ -1,0 +1,29 @@
+// scss-lint:disable TrailingSemicolon SpaceAfterVariableName
+$typography:(
+
+	display: (
+		'base': (
+			null  : (18px, 28px)
+		)
+	),
+
+	body: (
+		'mega': (
+			null  : (14px, 24px),
+			small : (16px, 30px)
+		),
+		'base': (
+			null  : (14px, 26px)
+		),
+		'mini': (
+			null : (13px, 26px)
+		)
+	),
+
+  mono: (
+		'base': (
+			null  : (15px, 1.5),
+		)
+	)
+
+);

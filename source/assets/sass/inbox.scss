@@ -1,7 +1,57 @@
-body {
-  background-color: slategrey;
-}
+// scss-lint:disable ImportPath
+@import 'config/breakpoints';
+@import 'config/grid';
+@import 'config/color';
+@import 'config/fonts';
+@import 'config/typography';
+@import 'config/z-index';
+@import 'config/debug';
+
+@import '../bower/sanitize-css/sanitize.scss';
+@import '../bower/stylekit/stylekit';
+
+@import 'base/typography';
 
 .hide {
   display: none;
+}
+
+
+.header {
+
+  &__inner {
+    @include clearfix();
+    padding: 40px 0;
+  }
+
+  &__logo {
+    color: c('text', 'headings');
+    float: left;
+    height: 24px;
+    width: 50px;
+  }
+
+  &__nav {
+    float: left;
+    margin-left: 30px;
+  }
+
+  &__twitter {
+    float: right;
+  }
+}
+
+.nav {
+  @include clearfix();
+  list-style-type: none;
+
+  &__item {
+    float: left;
+    font-size: 13px;
+    margin-left: 12px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
