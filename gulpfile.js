@@ -1,16 +1,39 @@
-var gulp = require('gulp'),
+var gulp        = require('gulp'),
     frontMatter = require('gulp-front-matter'),
     ext_replace = require('gulp-ext-replace'),
-    hb = require('gulp-hb'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
+    hb          = require('gulp-hb'),
+    sass        = require('gulp-sass'),
+    rename      = require('gulp-rename'),
     browserSync = require('browser-sync'),
-    reload = browserSync.reload;
+    svgmin      = require('gulp-svgmin'),
+    svgstore    = require('gulp-svgstore'),
+    cheerio     = require('gulp-cheerio'),
+    reload      = browserSync.reload;
+
+
+gulp.task('svg', function () {
+  gulp.src('./source/assets/svg/**/*.svg')
+    .pipe(svgmin())
+    .pipe(svgstore({ fileName: 'icons.svg', inlineSvg: true}))
+    .pipe(cheerio({
+      run: function ($, file) {
+          $('svg').addClass('hide');
+          $('[fill]').removeAttr('fill');
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(ext_replace('.hbs'))
+    .pipe(gulp.dest('./source/partials/'))
+    .pipe(reload({ stream:true }));
+});
+
 
 gulp.task('hbs', function () {
   gulp.src('./source/**/*.hbs')
       .pipe(frontMatter())
-      .pipe(hb())
+      .pipe(hb({
+        partials: './source/partials/**/*.hbs'
+      }))
       .pipe(ext_replace('.html'))
       .pipe(gulp.dest('./build/'))
       .pipe(reload({ stream:true }));
@@ -26,10 +49,9 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('compile', ['hbs', 'styles'])
+gulp.task('compile', ['svg', 'hbs', 'styles'])
 
 
-// watch files for changes and reload
 gulp.task('serve', ['compile'], function() {
   browserSync({
     server: {
@@ -38,5 +60,6 @@ gulp.task('serve', ['compile'], function() {
   });
 
   gulp.watch('source/**/*.hbs', ['hbs']);
-  gulp.watch('source/assets/sass/*.scss', ['styles']);
+  gulp.watch('source/assets/svg/**/*.svg', ['svg']);
+  gulp.watch('source/assets/sass/**/*.scss', ['styles']);
 });
