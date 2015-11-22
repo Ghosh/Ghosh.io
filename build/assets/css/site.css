@@ -1110,31 +1110,31 @@ abbr[title]:hover {
   .nav__link {
     color: #868c92; }
 
-.intro__inner:before, .intro__inner:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.intro__text {
-  float: left; }
-
-.intro__headline {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-  margin-bottom: 10px; }
-
-.intro__byline {
-  font-size: 18px;
-  line-height: 24px;
-  color: #868c92;
-  width: 445px; }
-
-.intro__cta {
-  float: right; }
-
-.intro__btn {
-  margin-top: 22px; }
+.intro {
+  margin-bottom: 40px; }
+  .intro__inner:before, .intro__inner:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .intro__text {
+    float: left; }
+  .intro__headline {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 10px; }
+  .intro__byline {
+    font-size: 18px;
+    line-height: 24px;
+    color: #868c92;
+    width: 445px; }
+  .intro__cta {
+    float: right; }
+  .intro__btn {
+    margin-top: 22px; }
 
 .hide {
   display: none; }
+
+.banner--moodboard {
+  background-color: #0097d4; }

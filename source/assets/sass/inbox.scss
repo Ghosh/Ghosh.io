@@ -21,3 +21,9 @@
 .hide {
   display: none;
 }
+
+.banner {
+  &--moodboard {
+    background-color: c('brand', 'moodboard');
+  }
+}
