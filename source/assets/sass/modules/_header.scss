@@ -1,0 +1,25 @@
+.header {
+
+  &__inner {
+    @include clearfix();
+    padding: 40px 0;
+  }
+
+  &__logo {
+    color: c('text', 'headings');
+    float: left;
+    height: 24px;
+    width: 50px;
+  }
+
+  &__nav {
+    float: left;
+    margin-left: 30px;
+  }
+
+  &__twitter {
+    color: c('accent', 'secondary');
+    float: right;
+    font-size: 13px;
+  }
+}

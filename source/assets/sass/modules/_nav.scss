@@ -1,0 +1,18 @@
+.nav {
+  @include clearfix();
+  list-style-type: none;
+
+  &__item {
+    float: left;
+    font-size: 13px;
+    margin-left: 12px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    color: c('text', 'light');
+  }
+}

@@ -12,46 +12,12 @@
 
 @import 'base/typography';
 
+@import 'components/button';
+
+@import 'modules/header';
+@import 'modules/nav';
+@import 'modules/intro';
+
 .hide {
   display: none;
-}
-
-
-.header {
-
-  &__inner {
-    @include clearfix();
-    padding: 40px 0;
-  }
-
-  &__logo {
-    color: c('text', 'headings');
-    float: left;
-    height: 24px;
-    width: 50px;
-  }
-
-  &__nav {
-    float: left;
-    margin-left: 30px;
-  }
-
-  &__twitter {
-    float: right;
-  }
-}
-
-.nav {
-  @include clearfix();
-  list-style-type: none;
-
-  &__item {
-    float: left;
-    font-size: 13px;
-    margin-left: 12px;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
 }

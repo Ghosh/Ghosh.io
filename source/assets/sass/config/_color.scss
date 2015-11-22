@@ -1,19 +1,22 @@
+// scss-lint:disable TrailingSemicolon SpaceAfterVariableName
 $colors: (
   text: (
-    headings: #4A4E53,
-    body: #4A4E53
+    headings: #4a4e53,
+    body: #4a4e53,
+    light: #868c92
   ),
 	neutral: (
 		base: #464646,
 	),
 	accent: (
-		primary: #0074D9,
+    primary: #479e2b,
+		secondary: #0074d9,
 	),
 	social: (
 		twitter: #55acee,
 		dribbble: #ea4c89,
 		github: #2d2d2a,
-		instagram: #2B5989,
-		facebook: #455FA2,
+		instagram: #2b5989,
+		facebook: #455fa2,
 	)
 );

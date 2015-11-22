@@ -52,7 +52,7 @@ gulp.task('styles', function() {
 gulp.task('compile', ['svg', 'hbs', 'styles'])
 
 
-gulp.task('serve', ['compile'], function() {
+gulp.task('go', ['compile'], function() {
   browserSync({
     server: {
       baseDir: 'build'
