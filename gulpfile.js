@@ -9,6 +9,8 @@ var gulp        = require('gulp'),
     svgmin      = require('gulp-svgmin'),
     svgstore    = require('gulp-svgstore'),
     cheerio     = require('gulp-cheerio'),
+    plumber     = require('gulp-plumber'),
+    notify      = require("gulp-notify"),
     reload      = browserSync.reload;
 
 
@@ -47,6 +49,9 @@ gulp.task('hbs', function () {
 
 gulp.task('styles', function() {
   gulp.src('source/assets/sass/**/*.scss')
+    .pipe(plumber({
+      errorHandler: notify.onError({ title: 'Error: Styles Task', message: '<%= error.message %>' })
+    }))
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('site.css'))
     .pipe(gulp.dest('build/assets/css/'))
