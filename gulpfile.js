@@ -32,7 +32,7 @@ gulp.task('svg', function () {
 
 
 gulp.task('hbs', function () {
-  gulp.src(['source/**/*.hbs', '!source/master.hbs'])
+  gulp.src(['source/**/*.hbs', '!source/partials/**/*.hbs'])
       .pipe(frontMatter())
       .pipe(hb({
         bustCache: true,
