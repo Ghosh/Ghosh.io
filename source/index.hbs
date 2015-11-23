@@ -1,8 +1,8 @@
 ---
 title: Indrashish Ghosh - Freelance Product Designer and Front End Developer
 ---
-{{> top}}
-{{> header}}
+{{#extend "layouts/master"}}
+    {{#content "body"}}
 
   <div class="intro">
     <div class="container">
@@ -40,4 +40,5 @@ title: Indrashish Ghosh - Freelance Product Designer and Front End Developer
     </div>
   </div>
 
-{{> bottom}}
+  {{/content}}
+{{/extend}}

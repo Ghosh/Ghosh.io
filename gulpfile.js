@@ -1,7 +1,8 @@
 var gulp        = require('gulp'),
     frontMatter = require('gulp-front-matter'),
-    ext_replace = require('gulp-ext-replace'),
+    layouts     = require('handlebars-layouts'),
     hb          = require('gulp-hb'),
+    ext_replace = require('gulp-ext-replace'),
     sass        = require('gulp-sass'),
     rename      = require('gulp-rename'),
     browserSync = require('browser-sync'),
@@ -29,10 +30,14 @@ gulp.task('svg', function () {
 
 
 gulp.task('hbs', function () {
-  gulp.src('./source/**/*.hbs')
+  gulp.src(['source/**/*.hbs', '!source/master.hbs'])
       .pipe(frontMatter())
       .pipe(hb({
-        partials: './source/partials/**/*.hbs'
+        bustCache: true,
+        partials: './source/partials/**/*.hbs',
+        helpers: [
+          './node_modules/handlebars-layouts/index.js',
+        ],
       }))
       .pipe(ext_replace('.html'))
       .pipe(gulp.dest('./build/'))
