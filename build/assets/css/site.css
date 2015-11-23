@@ -1144,6 +1144,11 @@ abbr[title]:hover {
   overflow: hidden; }
   .banner--moodboard {
     background-color: #0097d4; }
+  .banner--oyo {
+    background-color: #b41c03;
+    background-image: url("../images/pattern.png");
+    background-position: center bottom;
+    background-repeat: repeat-x; }
   .banner__inner {
     height: 680px;
     padding: 70px 0;
@@ -1156,26 +1161,34 @@ abbr[title]:hover {
     fill: #fff; }
     .banner__logo--moodboard {
       height: 22px;
-      width: 180px;
-      margin-top: 80px; }
+      margin-top: 80px;
+      width: 180px; }
+    .banner__logo--oyo {
+      height: 40px;
+      margin-top: 80px;
+      width: 96px; }
   .banner__desc {
     font-size: 16px;
     line-height: 28px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.8);
     margin-top: 15px;
     max-width: 35%; }
   .banner__service-list {
     color: rgba(255, 255, 255, 0.9);
     padding-left: 16px; }
-  .banner__img--moodboard {
-    bottom: -46px;
-    position: absolute;
-    right: -250px; }
+  .banner__img {
+    position: absolute; }
+    .banner__img--moodboard {
+      bottom: -46px;
+      right: -250px; }
+    .banner__img--oyo {
+      bottom: -86px;
+      right: -70px; }
   .banner__btn {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    opacity: .7;
-    margin-top: 10px; }
+    margin-top: 10px;
+    opacity: .7; }
     .banner__btn:hover {
       opacity: .9; }
 

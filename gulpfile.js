@@ -88,5 +88,6 @@ gulp.task('go', ['compile'], function() {
 
   gulp.watch('source/**/*.hbs', ['hbs']);
   gulp.watch('source/assets/svg/**/*.svg', ['svg']);
+  gulp.watch('source/assets/images/*', ['images']);
   gulp.watch('source/assets/sass/**/*.scss', ['styles']);
 });

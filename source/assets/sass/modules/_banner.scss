@@ -8,6 +8,13 @@ $banner-height: 680px;
     background-color: c('brand', 'moodboard');
   }
 
+  &--oyo {
+    background-color: c('brand', 'oyo');
+    background-image: url('../images/pattern.png');
+    background-position: center bottom;
+    background-repeat: repeat-x;
+  }
+
   &__inner {
     @include clearfix();
     height: $banner-height;
@@ -20,14 +27,20 @@ $banner-height: 680px;
 
     &--moodboard {
       height: 22px;
-      width: 180px;
       margin-top: 80px;
+      width: 180px;
+    }
+
+    &--oyo {
+      height: 40px;
+      margin-top: 80px;
+      width: 96px;
     }
   }
 
   &__desc {
     @include set-font-scale('deca', 'body');
-    color: rgba(c('neutral', 'milk') , .9);
+    color: rgba(c('neutral', 'milk') , .8);
     margin-top: 15px;
     max-width: 35%;
   }
@@ -38,17 +51,24 @@ $banner-height: 680px;
   }
 
   &__img {
+    position: absolute;
+
     &--moodboard {
       bottom: -46px;
-      position: absolute;
       right: -250px;
+    }
+
+    &--oyo {
+      bottom: -86px;
+      right: -70px;
     }
   }
 
   &__btn {
     @include font-smoothing();
-    opacity: .7;
     margin-top: 10px;
+    opacity: .7;
+
 
     &:hover {
       opacity: .9;
