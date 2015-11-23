@@ -22,3 +22,23 @@
 .hide {
   display: none;
 }
+
+.social {
+  &__link {
+    display: inline-block;
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+
+    &--twitter { fill: c('social', 'twitter'); }
+    &--dribbble { fill: c('social', 'dribbble'); }
+    &--github { fill: c('social', 'github'); }
+  }
+}

@@ -15,6 +15,16 @@ $banner-height: 680px;
     background-repeat: repeat-x;
   }
 
+  &--aldoshik {
+    background-color: c('brand', 'aldoshik');
+  }
+
+  &--zomato {
+    background-color: c('brand', 'zomato');
+    background-image: url('../images/pattern-zom.png');
+    background-repeat: repeat;
+  }
+
   &__inner {
     @include clearfix();
     height: $banner-height;
@@ -24,17 +34,28 @@ $banner-height: 680px;
 
   &__logo {
     fill: c('neutral', 'milk');
+    margin-top: 80px;
 
     &--moodboard {
       height: 22px;
-      margin-top: 80px;
       width: 180px;
     }
 
     &--oyo {
       height: 40px;
-      margin-top: 80px;
       width: 96px;
+    }
+
+    &--aldoshik {
+      height: 32px;
+      width: 166px;
+    }
+
+    &--zomato {
+      background-image: url('../images/zomato-logo.png');
+      display: block;
+      height: 50px;
+      width: 168px;
     }
   }
 
@@ -61,6 +82,16 @@ $banner-height: 680px;
     &--oyo {
       bottom: -86px;
       right: -70px;
+    }
+
+    &--aldoshik {
+      bottom: -46px;
+      right: -250px;
+    }
+
+    &--zomato {
+      bottom: -46px;
+      right: -250px;
     }
   }
 

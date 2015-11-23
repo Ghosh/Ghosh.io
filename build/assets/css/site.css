@@ -1095,10 +1095,8 @@ abbr[title]:hover {
   float: left;
   margin-left: 30px; }
 
-.header__twitter {
-  color: #0074d9;
-  float: right;
-  font-size: 13px; }
+.header__social {
+  float: right; }
 
 .nav {
   list-style-type: none; }
@@ -1116,8 +1114,8 @@ abbr[title]:hover {
     color: #868c92; }
 
 .intro {
-  margin-bottom: 70px;
-  margin-top: 30px; }
+  margin-bottom: 80px;
+  margin-top: 40px; }
   .intro__inner:before, .intro__inner:after {
     content: "";
     display: table;
@@ -1149,6 +1147,12 @@ abbr[title]:hover {
     background-image: url("../images/pattern.png");
     background-position: center bottom;
     background-repeat: repeat-x; }
+  .banner--aldoshik {
+    background-color: #e67d21; }
+  .banner--zomato {
+    background-color: #ad252f;
+    background-image: url("../images/pattern-zom.png");
+    background-repeat: repeat; }
   .banner__inner {
     height: 680px;
     padding: 70px 0;
@@ -1158,15 +1162,22 @@ abbr[title]:hover {
       display: table;
       clear: both; }
   .banner__logo {
-    fill: #fff; }
+    fill: #fff;
+    margin-top: 80px; }
     .banner__logo--moodboard {
       height: 22px;
-      margin-top: 80px;
       width: 180px; }
     .banner__logo--oyo {
       height: 40px;
-      margin-top: 80px;
       width: 96px; }
+    .banner__logo--aldoshik {
+      height: 32px;
+      width: 166px; }
+    .banner__logo--zomato {
+      background-image: url("../images/zomato-logo.png");
+      display: block;
+      height: 50px;
+      width: 168px; }
   .banner__desc {
     font-size: 16px;
     line-height: 28px;
@@ -1184,6 +1195,12 @@ abbr[title]:hover {
     .banner__img--oyo {
       bottom: -86px;
       right: -70px; }
+    .banner__img--aldoshik {
+      bottom: -46px;
+      right: -250px; }
+    .banner__img--zomato {
+      bottom: -46px;
+      right: -250px; }
   .banner__btn {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1194,3 +1211,19 @@ abbr[title]:hover {
 
 .hide {
   display: none; }
+
+.social__link {
+  display: inline-block;
+  margin-left: 10px; }
+  .social__link:first-child {
+    margin-left: 0; }
+
+.social__icon {
+  height: 20px;
+  width: 20px; }
+  .social__icon--twitter {
+    fill: #55acee; }
+  .social__icon--dribbble {
+    fill: #ea4c89; }
+  .social__icon--github {
+    fill: #2d2d2a; }
