@@ -1081,7 +1081,7 @@ abbr[title]:hover {
     clear: both; }
 
 .header__logo {
-  color: #4a4e53;
+  fill: #4a4e53;
   float: left;
   height: 24px;
   width: 54px; }
@@ -1127,7 +1127,7 @@ abbr[title]:hover {
     font-size: 18px;
     line-height: 24px;
     color: #868c92;
-    width: 445px; }
+    max-width: 445px; }
   .intro__cta {
     float: right; }
   .intro__btn {
@@ -1136,5 +1136,19 @@ abbr[title]:hover {
 .hide {
   display: none; }
 
-.banner--moodboard {
-  background-color: #0097d4; }
+.banner {
+  height: 680px;
+  padding: 50px 0; }
+  .banner--moodboard {
+    background-color: #0097d4; }
+  .banner__logo {
+    fill: #fff; }
+    .banner__logo--moodboard {
+      height: 22px;
+      width: 180px; }
+  .banner__desc {
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 15px;
+    max-width: 35%; }

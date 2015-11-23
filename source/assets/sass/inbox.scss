@@ -23,7 +23,26 @@
 }
 
 .banner {
+  height: 680px;
+  padding: 50px 0;
+
   &--moodboard {
     background-color: c('brand', 'moodboard');
+  }
+
+  &__logo {
+    fill: c('neutral', 'milk');
+
+    &--moodboard {
+      height: 22px;
+      width: 180px;
+    }
+  }
+
+  &__desc {
+    @include set-font-scale('deca', 'body');
+    color: rgba(c('neutral', 'milk') , .9);
+    margin-top: 15px;
+    max-width: 35%;
   }
 }
