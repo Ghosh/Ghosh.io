@@ -26,7 +26,7 @@
 .social {
   &__link {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 12px;
 
     &:first-child {
       margin-left: 0;
@@ -40,5 +40,36 @@
     &--twitter { fill: c('social', 'twitter'); }
     &--dribbble { fill: c('social', 'dribbble'); }
     &--github { fill: c('social', 'github'); }
+  }
+}
+
+
+
+
+.cta {
+  background-color: c('neutral', 'light');
+  background-image: url('../images/desk.jpg');
+  background-position: calc(50% - 13px) calc(100% + 40px);
+  height: 600px;
+  text-align: center;
+
+  &__inner {
+    margin-top: 110px;
+  }
+
+
+  &__headline {
+    @include set-font-scale('mega', 'display');
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__byline {
+    @include set-font-scale('mega', 'body');
+    color: c('text', 'light');
+  }
+
+  &__btn {
+    margin-top: 5px;
   }
 }

@@ -1214,7 +1214,7 @@ abbr[title]:hover {
 
 .social__link {
   display: inline-block;
-  margin-left: 10px; }
+  margin-left: 12px; }
   .social__link:first-child {
     margin-left: 0; }
 
@@ -1227,3 +1227,23 @@ abbr[title]:hover {
     fill: #ea4c89; }
   .social__icon--github {
     fill: #2d2d2a; }
+
+.cta {
+  background-color: #f5f5f5;
+  background-image: url("../images/desk.jpg");
+  background-position: calc(50% - 13px) calc(100% + 40px);
+  height: 600px;
+  text-align: center; }
+  .cta__inner {
+    margin-top: 110px; }
+  .cta__headline {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 10px; }
+  .cta__byline {
+    font-size: 19px;
+    line-height: 32px;
+    color: #868c92; }
+  .cta__btn {
+    margin-top: 5px; }
