@@ -13,7 +13,14 @@ var gulp        = require('gulp'),
     notify      = require("gulp-notify"),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
+    del         = require('del'),
     reload      = browserSync.reload;
+
+
+
+gulp.task('clean:build', function () {
+  return del(['build/*']);
+});
 
 
 gulp.task('svg', function () {
@@ -76,7 +83,7 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('compile', ['svg', 'hbs', 'styles', 'images'])
+gulp.task('compile', ['clean:build', 'svg', 'hbs', 'styles', 'images'])
 
 
 gulp.task('go', ['compile'], function() {
