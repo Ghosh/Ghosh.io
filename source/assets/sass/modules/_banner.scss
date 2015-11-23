@@ -1,0 +1,57 @@
+$banner-height: 680px;
+
+.banner {
+  height: $banner-height;
+  overflow: hidden;
+
+  &--moodboard {
+    background-color: c('brand', 'moodboard');
+  }
+
+  &__inner {
+    @include clearfix();
+    height: $banner-height;
+    padding: 70px 0;
+    position: relative;
+  }
+
+  &__logo {
+    fill: c('neutral', 'milk');
+
+    &--moodboard {
+      height: 22px;
+      width: 180px;
+      margin-top: 80px;
+    }
+  }
+
+  &__desc {
+    @include set-font-scale('deca', 'body');
+    color: rgba(c('neutral', 'milk') , .9);
+    margin-top: 15px;
+    max-width: 35%;
+  }
+
+  &__service-list {
+    color: rgba(c('neutral', 'milk') , .9);
+    padding-left: 16px;
+  }
+
+  &__img {
+    &--moodboard {
+      bottom: -46px;
+      position: absolute;
+      right: -250px;
+    }
+  }
+
+  &__btn {
+    @include font-smoothing();
+    opacity: .7;
+    margin-top: 10px;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}

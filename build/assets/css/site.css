@@ -1043,7 +1043,7 @@ abbr {
 abbr[title]:hover {
   cursor: help; }
 
-.btn--primary {
+.btn--primary, .btn--outline {
   -webkit-appearance: none;
   background-color: transparent;
   border: 12px solid transparent;
@@ -1059,9 +1059,9 @@ abbr[title]:hover {
   padding: 10px 30px;
   text-decoration: none;
   vertical-align: middle; }
-  .btn--primary:hover {
+  .btn--primary:hover, .btn--outline:hover {
     text-decoration: none; }
-  .btn--primary:focus {
+  .btn--primary:focus, .btn--outline:focus {
     outline: none; }
 
 ::-moz-focus-inner {
@@ -1072,6 +1072,11 @@ abbr[title]:hover {
   border: solid 2px #479e2b;
   border-radius: 30px;
   color: #479e2b; }
+
+.btn--outline {
+  border: solid 2px #fff;
+  border-radius: 30px;
+  color: #fff; }
 
 .header__inner {
   padding: 40px 0; }
@@ -1111,7 +1116,8 @@ abbr[title]:hover {
     color: #868c92; }
 
 .intro {
-  margin-bottom: 40px; }
+  margin-bottom: 70px;
+  margin-top: 30px; }
   .intro__inner:before, .intro__inner:after {
     content: "";
     display: table;
@@ -1124,8 +1130,8 @@ abbr[title]:hover {
     font-weight: 600;
     margin-bottom: 10px; }
   .intro__byline {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 19px;
+    line-height: 32px;
     color: #868c92;
     max-width: 445px; }
   .intro__cta {
@@ -1133,22 +1139,45 @@ abbr[title]:hover {
   .intro__btn {
     margin-top: 22px; }
 
-.hide {
-  display: none; }
-
 .banner {
   height: 680px;
-  padding: 50px 0; }
+  overflow: hidden; }
   .banner--moodboard {
     background-color: #0097d4; }
+  .banner__inner {
+    height: 680px;
+    padding: 70px 0;
+    position: relative; }
+    .banner__inner:before, .banner__inner:after {
+      content: "";
+      display: table;
+      clear: both; }
   .banner__logo {
     fill: #fff; }
     .banner__logo--moodboard {
       height: 22px;
-      width: 180px; }
+      width: 180px;
+      margin-top: 80px; }
   .banner__desc {
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 28px;
     color: rgba(255, 255, 255, 0.9);
     margin-top: 15px;
     max-width: 35%; }
+  .banner__service-list {
+    color: rgba(255, 255, 255, 0.9);
+    padding-left: 16px; }
+  .banner__img--moodboard {
+    bottom: -46px;
+    position: absolute;
+    right: -250px; }
+  .banner__btn {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: .7;
+    margin-top: 10px; }
+    .banner__btn:hover {
+      opacity: .9; }
+
+.hide {
+  display: none; }

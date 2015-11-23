@@ -11,6 +11,8 @@ var gulp        = require('gulp'),
     cheerio     = require('gulp-cheerio'),
     plumber     = require('gulp-plumber'),
     notify      = require("gulp-notify"),
+    imagemin    = require('gulp-imagemin'),
+    pngquant    = require('imagemin-pngquant'),
     reload      = browserSync.reload;
 
 
@@ -31,19 +33,34 @@ gulp.task('svg', function () {
 });
 
 
+gulp.task('images', function() {
+  gulp.src('source/assets/images/*')
+  .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+  .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+  }))
+  .pipe(gulp.dest('build/assets/images'))
+  .pipe(reload({ stream:true }));
+});
+
+
 gulp.task('hbs', function () {
   gulp.src(['source/**/*.hbs', '!source/partials/**/*.hbs'])
-      .pipe(frontMatter())
-      .pipe(hb({
-        bustCache: true,
-        partials: './source/partials/**/*.hbs',
-        helpers: [
-          './node_modules/handlebars-layouts/index.js',
-        ],
-      }))
-      .pipe(ext_replace('.html'))
-      .pipe(gulp.dest('./build/'))
-      .pipe(reload({ stream:true }));
+    .pipe(plumber({
+      errorHandler: notify.onError({ title: 'Error: Handlebars Task', message: '<%= error.message %>' })
+    }))
+    .pipe(frontMatter())
+    .pipe(hb({
+      bustCache: true,
+      partials: './source/partials/**/*.hbs',
+      helpers: [
+        './node_modules/handlebars-layouts/index.js',
+      ],
+    }))
+    .pipe(ext_replace('.html'))
+    .pipe(gulp.dest('./build/'))
+    .pipe(reload({ stream:true }));
 });
 
 
@@ -59,7 +76,7 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('compile', ['svg', 'hbs', 'styles'])
+gulp.task('compile', ['svg', 'hbs', 'styles', 'images'])
 
 
 gulp.task('go', ['compile'], function() {

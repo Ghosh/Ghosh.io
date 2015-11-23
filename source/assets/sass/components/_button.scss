@@ -43,3 +43,10 @@ $button-font-family: ff('display');
   border-radius: 30px;
   color: c('accent', 'primary');
 }
+
+.btn--outline {
+  @extend %btn;
+  border: solid 2px c('neutral', 'milk');
+  border-radius: 30px;
+  color: c('neutral', 'milk');
+}
