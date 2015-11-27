@@ -1191,7 +1191,8 @@ abbr[title]:hover {
     position: absolute; }
     .banner__img--moodboard {
       bottom: -46px;
-      right: -250px; }
+      right: -120px;
+      width: 780px; }
     .banner__img--oyo {
       bottom: -86px;
       right: -70px; }

@@ -1,0 +1,9 @@
+// scss-lint:disable TrailingSemicolon SpaceAfterVariableName
+$font-path: '../fonts/';
+
+$font-faces: (
+ 'Merriweather': (
+    'merriweather-light-webfont' normal normal,
+    'merriweather-lightitalic-webfont' nomral italic
+  )
+);

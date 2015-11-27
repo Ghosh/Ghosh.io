@@ -75,8 +75,11 @@ $banner-height: 680px;
     position: absolute;
 
     &--moodboard {
+      // bottom: -46px;
+      // right: -250px;
       bottom: -46px;
-      right: -250px;
+      right: -120px;
+      width: 780px;
     }
 
     &--oyo {
