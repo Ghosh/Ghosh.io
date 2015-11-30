@@ -1,18 +1,20 @@
-<header class="header">
+<header class="header {{#if file.frontMatter.cover}}header--absolute header--white{{/if}}">
   <div class="container">
     <div class="row">
       <div class="col-s-12">
         <div class="header__inner">
 
-          <svg class="header__logo"><use xlink:href="#logo" /></svg>
+          <a href="/">
+            <svg class="header__logo"><use xlink:href="#logo" /></svg>
+          </a>
 
-          <ul class="header__nav nav">
+          <ul class="header__nav nav {{#if file.frontMatter.cover}}nav--white{{/if}}">
             <li class="nav__item"><a href="#" class="nav__link">About</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
           </ul>
 
-          <nav class="header__social social">
+          <nav class="header__social social {{#if file.frontMatter.cover}}social--white{{/if}}">
             <a href="https://twitter.com/_ighosh" target="_blank" class="social__link">
               <svg class="social__icon social__icon--twitter"><use xlink:href="#twitter" /></svg>
             </a>

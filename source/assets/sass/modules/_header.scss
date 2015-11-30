@@ -20,4 +20,13 @@
   &__social {
     float: right;
   }
+
+  &--absolute {
+    position: absolute;
+    width: 100%;
+  }
+
+  &--white {
+    .header__logo { fill: c('neutral', 'milk'); }
+  }
 }

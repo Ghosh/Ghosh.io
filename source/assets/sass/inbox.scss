@@ -18,58 +18,29 @@
 @import 'modules/nav';
 @import 'modules/intro';
 @import 'modules/banner';
+@import 'modules/social';
+@import 'modules/cta';
 
 .hide {
   display: none;
 }
 
-.social {
-  &__link {
-    display: inline-block;
-    margin-left: 12px;
 
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
-  &__icon {
-    height: 20px;
-    width: 20px;
-
-    &--twitter { fill: c('social', 'twitter'); }
-    &--dribbble { fill: c('social', 'dribbble'); }
-    &--github { fill: c('social', 'github'); }
-  }
-}
-
-
-
-
-.cta {
-  background-color: c('neutral', 'light');
-  background-image: url('../images/desk.jpg');
-  background-position: calc(50% - 13px) calc(100% + 40px);
-  height: 600px;
+.cover {
+  height: 540px;
+  padding-top: 126px;
   text-align: center;
 
-  &__inner {
-    margin-top: 110px;
+  &--moodboard {
+    background-color: c('brand', 'moodboard');
   }
 
+  &__logo {
+    fill: c('neutral', 'milk');
 
-  &__headline {
-    @include set-font-scale('mega', 'display');
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  &__byline {
-    @include set-font-scale('mega', 'body');
-    color: c('text', 'light');
-  }
-
-  &__btn {
-    margin-top: 5px;
+    &--moodboard {
+      height: 22px;
+      width: 180px;
+    }
   }
 }

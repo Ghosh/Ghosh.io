@@ -1098,6 +1098,13 @@ abbr[title]:hover {
 .header__social {
   float: right; }
 
+.header--absolute {
+  position: absolute;
+  width: 100%; }
+
+.header--white .header__logo {
+  fill: #fff; }
+
 .nav {
   list-style-type: none; }
   .nav:before, .nav:after {
@@ -1112,6 +1119,8 @@ abbr[title]:hover {
       margin-left: 0; }
   .nav__link {
     color: #868c92; }
+  .nav--white .nav__link {
+    color: #fff; }
 
 .intro {
   margin-bottom: 80px;
@@ -1210,9 +1219,6 @@ abbr[title]:hover {
     .banner__btn:hover {
       opacity: .9; }
 
-.hide {
-  display: none; }
-
 .social__link {
   display: inline-block;
   margin-left: 12px; }
@@ -1228,6 +1234,9 @@ abbr[title]:hover {
     fill: #ea4c89; }
   .social__icon--github {
     fill: #2d2d2a; }
+
+.social--white .social__icon {
+  fill: #fff; }
 
 .cta {
   background-color: #f5f5f5;
@@ -1248,3 +1257,18 @@ abbr[title]:hover {
     color: #868c92; }
   .cta__btn {
     margin-top: 5px; }
+
+.hide {
+  display: none; }
+
+.cover {
+  height: 540px;
+  padding-top: 126px;
+  text-align: center; }
+  .cover--moodboard {
+    background-color: #0097d4; }
+  .cover__logo {
+    fill: #fff; }
+    .cover__logo--moodboard {
+      height: 22px;
+      width: 180px; }

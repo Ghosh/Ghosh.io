@@ -1,6 +1,9 @@
 files:
   include: '**/*.s+(a|c)ss'
   ignore:
+linters:
+  SelectorFormat:
+    convention: hyphenated_BEM
 rules:
   # Consistency Rules
   extends-before-mixins: 1

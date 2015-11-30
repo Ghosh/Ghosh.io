@@ -15,4 +15,8 @@
   &__link {
     color: c('text', 'light');
   }
+
+  &--white {
+    .nav__link { color: c('neutral', 'milk'); }
+  }
 }
