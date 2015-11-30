@@ -83,7 +83,7 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('compile', ['clean:build', 'svg', 'hbs', 'styles', 'images'])
+gulp.task('compile', ['svg', 'hbs', 'styles', 'images'])
 
 
 gulp.task('go', ['compile'], function() {
@@ -95,6 +95,6 @@ gulp.task('go', ['compile'], function() {
 
   gulp.watch('source/**/*.hbs', ['hbs']);
   gulp.watch('source/assets/svg/**/*.svg', ['svg']);
-  gulp.watch('source/assets/images/*', ['images']);
+  gulp.watch('source/assets/images/**/*.*', ['images']);
   gulp.watch('source/assets/sass/**/*.scss', ['styles']);
 });

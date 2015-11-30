@@ -1,3 +1,4 @@
+// scss-lint:disable NestingDepth
 .section-heading {
   margin-bottom: 30px;
   margin-top: 60px;
@@ -5,11 +6,10 @@
 
   &:before {
     color: c('neutral', 'section');
-    content: '01';
+    content: attr(data-content) ' ';
     font-size: 72px;
-    left: -100px;
+    left: -110px;
     position: absolute;
-
   }
 
   span {
@@ -34,11 +34,49 @@
     }
   }
 
-}
+  &--dark {
+    &:before {
+      color: darken(c('neutral', 'section'), 6%);
+    }
 
+    span:after {
+      background-color: darken(c('neutral', 'section'), 6%);
+    }
+  }
+
+}
 
 a {
   .moodboard & {
     color: c('brand', 'moodboard');
   }
+}
+
+.project {
+
+  ul {
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  figcaption {
+    color: c('text', 'light');
+    font-size: 12px;
+    font-style: italic;
+    line-height: 21px;
+
+    span {
+      color: c('text', 'headings');
+      display: block;
+      font-family: ff('display');
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+
 }

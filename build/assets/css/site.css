@@ -1049,9 +1049,9 @@ abbr[title]:hover {
   position: relative; }
   .section-heading:before {
     color: #eee;
-    content: '01';
+    content: attr(data-content) " ";
     font-size: 72px;
-    left: -100px;
+    left: -110px;
     position: absolute; }
   .section-heading span {
     display: block;
@@ -1069,9 +1069,155 @@ abbr[title]:hover {
       width: 100%; }
     .moodboard .section-heading span {
       color: #0097d4; }
+  .section-heading--dark:before {
+    color: #dfdfdf; }
+  .section-heading--dark span:after {
+    background-color: #dfdfdf; }
 
 .moodboard a {
   color: #0097d4; }
+
+.project ul {
+  padding-left: 20px; }
+  .project ul li {
+    margin-bottom: 10px; }
+
+.project figcaption {
+  color: #868c92;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 21px; }
+  .project figcaption span {
+    color: #4a4e53;
+    display: block;
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px; }
+
+.section-alternate {
+  background-color: #f5f5f5; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mt40 {
+  margin-top: 40px; }
+
+.mt50 {
+  margin-top: 50px; }
+
+.mt60 {
+  margin-top: 60px; }
+
+.mt70 {
+  margin-top: 70px; }
+
+.mt80 {
+  margin-top: 80px; }
+
+.mt90 {
+  margin-top: 90px; }
+
+.mt100 {
+  margin-top: 100px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.mb30 {
+  margin-bottom: 30px; }
+
+.mb40 {
+  margin-bottom: 40px; }
+
+.mb50 {
+  margin-bottom: 50px; }
+
+.mb60 {
+  margin-bottom: 60px; }
+
+.mb70 {
+  margin-bottom: 70px; }
+
+.mb80 {
+  margin-bottom: 80px; }
+
+.mb90 {
+  margin-bottom: 90px; }
+
+.mb100 {
+  margin-bottom: 100px; }
+
+.pt10 {
+  padding-top: 10px; }
+
+.pt20 {
+  padding-top: 20px; }
+
+.pt30 {
+  padding-top: 30px; }
+
+.pt40 {
+  padding-top: 40px; }
+
+.pt50 {
+  padding-top: 50px; }
+
+.pt60 {
+  padding-top: 60px; }
+
+.pt70 {
+  padding-top: 70px; }
+
+.pt80 {
+  padding-top: 80px; }
+
+.pt90 {
+  padding-top: 90px; }
+
+.pt100 {
+  padding-top: 100px; }
+
+.pb10 {
+  padding-bottom: 10px; }
+
+.pb20 {
+  padding-bottom: 20px; }
+
+.pb30 {
+  padding-bottom: 30px; }
+
+.pb40 {
+  padding-bottom: 40px; }
+
+.pb50 {
+  padding-bottom: 50px; }
+
+.pb60 {
+  padding-bottom: 60px; }
+
+.pb70 {
+  padding-bottom: 70px; }
+
+.pb80 {
+  padding-bottom: 80px; }
+
+.pb90 {
+  padding-bottom: 90px; }
+
+.pb100 {
+  padding-bottom: 100px; }
 
 .btn--primary, .btn--outline {
   -webkit-appearance: none;
@@ -1123,10 +1269,12 @@ abbr[title]:hover {
 
 .header__nav {
   float: left;
-  margin-left: 30px; }
+  margin-left: 30px;
+  margin-top: -2px; }
 
 .header__social {
-  float: right; }
+  float: right;
+  margin-top: -3px; }
 
 .header--absolute {
   position: absolute;
@@ -1289,6 +1437,43 @@ abbr[title]:hover {
   .cta__btn {
     margin-top: 5px; }
 
+.objective {
+  list-style-type: none;
+  margin-bottom: 60px;
+  margin-left: -30%;
+  margin-top: 50px;
+  width: 160%; }
+  .objective:before, .objective:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .objective__item {
+    align-items: center;
+    border: solid 1px #f5f5f5;
+    border-radius: 3px;
+    display: flex;
+    float: left;
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    height: 235px;
+    justify-content: center;
+    padding: 20px;
+    text-align: center; }
+    .objective__item:before {
+      content: none !important; }
+    .objective__item:first-child {
+      margin-left: 0 !important; }
+  .objective--triple .objective__item {
+    margin-left: 2%;
+    width: 32%; }
+  .objective--double .objective__item {
+    margin-left: 2%;
+    width: 48%; }
+  .objective--moodboard .objective__item {
+    background-color: #0097d4;
+    border: solid 1px #0097d4;
+    color: #fff; }
+
 .hide {
   display: none; }
 
@@ -1317,3 +1502,8 @@ abbr[title]:hover {
         .cover__image--moodboard {
           background-image: url("../images/projects/moodboard/moodboard-cover@2x.png");
           background-size: 698px 404px; } }
+
+.wireframe {
+  margin-bottom: 60px;
+  margin-left: -35%;
+  width: 170%; }
