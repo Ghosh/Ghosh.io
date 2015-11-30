@@ -1267,8 +1267,21 @@ abbr[title]:hover {
   text-align: center; }
   .cover--moodboard {
     background-color: #0097d4; }
+  .cover__logo-cont {
+    margin-bottom: 90px;
+    margin-top: 50px; }
   .cover__logo {
     fill: #fff; }
     .cover__logo--moodboard {
-      height: 22px;
-      width: 180px; }
+      height: 32px;
+      width: 220px; }
+  .cover__image {
+    display: inline-block;
+    height: 404px;
+    width: 698px; }
+    .cover__image--moodboard {
+      background: url("../images/projects/moodboard/moodboard-cover.png") no-repeat; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        .cover__image--moodboard {
+          background-image: url("../images/projects/moodboard/moodboard-cover@2x.png");
+          background-size: 698px 404px; } }

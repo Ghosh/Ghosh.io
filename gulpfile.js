@@ -41,7 +41,7 @@ gulp.task('svg', function () {
 
 
 gulp.task('images', function() {
-  gulp.src('source/assets/images/*')
+  gulp.src('source/assets/images/**/*.*')
   .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
   .pipe(imagemin({
       progressive: true,

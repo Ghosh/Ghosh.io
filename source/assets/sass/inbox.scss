@@ -10,6 +10,8 @@
 @import '../bower/sanitize-css/sanitize.scss';
 @import '../bower/stylekit/stylekit';
 
+@import 'helpers/mixins';
+
 @import 'base/typography';
 
 @import 'components/button';
@@ -35,12 +37,29 @@
     background-color: c('brand', 'moodboard');
   }
 
+  &__logo-cont {
+    margin-bottom: 90px;
+    margin-top: 50px;
+  }
+
   &__logo {
     fill: c('neutral', 'milk');
 
     &--moodboard {
-      height: 22px;
-      width: 180px;
+      height: 32px;
+      width: 220px;
     }
+  }
+
+  &__image {
+    display: inline-block;
+    height: 404px;
+    width: 698px;
+
+    &--moodboard {
+      @include retina-image('../images/projects/moodboard/moodboard-cover@2x.png', 698px, 404px);
+      background: url('../images/projects/moodboard/moodboard-cover.png') no-repeat;
+    }
+
   }
 }
