@@ -14,6 +14,8 @@
 
 @import 'base/typography';
 
+@import 'core/typography';
+
 @import 'components/button';
 
 @import 'modules/header';
@@ -33,7 +35,7 @@
   padding-top: 126px;
   text-align: center;
 
-  &--moodboard {
+  .moodboard & {
     background-color: c('brand', 'moodboard');
   }
 
@@ -54,6 +56,7 @@
   &__image {
     display: inline-block;
     height: 404px;
+    margin-bottom: 40px;
     width: 698px;
 
     &--moodboard {

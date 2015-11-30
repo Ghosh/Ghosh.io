@@ -5,21 +5,50 @@ cover: true
 {{#extend "layouts/master"}}
 {{#content "body"}}
 
-<div class="cover cover--moodboard">
+<!-- this is a namespace for the project colors -->
+<section class="moodboard project">
+
+  <div class="cover">
+    <div class="container">
+      <div class="row">
+        <div class="col-s-12">
+
+            <div class="cover__logo-cont">
+              <svg class="cover__logo cover__logo--moodboard"><use xlink:href="#moodboard"/></svg>
+            </div>
+
+            <div class="cover__image cover__image--moodboard"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row">
-      <div class="col-s-12">
+      <div class="col-s-6 col-s-push-3">
+        <p>
+          As the name suggests, <a href="http://moodboard.io/" target="_blank">Moodboard.io</a> is a simple tool which provides users a private place to store all visual inspiration and create a visual moodboard for their projects.
+        </p>
 
-          <div class="cover__logo-cont">
-            <svg class="cover__logo cover__logo--moodboard"><use xlink:href="#moodboard"/></svg>
-          </div>
+        <h5 class="section-heading">
+          <span>Objectives</span>
+        </h5>
 
-          <div class="cover__image cover__image--moodboard"></div>
+        <p>
+          Being the sole driving force behind this project, it was important for me to work smart and maximize the output from the effort involved. However, the main priority here was the user experience and the product.
+        </p>
+
+        <p>
+          Keeping in mind the various requirements and the project constraints, it quickly became clear to me the key objectives of the project. I needed to design an interface which was:-
+        </p>
 
       </div>
     </div>
   </div>
-</div>
+
+</section>
+<!-- end .moodboard -->
 
 {{/content}}
 {{/extend}}

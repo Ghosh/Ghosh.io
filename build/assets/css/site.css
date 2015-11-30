@@ -951,9 +951,9 @@ body {
  * Burger animations
  */
 body {
-  font-size: 14px;
-  line-height: 26px;
-  font-family: "Avenir Next", "Georgia", "Times New Roman", "Times", serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "Merriweather", "Georgia", "Times New Roman", "Times", serif;
   font-weight: normal; }
 
 h1,
@@ -969,14 +969,14 @@ h6 {
   font-weight: bold; }
 
 p {
-  color: #4a4e53;
+  color: #676262;
   margin-bottom: 20px;
   margin-top: 0; }
 
 dl,
 ol,
 ul {
-  color: #4a4e53;
+  color: #676262;
   margin-bottom: 20px; }
 
 ul ul,
@@ -1018,7 +1018,7 @@ hr {
 
 mark {
   background-color: #fbf6bb;
-  color: #4a4e53; }
+  color: #676262; }
 
 sub,
 sup {
@@ -1042,6 +1042,36 @@ abbr {
 
 abbr[title]:hover {
   cursor: help; }
+
+.section-heading {
+  margin-bottom: 30px;
+  margin-top: 60px;
+  position: relative; }
+  .section-heading:before {
+    color: #eee;
+    content: '01';
+    font-size: 72px;
+    left: -100px;
+    position: absolute; }
+  .section-heading span {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative; }
+    .section-heading span:after {
+      background-color: #eee;
+      content: '';
+      height: 1px;
+      margin-left: 20px;
+      margin-top: 15px;
+      position: absolute;
+      width: 100%; }
+    .moodboard .section-heading span {
+      color: #0097d4; }
+
+.moodboard a {
+  color: #0097d4; }
 
 .btn--primary, .btn--outline {
   -webkit-appearance: none;
@@ -1118,7 +1148,8 @@ abbr[title]:hover {
     .nav__item:first-child {
       margin-left: 0; }
   .nav__link {
-    color: #868c92; }
+    color: #868c92;
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
   .nav--white .nav__link {
     color: #fff; }
 
@@ -1265,7 +1296,7 @@ abbr[title]:hover {
   height: 540px;
   padding-top: 126px;
   text-align: center; }
-  .cover--moodboard {
+  .moodboard .cover {
     background-color: #0097d4; }
   .cover__logo-cont {
     margin-bottom: 90px;
@@ -1278,6 +1309,7 @@ abbr[title]:hover {
   .cover__image {
     display: inline-block;
     height: 404px;
+    margin-bottom: 40px;
     width: 698px; }
     .cover__image--moodboard {
       background: url("../images/projects/moodboard/moodboard-cover.png") no-repeat; }
