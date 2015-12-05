@@ -29,9 +29,8 @@
       width: 100%;
     }
 
-    .moodboard & {
-      color: c('brand', 'moodboard');
-    }
+    .moodboard & { color: c('brand', 'moodboard'); }
+    .oyo & { color: c('brand', 'oyo'); }
   }
 
   &--dark {
@@ -46,10 +45,14 @@
 
 }
 
+.section-subheading {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 a {
-  .moodboard & {
-    color: c('brand', 'moodboard');
-  }
+  .moodboard & { color: c('brand', 'moodboard'); }
+  .oyo & { color: c('brand', 'oyo'); }
 }
 
 .project {

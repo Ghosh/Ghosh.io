@@ -38,9 +38,8 @@
   padding-top: 126px;
   text-align: center;
 
-  .moodboard & {
-    background-color: c('brand', 'moodboard');
-  }
+  .moodboard & { background-color: c('brand', 'moodboard'); }
+  .oyo & { background-color: c('brand', 'oyo'); }
 
   &__logo-cont {
     margin-bottom: 90px;
@@ -54,6 +53,11 @@
       height: 32px;
       width: 220px;
     }
+
+    &--oyo {
+      height: 40px;
+      width: 96px;
+    }
   }
 
   &__image {
@@ -65,6 +69,11 @@
     &--moodboard {
       @include retina-image('../images/projects/moodboard/moodboard-cover@2x.png', 698px, 404px);
       background: url('../images/projects/moodboard/moodboard-cover.png') no-repeat;
+    }
+
+    &--oyo {
+      @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
+      background: url('../images/projects/oyo/oyo-cover.png') no-repeat;
     }
 
   }

@@ -50,4 +50,11 @@
       color: c('neutral', 'milk');
     }
   }
+
+  &--oyo {
+    .objective__item {
+      border: solid 1px c('neutral', 'border');
+      color: c('text', 'light');
+    }
+  }
 }
