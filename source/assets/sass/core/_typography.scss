@@ -31,6 +31,7 @@
 
     .moodboard & { color: c('brand', 'moodboard'); }
     .oyo & { color: c('brand', 'oyo'); }
+    .aldoshik & { color: c('brand', 'aldoshik'); }
   }
 
   &--dark {
@@ -53,6 +54,7 @@
 a {
   .moodboard & { color: c('brand', 'moodboard'); }
   .oyo & { color: c('brand', 'oyo'); }
+  .aldoshik & { color: c('brand', 'aldoshik'); }
 }
 
 .project {

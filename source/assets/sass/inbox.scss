@@ -40,6 +40,7 @@
 
   .moodboard & { background-color: c('brand', 'moodboard'); }
   .oyo & { background-color: c('brand', 'oyo'); }
+  .aldoshik & { background-color: c('brand', 'aldoshik'); }
 
   &__logo-cont {
     margin-bottom: 90px;
@@ -58,6 +59,11 @@
       height: 40px;
       width: 96px;
     }
+
+    &--aldoshik {
+      height: 30px;
+      width: 160px;
+    }
   }
 
   &__image {
@@ -74,6 +80,11 @@
     &--oyo {
       @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
       background: url('../images/projects/oyo/oyo-cover.png') no-repeat;
+    }
+
+    &--aldoshik {
+      @include retina-image('../images/projects/aldoshik/aldoshik-cover@2x.png', 698px, 404px);
+      background: url('../images/projects/aldoshik/aldoshik-cover.png') no-repeat;
     }
 
   }
