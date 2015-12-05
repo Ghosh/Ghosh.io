@@ -11,15 +11,19 @@ var gulp        = require('gulp'),
     cheerio     = require('gulp-cheerio'),
     plumber     = require('gulp-plumber'),
     notify      = require("gulp-notify"),
+    newer       = require('gulp-newer'),
+    clean       = require('gulp-clean'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
-    del         = require('del'),
+    runSequence = require('run-sequence'),
+    gulpif      = require('gulp-if'),
+    argv        = require('yargs').argv,
     reload      = browserSync.reload;
 
 
-
 gulp.task('clean:build', function () {
-  return del(['build/*']);
+  return gulp.src('build/*', {read: false})
+  		.pipe(clean());
 });
 
 
@@ -41,7 +45,8 @@ gulp.task('svg', function () {
 
 
 gulp.task('images', function() {
-  gulp.src('source/assets/images/**/*.*')
+  return gulp.src('source/assets/images/**/*.*')
+  .pipe(newer('build/assets/images'))
   .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
   .pipe(imagemin({
       progressive: true,
@@ -66,6 +71,7 @@ gulp.task('hbs', function () {
       ],
     }))
     .pipe(ext_replace('.html'))
+    .pipe(newer('./build/'))
     .pipe(gulp.dest('./build/'))
     .pipe(reload({ stream:true }));
 });
@@ -83,8 +89,9 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('compile', ['svg', 'hbs', 'styles', 'images'])
-
+gulp.task('compile', function(callback) {
+    (argv.clean == 1) ? runSequence('clean:build', ['svg', 'hbs', 'styles', 'images'], callback) : callback();
+});
 
 gulp.task('go', ['compile'], function() {
   browserSync({
