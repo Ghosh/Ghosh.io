@@ -89,11 +89,16 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('compile', function(callback) {
-    (argv.clean == 1) ? runSequence('clean:build', ['svg', 'hbs', 'styles', 'images'], callback) : callback();
+gulp.task('compile', ['svg', 'hbs', 'styles', 'images']);
+gulp.task('clean', ['clean:build']);
+
+gulp.task('build', function(callback) {
+    (argv.clean == 1) ?
+    runSequence('clean:build', 'compile', callback) :
+    runSequence('compile', callback) ;
 });
 
-gulp.task('go', ['compile'], function() {
+gulp.task('go', ['build'], function() {
   browserSync({
     server: {
       baseDir: 'build'
