@@ -1377,6 +1377,7 @@ abbr[title]:hover {
       clear: both; }
   .banner__logo {
     fill: #fff;
+    margin-bottom: 10px;
     margin-top: 80px; }
     .banner__logo--moodboard {
       height: 22px;
@@ -1388,10 +1389,8 @@ abbr[title]:hover {
       height: 32px;
       width: 166px; }
     .banner__logo--zomato {
-      background-image: url("../images/zomato-logo.png");
-      display: block;
-      height: 50px;
-      width: 168px; }
+      height: 37px;
+      width: 144px; }
   .banner__desc {
     font-size: 16px;
     line-height: 28px;
@@ -1516,6 +1515,8 @@ abbr[title]:hover {
     background-color: #b41c03; }
   .aldoshik .cover {
     background-color: #e67d21; }
+  .zomato .cover {
+    background-color: #ad252f; }
   .cover__logo-cont {
     margin-bottom: 90px;
     margin-top: 50px; }
@@ -1530,6 +1531,9 @@ abbr[title]:hover {
     .cover__logo--aldoshik {
       height: 30px;
       width: 160px; }
+    .cover__logo--zomato {
+      height: 37px;
+      width: 144px; }
   .cover__image {
     display: inline-block;
     height: 404px;
@@ -1552,6 +1556,12 @@ abbr[title]:hover {
       @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
         .cover__image--aldoshik {
           background-image: url("../images/projects/aldoshik/aldoshik-cover@2x.png");
+          background-size: 698px 404px; } }
+    .cover__image--zomato {
+      background: url("../images/projects/zomato/zomato-cover.png") no-repeat; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        .cover__image--zomato {
+          background-image: url("../images/projects/zomato/zomato-cover@2x.png");
           background-size: 698px 404px; } }
 
 .wireframe {

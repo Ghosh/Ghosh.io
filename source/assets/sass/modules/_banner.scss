@@ -34,6 +34,7 @@ $banner-height: 680px;
 
   &__logo {
     fill: c('neutral', 'milk');
+    margin-bottom: 10px;
     margin-top: 80px;
 
     &--moodboard {
@@ -52,10 +53,8 @@ $banner-height: 680px;
     }
 
     &--zomato {
-      background-image: url('../images/zomato-logo.png');
-      display: block;
-      height: 50px;
-      width: 168px;
+      height: 37px;
+      width: 144px;
     }
   }
 
