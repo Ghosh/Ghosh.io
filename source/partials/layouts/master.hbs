@@ -16,20 +16,15 @@
 
   <link rel="stylesheet" href="/assets/css/site.css" media="screen" title="no title" charset="utf-8">
 </head>
+
 {{> svg}}
+
 <body class="{{file.frontMatter.bodyClass}}">
   {{> header}}
 
   {{#block "body"}}
   {{/block}}
 
-  <script type="text/javascript" src="/assets/js/minigrid.js"></script>
-  <script>
-  minigrid({
-    container: '.minigrid',
-    item: '.minigrid-item',
-    gutter: 10
-  });
-  </script>
+  <script type="text/javascript" src="/assets/js/site.js"></script>
 </body>
 </html>
