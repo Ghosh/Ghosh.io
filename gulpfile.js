@@ -100,9 +100,8 @@ gulp.task('build', function(callback) {
 
 gulp.task('go', ['build'], function() {
   browserSync({
-    server: {
-      baseDir: 'build'
-    }
+    server: {baseDir: 'build' },
+    open: argv.open == 1 ? true : false
   });
 
   gulp.watch('source/**/*.hbs', ['hbs']);
