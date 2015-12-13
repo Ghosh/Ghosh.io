@@ -41,7 +41,11 @@
   .moodboard & { background-color: c('brand', 'moodboard'); }
   .oyo & { background-color: c('brand', 'oyo'); }
   .aldoshik & { background-color: c('brand', 'aldoshik'); }
-  .zomato & { background-color: c('brand', 'zomato'); }
+  .zomato & {
+    background-color: c('brand', 'zomato');
+    background-image: url('../images/pattern-zom.png');
+    background-repeat: repeat;
+  }
 
   &__logo-cont {
     margin-bottom: 90px;

@@ -1073,6 +1073,8 @@ abbr[title]:hover {
       color: #b41c03; }
     .aldoshik .section-heading span {
       color: #e67d21; }
+    .zomato .section-heading span {
+      color: #ad252f; }
   .section-heading--dark:before {
     color: #dfdfdf; }
   .section-heading--dark span:after {
@@ -1090,6 +1092,9 @@ abbr[title]:hover {
 
 .aldoshik a {
   color: #e67d21; }
+
+.zomato a {
+  color: #ad252f; }
 
 .project ul {
   padding-left: 20px; }
@@ -1516,7 +1521,9 @@ abbr[title]:hover {
   .aldoshik .cover {
     background-color: #e67d21; }
   .zomato .cover {
-    background-color: #ad252f; }
+    background-color: #ad252f;
+    background-image: url("../images/pattern-zom.png");
+    background-repeat: repeat; }
   .cover__logo-cont {
     margin-bottom: 90px;
     margin-top: 50px; }
@@ -1568,3 +1575,5 @@ abbr[title]:hover {
   margin-bottom: 60px;
   margin-left: -35%;
   width: 170%; }
+
+/*# sourceMappingURL=site.css.map */

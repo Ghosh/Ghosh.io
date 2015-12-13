@@ -1,11 +1,8 @@
 var gulp        = require('gulp'),
     frontMatter = require('gulp-front-matter'),
-    layouts     = require('handlebars-layouts'),
-    hb          = require('gulp-hb'),
     ext_replace = require('gulp-ext-replace'),
     sass        = require('gulp-sass'),
     rename      = require('gulp-rename'),
-    browserSync = require('browser-sync'),
     svgmin      = require('gulp-svgmin'),
     svgstore    = require('gulp-svgstore'),
     cheerio     = require('gulp-cheerio'),
@@ -14,9 +11,13 @@ var gulp        = require('gulp'),
     newer       = require('gulp-newer'),
     clean       = require('gulp-clean'),
     imagemin    = require('gulp-imagemin'),
+    gulpif      = require('gulp-if'),
+    sourcemaps  = require('gulp-sourcemaps')
+    layouts     = require('handlebars-layouts'),
+    hb          = require('gulp-hb'),
+    browserSync = require('browser-sync'),
     pngquant    = require('imagemin-pngquant'),
     runSequence = require('run-sequence'),
-    gulpif      = require('gulp-if'),
     argv        = require('yargs').argv,
     reload      = browserSync.reload;
 
@@ -82,8 +83,10 @@ gulp.task('styles', function() {
     .pipe(plumber({
       errorHandler: notify.onError({ title: 'Error: Styles Task', message: '<%= error.message %>' })
     }))
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('site.css'))
+    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('build/assets/css/'))
     .pipe(reload({ stream:true }));
 });
