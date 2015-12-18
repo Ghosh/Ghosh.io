@@ -1043,6 +1043,76 @@ abbr {
 abbr[title]:hover {
   cursor: help; }
 
+.btn--primary, .btn--outline {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 12px solid transparent;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  height: auto;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 30px;
+  text-decoration: none;
+  vertical-align: middle; }
+  .btn--primary:hover, .btn--outline:hover {
+    text-decoration: none; }
+  .btn--primary:focus, .btn--outline:focus {
+    outline: none; }
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input,
+select,
+textarea,
+fieldset {
+  box-sizing: border-box;
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 0;
+  outline: 0;
+  width: 100%; }
+
+label {
+  vertical-align: middle; }
+
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  -webkit-appearance: none;
+  height: 50px;
+  padding: 10px 10px;
+  vertical-align: middle; }
+
+select {
+  line-height: 1.75;
+  padding: 10px 10px; }
+
+select:not([multiple]) {
+  height: 50px;
+  vertical-align: middle; }
+
+textarea {
+  line-height: 1.75;
+  padding: 10px 10px; }
+
 .section-heading {
   margin-bottom: 30px;
   margin-top: 60px;
@@ -1250,31 +1320,6 @@ abbr[title]:hover {
 .tal {
   text-align: left; }
 
-.btn--primary, .btn--outline {
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: 12px solid transparent;
-  color: inherit;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  height: auto;
-  line-height: 1.5;
-  margin: 0;
-  padding: 10px 30px;
-  text-decoration: none;
-  vertical-align: middle; }
-  .btn--primary:hover, .btn--outline:hover {
-    text-decoration: none; }
-  .btn--primary:focus, .btn--outline:focus {
-    outline: none; }
-
-::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
 .btn--primary {
   border: solid 2px #479e2b;
   border-radius: 30px;
@@ -1286,6 +1331,7 @@ abbr[title]:hover {
   color: #fff; }
 
 .header {
+  border-top: solid 5px rgba(0, 0, 0, 0.2);
   z-index: 10; }
   .header__inner {
     padding: 40px 0; }
@@ -1347,6 +1393,7 @@ abbr[title]:hover {
     font-size: 19px;
     line-height: 32px;
     color: #868c92;
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     max-width: 445px; }
   .intro__cta {
     float: right; }
@@ -1397,10 +1444,12 @@ abbr[title]:hover {
     font-size: 16px;
     line-height: 28px;
     color: rgba(255, 255, 255, 0.8);
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     margin-top: 15px;
     max-width: 35%; }
   .banner__service-list {
     color: rgba(255, 255, 255, 0.9);
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding-left: 16px; }
   .banner__img {
     position: absolute; }
@@ -1460,7 +1509,8 @@ abbr[title]:hover {
   .cta__byline {
     font-size: 19px;
     line-height: 32px;
-    color: #868c92; }
+    color: #868c92;
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
   .cta__btn {
     margin-top: 5px; }
 
@@ -1520,9 +1570,12 @@ abbr[title]:hover {
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to top, #e53935, #e35d5b);
+      background: linear-gradient(to left, #136a8a, #267871);
       content: '';
       mix-blend-mode: multiply; }
+  .cover--contact {
+    background: linear-gradient(to left, #136a8a, #267871);
+    height: inherit; }
   .moodboard .cover {
     background-color: #0097d4; }
   .oyo .cover {
@@ -1592,12 +1645,28 @@ abbr[title]:hover {
   font-family: "Merriweather", "Georgia", "Times New Roman", "Times", serif;
   font-size: 22px;
   line-height: 40px;
-  margin-bottom: 40px;
-  margin-top: 60px;
   text-align: center; }
 
 .about__text {
   color: #868c92;
   font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+.contact {
+  background-color: #f3f3f3;
+  padding: 50px; }
+  .contact__input, .contact__textarea {
+    border: solid 2px #a2a2a2;
+    background-color: #fff; }
+    .contact__input:focus, .contact__textarea:focus {
+      border: solid 2px #0074d9; }
+  .contact__textarea {
+    margin-top: 38px;
+    height: 250px; }
+  .contact__btn-cont {
+    text-align: center; }
+  .contact__btn {
+    width: initial;
+    margin-top: 30px;
+    display: inline-block; }
 
 /*# sourceMappingURL=site.css.map */

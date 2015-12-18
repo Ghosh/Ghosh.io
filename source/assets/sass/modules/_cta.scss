@@ -19,6 +19,7 @@
   &__byline {
     @include set-font-scale('mega', 'body');
     color: c('text', 'light');
+    font-family: ff('display');
   }
 
   &__btn {

@@ -12,13 +12,16 @@
 
     &:before {
       @include coverer();
-      // background-color: c('background', 'dark');
-      // background-color: c('background', 'dark-blue');
-      // background-color: c('background', 'maroon-red');
-      background: linear-gradient(to top, #e53935 , #e35d5b);
+      // background: linear-gradient(to top, #e53935 , #e35d5b);
+      background: linear-gradient(to left, #136a8a , #267871);
       content: '';
       mix-blend-mode: multiply;
     }
+  }
+
+  &--contact {
+    background: linear-gradient(to left, #136a8a , #267871);
+    height: inherit;
   }
 
   .moodboard & { background-color: c('brand', 'moodboard'); }

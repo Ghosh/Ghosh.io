@@ -61,12 +61,14 @@ $banner-height: 680px;
   &__desc {
     @include set-font-scale('deca', 'body');
     color: rgba(c('neutral', 'milk') , .8);
+    font-family: ff('display');
     margin-top: 15px;
     max-width: 35%;
   }
 
   &__service-list {
     color: rgba(c('neutral', 'milk') , .9);
+    font-family: ff('display');
     padding-left: 16px;
   }
 

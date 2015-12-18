@@ -13,6 +13,8 @@
 @import 'helpers/mixins';
 
 @import 'base/typography';
+@import 'base/button';
+@import 'base/form';
 
 @import 'core/typography';
 @import 'core/layout';
@@ -44,13 +46,42 @@
     font-family: ff('body');
     font-size: 22px;
     line-height: 40px;
-    margin-bottom: 40px;
-    margin-top: 60px;
     text-align: center;
   }
 
   &__text {
     color: c('text', 'light');
     font-family: ff('display');
+  }
+}
+
+
+.contact {
+  background-color: #f3f3f3;
+  padding: 50px;
+
+  &__input,
+  &__textarea {
+    border: solid 2px #a2a2a2;
+    background-color: #fff;
+
+    &:focus {
+      border: solid 2px c('accent', 'secondary');
+    }
+  }
+
+  &__textarea {
+    margin-top: 38px;
+    height: 250px;
+  }
+
+  &__btn-cont {
+    text-align: center;
+  }
+
+  &__btn {
+    width: initial;
+    margin-top: 30px;
+    display: inline-block;
   }
 }
