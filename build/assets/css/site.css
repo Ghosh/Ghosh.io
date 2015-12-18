@@ -1407,14 +1407,14 @@ textarea {
     background-color: #0097d4; }
   .banner--oyo {
     background-color: #b41c03;
-    background-image: url("../images/pattern.png");
+    background-image: url("../images/projects/oyo/pattern.png");
     background-position: center bottom;
     background-repeat: repeat-x; }
   .banner--aldoshik {
     background-color: #e67d21; }
   .banner--zomato {
     background-color: #ad252f;
-    background-image: url("../images/pattern-zom.png");
+    background-image: url("../images/projects/zomato/pattern-zom.png");
     background-repeat: repeat; }
   .banner__inner {
     height: 680px;
@@ -1584,7 +1584,7 @@ textarea {
     background-color: #e67d21; }
   .zomato .cover {
     background-color: #ad252f;
-    background-image: url("../images/pattern-zom.png");
+    background-image: url("../images/projects/zomato/pattern-zom.png");
     background-repeat: repeat; }
   .cover__logo-cont {
     margin-bottom: 90px;
@@ -1654,6 +1654,11 @@ textarea {
 .contact {
   background-color: #f3f3f3;
   padding: 50px; }
+  .contact__byline {
+    font-family: "Merriweather", "Georgia", "Times New Roman", "Times", serif;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center; }
   .contact__input, .contact__textarea {
     border: solid 2px #a2a2a2;
     background-color: #fff; }

@@ -10,7 +10,7 @@ $banner-height: 680px;
 
   &--oyo {
     background-color: c('brand', 'oyo');
-    background-image: url('../images/pattern.png');
+    background-image: url('../images/projects/oyo/pattern.png');
     background-position: center bottom;
     background-repeat: repeat-x;
   }
@@ -21,7 +21,7 @@ $banner-height: 680px;
 
   &--zomato {
     background-color: c('brand', 'zomato');
-    background-image: url('../images/pattern-zom.png');
+    background-image: url('../images/projects/zomato/pattern-zom.png');
     background-repeat: repeat;
   }
 

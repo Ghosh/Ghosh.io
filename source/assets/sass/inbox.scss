@@ -60,6 +60,13 @@
   background-color: #f3f3f3;
   padding: 50px;
 
+  &__byline {
+    font-family: ff('body');
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+  }
+
   &__input,
   &__textarea {
     border: solid 2px #a2a2a2;
