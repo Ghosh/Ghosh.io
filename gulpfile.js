@@ -74,7 +74,7 @@ var gulp        = require('gulp'),
           bustCache: true,
           partials: './source/partials/**/*.hbs',
           helpers: [
-            './node_modules/handlebars-layouts/index.js',
+            './node_modules/handlebars-layouts/index.js'
           ],
         }))
         .pipe(ext_replace('.html'))
