@@ -1285,34 +1285,31 @@ abbr[title]:hover {
   border-radius: 30px;
   color: #fff; }
 
-.header__inner {
-  padding: 40px 0; }
-  .header__inner:before, .header__inner:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.header__logo {
-  fill: #4a4e53;
-  float: left;
-  height: 24px;
-  width: 54px; }
-
-.header__nav {
-  float: left;
-  margin-left: 30px;
-  margin-top: -2px; }
-
-.header__social {
-  float: right;
-  margin-top: -3px; }
-
-.header--absolute {
-  position: absolute;
-  width: 100%; }
-
-.header--white .header__logo {
-  fill: #fff; }
+.header {
+  z-index: 10; }
+  .header__inner {
+    padding: 40px 0; }
+    .header__inner:before, .header__inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .header__logo {
+    fill: #4a4e53;
+    float: left;
+    height: 24px;
+    width: 46px; }
+  .header__nav {
+    float: left;
+    margin-left: 30px;
+    margin-top: -2px; }
+  .header__social {
+    float: right;
+    margin-top: -3px; }
+  .header--absolute {
+    position: absolute;
+    width: 100%; }
+  .header--white .header__logo {
+    fill: #fff; }
 
 .nav {
   list-style-type: none; }
@@ -1507,13 +1504,25 @@ abbr[title]:hover {
     border: solid 1px #e4e4e4;
     color: #868c92; }
 
-.hide {
-  display: none; }
-
 .cover {
   height: 540px;
   padding-top: 126px;
   text-align: center; }
+  .cover--about {
+    background-image: url("../images/about/about.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 470px;
+    position: relative; }
+    .cover--about:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #e53935, #e35d5b);
+      content: '';
+      mix-blend-mode: multiply; }
   .moodboard .cover {
     background-color: #0097d4; }
   .oyo .cover {
@@ -1571,9 +1580,24 @@ abbr[title]:hover {
           background-image: url("../images/projects/zomato/zomato-cover@2x.png");
           background-size: 698px 404px; } }
 
+.hide {
+  display: none; }
+
 .wireframe {
   margin-bottom: 60px;
   margin-left: -35%;
   width: 170%; }
+
+.about__byline {
+  font-family: "Merriweather", "Georgia", "Times New Roman", "Times", serif;
+  font-size: 22px;
+  line-height: 40px;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  text-align: center; }
+
+.about__text {
+  color: #868c92;
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 /*# sourceMappingURL=site.css.map */

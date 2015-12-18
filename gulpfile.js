@@ -118,8 +118,9 @@ var gulp        = require('gulp'),
     });
 
 
-    gulp.task('compile', ['svg', 'hbs', 'styles', 'scripts','images']);
     gulp.task('clean', ['clean:build']);
+    gulp.task('compile', ['svg', 'hbs', 'styles', 'scripts','images']);
+
 
     gulp.task('build', function(callback) {
         (argv.clean == 1) ?

@@ -1,4 +1,5 @@
 .header {
+  z-index: 10;
 
   &__inner {
     @include clearfix();
@@ -9,7 +10,7 @@
     fill: c('text', 'headings');
     float: left;
     height: 24px;
-    width: 54px;
+    width: 46px;
   }
 
   &__nav {

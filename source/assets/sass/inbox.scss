@@ -27,87 +27,30 @@
 @import 'modules/social';
 @import 'modules/cta';
 @import 'modules/objective';
+@import 'modules/cover';
 
 .hide {
   display: none;
 }
 
-
-.cover {
-  height: 540px;
-  padding-top: 126px;
-  text-align: center;
-
-  .moodboard & { background-color: c('brand', 'moodboard'); }
-  .oyo & { background-color: c('brand', 'oyo'); }
-  .aldoshik & { background-color: c('brand', 'aldoshik'); }
-  .zomato & {
-    background-color: c('brand', 'zomato');
-    background-image: url('../images/pattern-zom.png');
-    background-repeat: repeat;
-  }
-
-  &__logo-cont {
-    margin-bottom: 90px;
-    margin-top: 50px;
-  }
-
-  &__logo {
-    fill: c('neutral', 'milk');
-
-    &--moodboard {
-      height: 32px;
-      width: 220px;
-    }
-
-    &--oyo {
-      height: 40px;
-      width: 96px;
-    }
-
-    &--aldoshik {
-      height: 30px;
-      width: 160px;
-    }
-
-    &--zomato {
-      height: 37px;
-      width: 144px;
-    }
-  }
-
-  &__image {
-    display: inline-block;
-    height: 404px;
-    margin-bottom: 40px;
-    width: 698px;
-
-    &--moodboard {
-      @include retina-image('../images/projects/moodboard/moodboard-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/moodboard/moodboard-cover.png') no-repeat;
-    }
-
-    &--oyo {
-      @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/oyo/oyo-cover.png') no-repeat;
-    }
-
-    &--aldoshik {
-      @include retina-image('../images/projects/aldoshik/aldoshik-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/aldoshik/aldoshik-cover.png') no-repeat;
-    }
-
-    &--zomato {
-      @include retina-image('../images/projects/zomato/zomato-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/zomato/zomato-cover.png') no-repeat;
-    }
-
-  }
-}
-
-
 .wireframe {
   margin-bottom: 60px;
   margin-left: -35%;
   width: 170%;
+}
+
+.about {
+  &__byline {
+    font-family: ff('body');
+    font-size: 22px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  &__text {
+    color: c('text', 'light');
+    font-family: ff('display');
+  }
 }

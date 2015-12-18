@@ -1,0 +1,92 @@
+.cover {
+  height: 540px;
+  padding-top: 126px;
+  text-align: center;
+
+  &--about {
+    background-image: url('../images/about/about.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 470px;
+    position: relative;
+
+    &:before {
+      @include coverer();
+      // background-color: c('background', 'dark');
+      // background-color: c('background', 'dark-blue');
+      // background-color: c('background', 'maroon-red');
+      background: linear-gradient(to top, #e53935 , #e35d5b);
+      content: '';
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .moodboard & { background-color: c('brand', 'moodboard'); }
+  .oyo & { background-color: c('brand', 'oyo'); }
+  .aldoshik & { background-color: c('brand', 'aldoshik'); }
+  .zomato & {
+    background-color: c('brand', 'zomato');
+    background-image: url('../images/pattern-zom.png');
+    background-repeat: repeat;
+  }
+
+  // Only project pages
+  &__logo-cont {
+    margin-bottom: 90px;
+    margin-top: 50px;
+  }
+
+  // Only project pages
+  &__logo {
+    fill: c('neutral', 'milk');
+
+    &--moodboard {
+      height: 32px;
+      width: 220px;
+    }
+
+    &--oyo {
+      height: 40px;
+      width: 96px;
+    }
+
+    &--aldoshik {
+      height: 30px;
+      width: 160px;
+    }
+
+    &--zomato {
+      height: 37px;
+      width: 144px;
+    }
+  }
+
+  // Only project pages
+  &__image {
+    display: inline-block;
+    height: 404px;
+    margin-bottom: 40px;
+    width: 698px;
+
+    &--moodboard {
+      @include retina-image('../images/projects/moodboard/moodboard-cover@2x.png', 698px, 404px);
+      background: url('../images/projects/moodboard/moodboard-cover.png') no-repeat;
+    }
+
+    &--oyo {
+      @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
+      background: url('../images/projects/oyo/oyo-cover.png') no-repeat;
+    }
+
+    &--aldoshik {
+      @include retina-image('../images/projects/aldoshik/aldoshik-cover@2x.png', 698px, 404px);
+      background: url('../images/projects/aldoshik/aldoshik-cover.png') no-repeat;
+    }
+
+    &--zomato {
+      @include retina-image('../images/projects/zomato/zomato-cover@2x.png', 698px, 404px);
+      background: url('../images/projects/zomato/zomato-cover.png') no-repeat;
+    }
+
+  }
+}
