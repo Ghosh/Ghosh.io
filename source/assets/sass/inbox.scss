@@ -116,10 +116,10 @@
   &__input,
   &__textarea {
     background-color: #fff;
-    border-bottom: solid 2px #a2a2a2;
+    border-bottom: solid 1px #a2a2a2;
 
     &:focus {
-      border-bottom: solid 2px c('accent', 'primary');
+      border-bottom: solid 1px c('accent', 'primary');
     }
   }
 
@@ -136,5 +136,28 @@
     display: inline-block;
     margin-top: 30px;
     width: initial;
+  }
+}
+
+.thanks {
+  background-color: #f3f3f3;
+  margin-bottom: 80px;
+  padding: 40px 50px;
+  text-align: center;
+
+  &__icon {
+    fill: c('accent', 'primary');
+    width: 60px;
+  }
+
+  &__headline {
+    margin-top: -30px;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  &__byline {
+    font-family: ff('display');
+    padding: 0 80px;
   }
 }

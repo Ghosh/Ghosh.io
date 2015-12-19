@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,36 +93,17 @@
       </div>
 
       <div class="col-s-7">
-        <div class="contact">
+        <div class="thanks">
 
           <div class="row">
 
-            <form class="contact__form form" action="//formspree.io/mail@indrashishghosh.com" method="post">
+            <svg class="thanks__icon"><use xlink:href="#mail" /></svg>
 
-              <div class="col-s-6">
-                <input class="contact__input form__imput" type="text" name="name" placeholder="Name*" required>
-              </div>
+            <h2 class="thanks__headline">Message Successfully sent!</h2>
 
-              <div class="col-s-6">
-                <input class="contact__input form__input" type="email" name="_replyto" placeholder="Email*" required>
-              </div>
-
-              <div class="col-s-12">
-                  <textarea class="contact__textarea form__textarea" name="message" placeholder="Message*" required></textarea>
-              </div>
-
-              <div class="col-s-12">
-                <div class="contact__btn-cont">
-                  <input type="text" name="_gotcha" style="display:none" />
-                  <input type="hidden" name="_subject" value="New message from portfolio!" />
-                  <input type="hidden" name="_next" value="http://localhost:3000/thank-you.html" />
-
-                  <input class="contact__btn btn btn--primary" type="submit" name="name" value="Send Enquiry">
-
-                </div>
-              </div>
-
-            </form>
+            <p class="thanks__byline">
+              Thanks for reaching out to me. I will try and revert back to you as soon as possible.
+            </p>
 
           </div>
 
