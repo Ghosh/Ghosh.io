@@ -1670,26 +1670,63 @@ textarea {
   font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 .contact {
-  padding: 10px 50px;
-  margin-bottom: 80px; }
+  background-color: #f3f3f3;
+  margin-bottom: 80px;
+  padding: 40px 50px; }
+  .contact__headline {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 15px; }
   .contact__byline {
-    font-family: "Merriweather", "Georgia", "Times New Roman", "Times", serif;
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center; }
+    color: #868c92;
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px; }
+  .contact__subheading {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-transform: uppercase; }
+  .contact__social .social__link {
+    margin-left: 0; }
+  .contact__social-link:before, .contact__social-link:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .contact__social-icon {
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px; }
+  .contact__social-label {
+    display: inline-block;
+    float: left;
+    font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0; }
+    .contact__social-label--twitter {
+      color: #55acee; }
+    .contact__social-label--dribbble {
+      color: #ea4c89; }
+    .contact__social-label--github {
+      color: #2d2d2a; }
   .contact__input, .contact__textarea {
-    border: solid 2px #a2a2a2;
-    background-color: #fff; }
+    background-color: #fff;
+    border-bottom: solid 2px #a2a2a2; }
     .contact__input:focus, .contact__textarea:focus {
-      border: solid 2px #0074d9; }
+      border-bottom: solid 2px #479e2b; }
   .contact__textarea {
-    margin-top: 38px;
-    height: 250px; }
+    height: 250px;
+    margin-top: 38px; }
   .contact__btn-cont {
     text-align: center; }
   .contact__btn {
-    width: initial;
+    display: inline-block;
     margin-top: 30px;
-    display: inline-block; }
+    width: initial; }
 
 /*# sourceMappingURL=site.css.map */

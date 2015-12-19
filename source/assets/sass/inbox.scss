@@ -57,30 +57,75 @@
 
 
 .contact {
-  // background-color: #f3f3f3;
-  padding: 10px 50px;
+  background-color: #f3f3f3;
   margin-bottom: 80px;
+  padding: 40px 50px;
+
+  &__headline {
+    @include set-font-scale('mega', 'display');
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
 
   &__byline {
-    font-family: ff('body');
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center;
+    color: c('text', 'light');
+    font-family: ff('display');
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__subheading {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+  }
+
+  &__social {
+    .social__link {
+      margin-left: 0;
+    }
+  }
+
+  &__social-link {
+    @include clearfix();
+  }
+
+  &__social-icon {
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+
+  &__social-label {
+    display: inline-block;
+    float: left;
+    font-family: ff('display');
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &--twitter { color: c('social', 'twitter') }
+    &--dribbble { color: c('social', 'dribbble') }
+    &--github { color: c('social', 'github') }
   }
 
   &__input,
   &__textarea {
-    border: solid 2px #a2a2a2;
     background-color: #fff;
+    border-bottom: solid 2px #a2a2a2;
 
     &:focus {
-      border: solid 2px c('accent', 'secondary');
+      border-bottom: solid 2px c('accent', 'primary');
     }
   }
 
   &__textarea {
-    margin-top: 38px;
     height: 250px;
+    margin-top: 38px;
   }
 
   &__btn-cont {
@@ -88,8 +133,8 @@
   }
 
   &__btn {
-    width: initial;
-    margin-top: 30px;
     display: inline-block;
+    margin-top: 30px;
+    width: initial;
   }
 }
