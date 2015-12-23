@@ -72,6 +72,10 @@ $banner-height: 680px;
     padding-left: 16px;
   }
 
+  &__service-item {
+    color: rgba(c('neutral', 'milk') , .8);
+  }
+
   &__img {
     position: absolute;
 

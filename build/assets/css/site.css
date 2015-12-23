@@ -1451,6 +1451,8 @@ textarea {
     color: rgba(255, 255, 255, 0.9);
     font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding-left: 16px; }
+  .banner__service-item {
+    color: rgba(255, 255, 255, 0.8); }
   .banner__img {
     position: absolute; }
     .banner__img--moodboard {
