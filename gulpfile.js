@@ -1,3 +1,6 @@
+/*
+  TODO: Clean up ifchecks in gulpfile
+ */
 var gulp        = require('gulp'),
     frontMatter = require('gulp-front-matter'),
     ext_replace = require('gulp-ext-replace'),
@@ -50,7 +53,6 @@ var gulp        = require('gulp'),
         .pipe(reload({ stream:true }));
     });
 
-
     gulp.task('images', function() {
       return gulp.src('source/assets/images/**/*.*')
       .pipe(newer('build/assets/images'))
@@ -89,10 +91,10 @@ var gulp        = require('gulp'),
         .pipe(plumber({
           errorHandler: notify.onError({ title: 'Error: Styles Task', message: '<%= error.message %>' })
         }))
-        .pipe(sourcemaps.init())
+        .pipe(gulpif( argv.build, gutil.noop(), sourcemaps.init({loadMaps: true}) ))
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('site.css'))
-        .pipe(sourcemaps.write('/'))
+        .pipe(gulpif( argv.build, gutil.noop(), sourcemaps.write('./') ))
         .pipe(gulp.dest('build/assets/css/'))
         .pipe(reload({ stream:true }));
     });
@@ -108,11 +110,11 @@ var gulp        = require('gulp'),
       return b.bundle()
         .pipe(source('inbox.js'))
         .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true}))
-            .pipe(uglify())
-            .on('error', gutil.log)
+        .pipe(gulpif( argv.build, gutil.noop(), sourcemaps.init({loadMaps: true}) ))
+        .pipe(gulpif(argv.build, uglify()))
+        .on('error', gutil.log)
         .pipe(rename('site.js'))
-        .pipe(sourcemaps.write('./'))
+        .pipe(gulpif( argv.build, gutil.noop(), sourcemaps.write('./') ))
         .pipe(gulp.dest('build/assets/js/'))
         .pipe(reload({ stream:true }));
     });
@@ -123,9 +125,9 @@ var gulp        = require('gulp'),
 
 
     gulp.task('build', function(callback) {
-        (argv.clean == 1) ?
-        runSequence('clean:build', 'compile', callback) :
-        runSequence('compile', callback) ;
+      (argv.clean == 1) ?
+      runSequence('clean:build', 'compile', callback) :
+      runSequence('compile', callback) ;
     });
 
     gulp.task('go', ['build'], function() {
