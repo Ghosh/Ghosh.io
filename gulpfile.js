@@ -1,6 +1,7 @@
 /*
   TODO: Clean up ifchecks in gulpfile
   TODO: Break gulpfile into multiple modules
+  TODO: Fix watch notification
  */
 var gulp          = require('gulp'),
     frontMatter   = require('gulp-front-matter'),
