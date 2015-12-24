@@ -1,34 +1,41 @@
 /*
   TODO: Clean up ifchecks in gulpfile
+  TODO: Break gulpfile into multiple modules
  */
-var gulp        = require('gulp'),
-    frontMatter = require('gulp-front-matter'),
-    ext_replace = require('gulp-ext-replace'),
-    sass        = require('gulp-sass'),
-    rename      = require('gulp-rename'),
-    svgmin      = require('gulp-svgmin'),
-    svgstore    = require('gulp-svgstore'),
-    cheerio     = require('gulp-cheerio'),
-    plumber     = require('gulp-plumber'),
-    notify      = require("gulp-notify"),
-    newer       = require('gulp-newer'),
-    clean       = require('gulp-clean'),
-    imagemin    = require('gulp-imagemin'),
-    gulpif      = require('gulp-if'),
-    sourcemaps  = require('gulp-sourcemaps')
-    layouts     = require('handlebars-layouts'),
-    hb          = require('gulp-hb'),
-    browserSync = require('browser-sync'),
-    pngquant    = require('imagemin-pngquant'),
-    runSequence = require('run-sequence'),
-    gutil       = require('gulp-util'),
-    uglify      = require('gulp-uglify'),
-    browserify  = require('browserify'),
-    // debowerify  = require('debowerify'), // --> Causes wierd issue with gulp hb
-    source      = require('vinyl-source-stream'),
-    buffer      = require('vinyl-buffer'),
-    argv        = require('yargs').argv,
-    reload      = browserSync.reload;
+var gulp          = require('gulp'),
+    frontMatter   = require('gulp-front-matter'),
+    ext_replace   = require('gulp-ext-replace'),
+    sass          = require('gulp-sass'),
+    postcss       = require('gulp-postcss'),
+    autoprefixer  = require('autoprefixer'),
+    willChange    = require('postcss-will-change'),
+    vmin          = require('postcss-vmin'),
+    mqpacker      = require('css-mqpacker'),
+    cssnano       = require('cssnano'),
+    rename        = require('gulp-rename'),
+    svgmin        = require('gulp-svgmin'),
+    svgstore      = require('gulp-svgstore'),
+    cheerio       = require('gulp-cheerio'),
+    plumber       = require('gulp-plumber'),
+    notify        = require("gulp-notify"),
+    newer         = require('gulp-newer'),
+    clean         = require('gulp-clean'),
+    imagemin      = require('gulp-imagemin'),
+    gulpif        = require('gulp-if'),
+    sourcemaps    = require('gulp-sourcemaps')
+    layouts       = require('handlebars-layouts'),
+    hb            = require('gulp-hb'),
+    browserSync   = require('browser-sync'),
+    pngquant      = require('imagemin-pngquant'),
+    runSequence   = require('run-sequence'),
+    gutil         = require('gulp-util'),
+    uglify        = require('gulp-uglify'),
+    browserify    = require('browserify'),
+    // debowerify = require('debowerify'), // --> Causes wierd issue with gulp hb
+    source        = require('vinyl-source-stream'),
+    buffer        = require('vinyl-buffer'),
+    argv          = require('yargs').argv,
+    reload        = browserSync.reload;
 
 
     gulp.task('clean:build', function () {
@@ -87,12 +94,20 @@ var gulp        = require('gulp'),
 
 
     gulp.task('styles', function() {
+      var processors = [
+        willChange(),
+        vmin(),
+        mqpacker(),
+        autoprefixer({ browsers: ['last 2 versions'] })
+      ];
       gulp.src('source/assets/sass/**/*.scss')
         .pipe(plumber({
           errorHandler: notify.onError({ title: 'Error: Styles Task', message: '<%= error.message %>' })
         }))
         .pipe(gulpif( argv.build, gutil.noop(), sourcemaps.init({loadMaps: true}) ))
         .pipe(sass().on('error', sass.logError))
+        .pipe(postcss(processors))
+        .pipe(gulpif(argv.build, postcss([cssnano()])))
         .pipe(rename('site.css'))
         .pipe(gulpif( argv.build, gutil.noop(), sourcemaps.write('./') ))
         .pipe(gulp.dest('build/assets/css/'))
@@ -126,8 +141,8 @@ var gulp        = require('gulp'),
 
     gulp.task('build', function(callback) {
       (argv.clean == 1) ?
-      runSequence('clean:build', 'compile', callback) :
-      runSequence('compile', callback) ;
+        runSequence('clean:build', 'compile', callback) :
+        runSequence('compile', callback) ;
     });
 
     gulp.task('go', ['build'], function() {
@@ -141,4 +156,6 @@ var gulp        = require('gulp'),
       gulp.watch('source/assets/images/**/*.*', ['images']);
       gulp.watch('source/assets/sass/**/*.scss', ['styles']);
       gulp.watch('source/assets/js/**/*.js', ['scripts']);
+
+      notify("Watching for changes!");
     });
