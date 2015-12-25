@@ -11,6 +11,7 @@
 @import '../bower/stylekit/stylekit';
 
 @import 'helpers/mixins';
+@import 'helpers/utils';
 
 @import 'base/typography';
 @import 'base/button';
@@ -18,9 +19,7 @@
 
 @import 'core/typography';
 @import 'core/layout';
-@import 'core/utils';
-
-@import 'components/button';
+@import 'core/button';
 
 @import 'modules/header';
 @import 'modules/nav';
@@ -32,11 +31,3 @@
 @import 'modules/cover';
 @import 'modules/about';
 @import 'modules/contact';
-
-
-
-.wireframe {
-  margin-bottom: 60px;
-  margin-left: -35%;
-  width: 170%;
-}
