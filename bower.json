@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "sanitize-css": "~3.0.0"
+    "sanitize-css": "~3.0.0",
+    "stylekit": "*"
   }
 }
