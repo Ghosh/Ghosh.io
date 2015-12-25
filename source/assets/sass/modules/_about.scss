@@ -1,0 +1,13 @@
+.about {
+  &__byline {
+    font-family: ff('body');
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  &__text {
+    color: c('text', 'light');
+    font-family: ff('display');
+  }
+}

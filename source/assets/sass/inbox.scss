@@ -30,134 +30,13 @@
 @import 'modules/cta';
 @import 'modules/objective';
 @import 'modules/cover';
+@import 'modules/about';
+@import 'modules/contact';
 
-.hide {
-  display: none;
-}
+
 
 .wireframe {
   margin-bottom: 60px;
   margin-left: -35%;
   width: 170%;
-}
-
-.about {
-  &__byline {
-    font-family: ff('body');
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center;
-  }
-
-  &__text {
-    color: c('text', 'light');
-    font-family: ff('display');
-  }
-}
-
-
-.contact {
-  background-color: #f3f3f3;
-  margin-bottom: 80px;
-  padding: 40px 50px;
-
-  &__headline {
-    @include set-font-scale('mega', 'display');
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-
-  &__byline {
-    color: c('text', 'light');
-    font-family: ff('display');
-    font-size: 18px;
-    line-height: 30px;
-    margin-bottom: 10px;
-  }
-
-  &__subheading {
-    color: #888;
-    font-size: 13px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-top: 30px;
-    text-transform: uppercase;
-  }
-
-  &__social {
-    .social__link {
-      margin-left: 0;
-    }
-  }
-
-  &__social-link {
-    @include clearfix();
-  }
-
-  &__social-icon {
-    float: left;
-    margin-right: 10px;
-    margin-top: 4px;
-  }
-
-  &__social-label {
-    display: inline-block;
-    float: left;
-    font-family: ff('display');
-    font-size: 16px;
-    margin-bottom: 0;
-    margin-top: 0;
-
-    &--twitter { color: c('social', 'twitter') }
-    &--dribbble { color: c('social', 'dribbble') }
-    &--github { color: c('social', 'github') }
-  }
-
-  &__input,
-  &__textarea {
-    background-color: #fff;
-    border-bottom: solid 1px #a2a2a2;
-
-    &:focus {
-      border-bottom: solid 1px c('accent', 'primary');
-    }
-  }
-
-  &__textarea {
-    height: 250px;
-    margin-top: 38px;
-  }
-
-  &__btn-cont {
-    text-align: center;
-  }
-
-  &__btn {
-    display: inline-block;
-    margin-top: 30px;
-    width: initial;
-  }
-}
-
-.thanks {
-  background-color: #f3f3f3;
-  margin-bottom: 80px;
-  padding: 40px 50px;
-  text-align: center;
-
-  &__icon {
-    fill: c('accent', 'primary');
-    width: 60px;
-  }
-
-  &__headline {
-    margin-top: -30px;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-
-  &__byline {
-    font-family: ff('display');
-    padding: 0 80px;
-  }
 }
