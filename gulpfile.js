@@ -35,8 +35,15 @@ var gulp          = require('gulp'),
     // debowerify = require('debowerify'), // --> Causes wierd issue with gulp hb
     source        = require('vinyl-source-stream'),
     buffer        = require('vinyl-buffer'),
+    deploy        = require('gulp-gh-pages'),
+    file          = require('gulp-file'),
     argv          = require('yargs').argv,
     reload        = browserSync.reload;
+
+
+    var config = {
+      cname: 'www.ghosh.io'
+    };
 
 
     gulp.task('clean:build', function () {
@@ -44,6 +51,10 @@ var gulp          = require('gulp'),
       		.pipe(clean());
     });
 
+    gulp.task('cname', function () {
+      return file('CNAME', config.cname, {src: true})
+        .pipe(gulp.dest('build/'))
+    });
 
     gulp.task('svg', function () {
       gulp.src('./source/assets/svg/**/*.svg')
@@ -137,7 +148,7 @@ var gulp          = require('gulp'),
 
 
     gulp.task('clean', ['clean:build']);
-    gulp.task('compile', ['svg', 'hbs', 'styles', 'scripts','images']);
+    gulp.task('compile', ['svg', 'hbs', 'styles', 'scripts','images', 'cname']);
 
 
     gulp.task('build', function(callback) {
@@ -159,4 +170,12 @@ var gulp          = require('gulp'),
       gulp.watch('source/assets/js/**/*.js', ['scripts']);
 
       notify("Watching for changes!");
+    });
+
+    gulp.task('deploy', function () {
+      return gulp
+        .src('./build/**/*')
+        .pipe(deploy({
+            'remoteUrl' : 'git@github.com:Ghosh/Ghosh.io.git'
+        }));
     });
