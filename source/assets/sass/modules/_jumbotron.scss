@@ -1,0 +1,81 @@
+.jumbotron {
+  background-color: c('accent', 'secondary');
+  border-radius: 5px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    @include coverer();
+    border-radius: 5px;
+    content: '';
+    opacity: .8;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &__inner {
+    @include centerer();
+    text-align: center;
+  }
+
+  &__logo {
+    display: inline-block;
+    fill: c('neutral', 'milk');
+
+    &--uigradients {
+      height: 70px;
+      opacity: .9;
+      width: 200px;
+    }
+
+    &--cssfilters {
+      height: 115px;
+      opacity: .9;
+      width: 180px;
+    }
+  }
+
+  &__byline {
+    @include set-font-scale('deci', 'display');
+    color: c('neutral', 'milk');
+    font-family: ff('display');
+    opacity: .8;
+  }
+
+  &--uigradients {
+    background-color: #516395;
+    background-image: url('../images/lab/uigradients/uigradients.png');
+    background-position: right bottom;
+
+    &:before {
+      background: linear-gradient(to left, #614385 , #516395);
+    }
+
+    &:hover {
+      &:before {
+        opacity: 0.9;
+      }
+    }
+
+  }
+
+  &--cssfilters {
+    background-color: #292E36;
+    background-image: url('../images/lab/cssfilters/cssfilters.png');
+    background-position: left bottom;
+
+    @include breakpoint('large') {
+      background-size: 90%;
+    }
+
+    &:before {
+      background: #292E36;
+    }
+
+    &:hover {
+      &:before {
+        opacity: .9;
+      }
+    }
+  }
+}
