@@ -21,6 +21,10 @@
     color: c('text', 'light');
     font-family: ff('display');
     max-width: 445px;
+
+    &--wide {
+      max-width: 700px;
+    }
   }
 
   &__cta {
