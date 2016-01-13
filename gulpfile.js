@@ -68,7 +68,7 @@ var gulp          = require('gulp'),
           parserOptions: { xmlMode: true }
         }))
         .pipe(ext_replace('.hbs'))
-        .pipe(gulp.dest('./source/partials/'))
+        .pipe(gulp.dest('./source/templates/partials/'))
         .pipe(reload({ stream:true }));
     });
 
@@ -86,14 +86,17 @@ var gulp          = require('gulp'),
 
 
     gulp.task('hbs', function () {
-      gulp.src(['source/**/*.hbs', '!source/partials/**/*.hbs'])
+      gulp.src(['source/templates/**/*.hbs', '!source/templates/partials/**/*.hbs', '!source/templates/layouts/**/*.hbs'])
         .pipe(plumber({
           errorHandler: notify.onError({ title: 'Error: Handlebars Task', message: '<%= error.message %>' })
         }))
         .pipe(frontMatter())
         .pipe(hb({
           bustCache: true,
-          partials: './source/partials/**/*.hbs',
+          partials: [
+              './source/templates/partials/**/*.hbs',
+              './source/templates/layouts/**/*.hbs'
+          ],
           helpers: [
             './node_modules/handlebars-layouts/index.js'
           ],
