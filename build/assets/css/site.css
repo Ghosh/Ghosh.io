@@ -1254,7 +1254,8 @@ textarea {
 .cover {
   height: 320px;
   padding-top: 126px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 40px; }
   .cover--about {
     background-image: url("../images/about/about.png");
     background-position: center bottom;
@@ -1462,7 +1463,23 @@ textarea {
       background: #292E36; }
     .jumbotron--cssfilters:hover:before {
       opacity: .9; }
-    @media all and (min-width: 10px) {
+
+.minigrid {
+  /* Masonry container */
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px; }
+
+.minigrid-item {
+  /* Masonry bricks or child elements */
+  display: inline-block;
+  margin: 0 0 10px;
+  width: 100%; }
+
+@media all and (min-width: 10px) {
   .col-s-1 {
     width: 8.33333%; }
   .col-s-offset-1 {
@@ -1567,7 +1584,8 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     float: none; } }
-    @media all and (min-width: 640px) {
+
+@media all and (min-width: 640px) {
   .col-m-1 {
     width: 8.33333%; }
   .col-m-offset-1 {
@@ -1672,7 +1690,8 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     float: none; } }
-    @media all and (min-width: 1040px) {
+
+@media all and (min-width: 1040px) {
   .col-l-1 {
     width: 8.33333%; }
   .col-l-offset-1 {
@@ -1777,15 +1796,18 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     float: none; } }
-    @media (min-width: 0) and (max-width: 639px) {
+
+@media (min-width: 0) and (max-width: 639px) {
   .hide-when-small {
     display: none; } }
-    @media (min-width: 640px) and (max-width: 1039px) {
+
+@media (min-width: 640px) and (max-width: 1039px) {
   .hide-when-medium {
     display: none; }
   .show-when-medium {
     display: block !important; } }
-    @media (min-width: 1040px) {
+
+@media (min-width: 1040px) {
   .hide-when-large {
     display: none; }
   .hide-large-onwards {
@@ -1820,6 +1842,8 @@ textarea {
   .banner .banner__text {
     margin-bottom: initial;
     text-align: left; }
+  .cover__logo-cont {
+    margin-bottom: 90px !important; }
   .cover__image {
     height: 404px;
     margin-bottom: 40px;
@@ -1834,12 +1858,14 @@ textarea {
     margin-top: 30px; }
   .jumbotron--cssfilters {
     background-size: 90%; } }
-    @media (min-width: 10px) {
+
+@media (min-width: 10px) {
   .hide-small-onwards {
     display: none; }
   .show-small-onwards {
     display: block !important; } }
-    @media (min-width: 640px) {
+
+@media (min-width: 640px) {
   .hide-medium-onwards {
     display: none; }
   .show-medium-onwards {
@@ -1864,39 +1890,38 @@ textarea {
     margin-left: 2%;
     width: 48%; }
   .cover {
-    height: 540px; }
+    height: 540px;
+    margin-bottom: 0; }
   .cover__logo-cont {
-    margin-bottom: 90px;
+    margin-bottom: 30px;
     margin-top: 50px; }
   .cover__image {
-    height: 404px; } }
-    @media (max-width: 10px) {
+    height: 404px; }
+  .minigrid {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2; } }
+
+@media (max-width: 10px) {
   .hide-upto-small {
     display: none; }
   .show-upto-small {
     display: block !important; } }
-    @media (max-width: 640px) {
+
+@media (max-width: 640px) {
   .hide-upto-medium {
     display: none; }
   .show-upto-medium {
     display: block !important; } }
-    @media (max-width: 1040px) {
+
+@media (max-width: 1040px) {
   .hide-upto-large {
     display: none; }
   .show-upto-large {
     display: block !important; } }
-    @media (min-width: 10px) and (max-width: 639px) {
+
+@media (min-width: 10px) and (max-width: 639px) {
   .show-when-small {
     display: block !important; } }
-    @media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  .cover__image--oyo {
-    background-image: url("../images/projects/oyo/oyo-cover@2x.png");
-    background-size: 698px 404px; }
-  .cover__image--aldoshik {
-    background-image: url("../images/projects/aldoshik/aldoshik-cover@2x.png");
-    background-size: 698px 404px; }
-  .cover__image--zomato {
-    background-image: url("../images/projects/zomato/zomato-cover@2x.png");
-    background-size: 698px 404px; } }
 
 /*# sourceMappingURL=site.css.map */

@@ -2,9 +2,11 @@
   height: 320px;
   padding-top: 126px;
   text-align: center;
+  margin-bottom: 40px;
 
   @include breakpoint('medium') {
     height: 540px;
+    margin-bottom: 0;
   }
 
   &--about {
@@ -43,8 +45,12 @@
     margin-bottom: 20px;
 
     @include breakpoint('medium') {
-      margin-bottom: 90px;
+      margin-bottom: 30px;
       margin-top: 50px;
+    };
+
+    @include breakpoint('large') {
+      margin-bottom: 90px !important;
     };
   }
 
@@ -100,17 +106,17 @@
     }
 
     &--oyo {
-      @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
+      // @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
       background-image: url('../images/projects/oyo/oyo-cover.png');
     }
 
     &--aldoshik {
-      @include retina-image('../images/projects/aldoshik/aldoshik-cover@2x.png', 698px, 404px);
+      // @include retina-image('../images/projects/aldoshik/aldoshik-cover@2x.png', 698px, 404px);
       background-image: url('../images/projects/aldoshik/aldoshik-cover.png');
     }
 
     &--zomato {
-      @include retina-image('../images/projects/zomato/zomato-cover@2x.png', 698px, 404px);
+      // @include retina-image('../images/projects/zomato/zomato-cover@2x.png', 698px, 404px);
       background-image: url('../images/projects/zomato/zomato-cover.png');
     }
 
