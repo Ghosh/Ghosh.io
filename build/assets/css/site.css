@@ -1333,7 +1333,7 @@ textarea {
 .contact {
   background-color: #f3f3f3;
   margin-bottom: 80px;
-  padding: 40px 50px; }
+  padding: 20px 30px; }
   .contact__headline {
     font-size: 24px;
     line-height: 32px;
@@ -1352,8 +1352,10 @@ textarea {
     margin-bottom: 10px;
     margin-top: 30px;
     text-transform: uppercase; }
-  .contact__social .social__link {
-    margin-left: 0; }
+  .contact__social {
+    margin-bottom: 30px; }
+    .contact__social .social__link {
+      margin-left: 0; }
   .contact__social-link:before, .contact__social-link:after {
     content: "";
     display: table;
@@ -1379,14 +1381,16 @@ textarea {
     background-color: #fff; }
     .contact__input:focus, .contact__textarea:focus {
       border-bottom: solid 1px #479e2b; }
+  .contact__input {
+    margin-bottom: 20px; }
   .contact__textarea {
     height: 250px;
-    margin-top: 38px; }
+    margin-top: 28px; }
   .contact__btn-cont {
     text-align: center; }
   .contact__btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 10px;
     width: initial; }
 
 .thanks {
@@ -1398,9 +1402,9 @@ textarea {
     fill: #479e2b;
     width: 60px; }
   .thanks__headline {
-    margin-top: -30px;
+    font-size: 18px;
     margin-bottom: 15px;
-    font-size: 18px; }
+    margin-top: -30px; }
   .thanks__byline {
     font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding: 0 80px; }
@@ -1814,6 +1818,14 @@ textarea {
   .banner .banner__text {
     margin-bottom: initial;
     text-align: left; }
+  .contact {
+    padding: 40px 50px; }
+  .contact__input {
+    margin-bottom: 0; }
+  .contact__textarea {
+    margin-top: 38px; }
+  .contact__btn {
+    margin-top: 30px; }
   .jumbotron--cssfilters {
     background-size: 90%; } }
     @media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
