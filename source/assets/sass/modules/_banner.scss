@@ -1,3 +1,4 @@
+// scss-lint:disable ImportantRule
 $banner-height: 680px;
 
 .banner {
@@ -31,9 +32,9 @@ $banner-height: 680px;
     position: relative;
     text-align: center;
 
-    @include breakpoint('large'){
-      text-align: initial;
+    @include breakpoint('large') {
       padding: 70px 0;
+      text-align: initial;
     };
   }
 
@@ -68,8 +69,8 @@ $banner-height: 680px;
     color: rgba(c('neutral', 'milk') , .8);
     font-family: ff('display');
     margin: auto;
-    margin-top: 15px;
     margin-bottom: 20px;
+    margin-top: 15px;
     max-width: 100%;
 
     @include breakpoint('medium') {
@@ -85,8 +86,8 @@ $banner-height: 680px;
   &__service-list {
     color: rgba(c('neutral', 'milk') , .9);
     font-family: ff('display');
-    padding-left: 16px;
     list-style-type: none;
+    padding-left: 16px;
 
     @include breakpoint('large') {
       list-style-type: disc;
@@ -139,15 +140,14 @@ $banner-height: 680px;
     margin-top: 10px;
     opacity: .7;
 
-
     &:hover {
       opacity: .9;
     }
   }
 
   .banner__text {
-    text-align: center;
     margin-bottom: 40px;
+    text-align: center;
 
     @include breakpoint('large') {
       margin-bottom: initial;
