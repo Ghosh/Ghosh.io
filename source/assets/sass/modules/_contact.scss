@@ -1,7 +1,12 @@
 .contact {
   background-color: #f3f3f3;
   margin-bottom: 80px;
-  padding: 40px 50px;
+  padding: 20px 30px;
+
+  @include breakpoint('large') {
+    padding: 40px 50px;
+  };
+
 
   &__headline {
     @include set-font-scale('mega', 'display');
@@ -27,6 +32,7 @@
   }
 
   &__social {
+    margin-bottom: 30px;
     .social__link {
       margin-left: 0;
     }
@@ -64,9 +70,21 @@
     }
   }
 
+  &__input {
+    margin-bottom: 20px;
+
+    @include breakpoint('large') {
+      margin-bottom: 0;
+    }
+  }
+
   &__textarea {
     height: 250px;
-    margin-top: 38px;
+    margin-top: 28px;
+
+    @include breakpoint('large') {
+      margin-top: 38px;
+    };
   }
 
   &__btn-cont {
@@ -75,8 +93,12 @@
 
   &__btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 10px;
     width: initial;
+
+    @include breakpoint('large') {
+      margin-top: 30px;
+    };
   }
 }
 
@@ -92,9 +114,9 @@
   }
 
   &__headline {
-    margin-top: -30px;
-    margin-bottom: 15px;
     font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: -30px;
   }
 
   &__byline {

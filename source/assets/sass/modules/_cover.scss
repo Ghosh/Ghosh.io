@@ -1,7 +1,13 @@
 .cover {
-  height: 540px;
+  height: 320px;
   padding-top: 126px;
   text-align: center;
+  margin-bottom: 40px;
+
+  @include breakpoint('medium') {
+    height: 540px;
+    margin-bottom: 0;
+  }
 
   &--about {
     background-image: url('../images/about/about.png');
@@ -36,8 +42,16 @@
 
   // Only project pages
   &__logo-cont {
-    margin-bottom: 90px;
-    margin-top: 50px;
+    margin-bottom: 20px;
+
+    @include breakpoint('medium') {
+      margin-bottom: 30px;
+      margin-top: 50px;
+    };
+
+    @include breakpoint('large') {
+      margin-bottom: 90px !important;
+    };
   }
 
   // Only project pages
@@ -67,29 +81,43 @@
 
   // Only project pages
   &__image {
+    background-position: center;
+    background-repeat: no-repeat;;
+    background-size: contain;
     display: inline-block;
-    height: 404px;
-    margin-bottom: 40px;
-    width: 698px;
+    height: 250px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint('medium') {
+      height: 404px;
+    };
+
+    @include breakpoint('large') {
+      height: 404px;
+      margin-bottom: 40px;
+      width: 698px;
+    };
 
     &--moodboard {
-      @include retina-image('../images/projects/moodboard/moodboard-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/moodboard/moodboard-cover.png') no-repeat;
+      // @include retina-image('../images/projects/moodboard/moodboard-cover@2x.png', 698px, 404px);
+      background-image: url('../images/projects/moodboard/moodboard-cover.png');
     }
 
     &--oyo {
-      @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/oyo/oyo-cover.png') no-repeat;
+      // @include retina-image('../images/projects/oyo/oyo-cover@2x.png', 698px, 404px);
+      background-image: url('../images/projects/oyo/oyo-cover.png');
     }
 
     &--aldoshik {
-      @include retina-image('../images/projects/aldoshik/aldoshik-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/aldoshik/aldoshik-cover.png') no-repeat;
+      // @include retina-image('../images/projects/aldoshik/aldoshik-cover@2x.png', 698px, 404px);
+      background-image: url('../images/projects/aldoshik/aldoshik-cover.png');
     }
 
     &--zomato {
-      @include retina-image('../images/projects/zomato/zomato-cover@2x.png', 698px, 404px);
-      background: url('../images/projects/zomato/zomato-cover.png') no-repeat;
+      // @include retina-image('../images/projects/zomato/zomato-cover@2x.png', 698px, 404px);
+      background-image: url('../images/projects/zomato/zomato-cover.png');
     }
 
   }

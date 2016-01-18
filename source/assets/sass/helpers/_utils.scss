@@ -51,3 +51,133 @@
 .tal { text-align: left; }
 
 .hide { display: none; }
+
+
+
+%hide-when-small,
+.hide-when-small {
+	@media (min-width: 0) and (max-width: bp('medium') - 1) {
+		display: none;
+	}
+}
+
+%hide-when-medium,
+.hide-when-medium {
+	@media (min-width: bp('medium')) and (max-width: bp('large') - 1) {
+		display: none;
+	}
+}
+
+%hide-when-large,
+.hide-when-large {
+	@media (min-width: bp('large')) {
+		display: none;
+	}
+}
+
+%hide-small-onwards,
+.hide-small-onwards {
+	@media (min-width: bp('small')) {
+		display: none;
+	}
+}
+
+%hide-medium-onwards,
+.hide-medium-onwards {
+	@media (min-width: bp('medium')) {
+		display: none;
+	}
+}
+
+%hide-large-onwards,
+.hide-large-onwards {
+	@media (min-width: bp('large')) {
+		display: none;
+	}
+}
+
+%hide-upto-small,
+.hide-upto-small {
+	@media (max-width: bp('small')) {
+		display: none;
+	}
+}
+
+%hide-upto-medium,
+.hide-upto-medium {
+	@media (max-width: bp('medium')) {
+		display: none;
+	}
+}
+
+%hide-upto-large,
+.hide-upto-large {
+	@media (max-width: bp('large')) {
+		display: none;
+	}
+}
+
+
+
+%show-when-small,
+.show-when-small {
+	@media (min-width: bp('small')) and (max-width: bp('medium') - 1) {
+		display: block !important;
+	}
+}
+
+%show-when-medium,
+.show-when-medium {
+	@media (min-width: bp('medium')) and (max-width: bp('large') - 1) {
+		display: block !important;
+	}
+}
+
+%show-when-large,
+.show-when-large {
+	@media (min-width: bp('large')) {
+		display: block !important;
+	}
+}
+
+%show-small-onwards,
+.show-small-onwards {
+	@media (min-width: bp('small')) {
+		display: block !important;
+	}
+}
+
+%show-medium-onwards,
+.show-medium-onwards {
+	@media (min-width: bp('medium')) {
+		display: block !important;
+	}
+}
+
+%show-large-onwards,
+.show-large-onwards {
+	@media (min-width: bp('large')) {
+		display: block !important;
+	}
+}
+
+%show-upto-small,
+.show-upto-small {
+	@media (max-width: bp('small')) {
+		display: block !important;
+	}
+}
+
+%show-upto-medium,
+.show-upto-medium {
+	@media (max-width: bp('medium')) {
+		display: block !important;
+	}
+}
+
+%show-upto-large,
+.show-upto-large {
+	@media (max-width: bp('large')) {
+		display: block !important;
+	}
+}

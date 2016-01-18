@@ -1,3 +1,4 @@
+// scss-lint:disable ImportantRule
 $banner-height: 680px;
 
 .banner {
@@ -28,8 +29,13 @@ $banner-height: 680px;
   &__inner {
     @include clearfix();
     height: $banner-height;
-    padding: 70px 0;
     position: relative;
+    text-align: center;
+
+    @include breakpoint('large') {
+      padding: 70px 0;
+      text-align: initial;
+    };
   }
 
   &__logo {
@@ -62,14 +68,30 @@ $banner-height: 680px;
     @include set-font-scale('deca', 'body');
     color: rgba(c('neutral', 'milk') , .8);
     font-family: ff('display');
+    margin: auto;
+    margin-bottom: 20px;
     margin-top: 15px;
-    max-width: 35%;
+    max-width: 100%;
+
+    @include breakpoint('medium') {
+      max-width: 65%;
+    };
+
+    @include breakpoint('large') {
+      margin-left: 0;
+      max-width: 35% !important;
+    };
   }
 
   &__service-list {
     color: rgba(c('neutral', 'milk') , .9);
     font-family: ff('display');
+    list-style-type: none;
     padding-left: 16px;
+
+    @include breakpoint('large') {
+      list-style-type: disc;
+    };
   }
 
   &__service-item {
@@ -77,29 +99,39 @@ $banner-height: 680px;
   }
 
   &__img {
-    position: absolute;
+    max-width: 100%;
+
+    @include breakpoint('large') {
+      position: absolute;
+    }
 
     &--moodboard {
-      // bottom: -46px;
-      // right: -250px;
-      bottom: -46px;
-      right: -120px;
-      width: 780px;
+      @include breakpoint('large') {
+        bottom: -46px;
+        right: -120px;
+        width: 780px;
+      }
     }
 
     &--oyo {
-      bottom: -86px;
-      right: -70px;
+      @include breakpoint('large') {
+        bottom: -86px;
+        right: -70px;
+      };
     }
 
     &--aldoshik {
-      bottom: -46px;
-      right: -250px;
+      @include breakpoint('large') {
+        bottom: -46px;
+        right: -250px;
+      };
     }
 
     &--zomato {
-      bottom: -46px;
-      right: -250px;
+      @include breakpoint('large') {
+        bottom: -46px;
+        right: -250px;
+      };
     }
   }
 
@@ -108,9 +140,18 @@ $banner-height: 680px;
     margin-top: 10px;
     opacity: .7;
 
-
     &:hover {
       opacity: .9;
     }
+  }
+
+  .banner__text {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include breakpoint('large') {
+      margin-bottom: initial;
+      text-align: left;
+    };
   }
 }

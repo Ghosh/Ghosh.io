@@ -32,3 +32,19 @@
 @import 'modules/about';
 @import 'modules/contact';
 @import 'modules/jumbotron';
+
+
+.minigrid { /* Masonry container */
+  column-count: 1;
+  column-gap: 10px;
+
+  @include breakpoint('medium') {
+    column-count: 2;
+  };
+}
+
+.minigrid-item { /* Masonry bricks or child elements */
+  display: inline-block;
+  margin: 0 0 10px;
+  width: 100%;
+}

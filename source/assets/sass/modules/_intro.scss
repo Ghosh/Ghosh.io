@@ -7,7 +7,9 @@
   }
 
   &__text {
-    float: left;
+    @include breakpoint('medium') {
+      float: left;
+    };
   }
 
   &__headline {
@@ -28,7 +30,10 @@
   }
 
   &__cta {
-    float: right;
+    @include breakpoint('medium') {
+      float: right;
+    };
+
   }
 
   &__btn {
