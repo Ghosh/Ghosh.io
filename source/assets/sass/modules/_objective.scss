@@ -3,9 +3,14 @@
   @include clearfix();
   list-style-type: none;
   margin-bottom: 60px;
-  margin-left: -30%;
   margin-top: 50px;
-  width: 160%;
+  width: 100%;
+  padding-left: 0 !important;
+
+  @include breakpoint('medium') {
+    margin-left: -30%;
+    width: 160%;
+  }
 
   &__item {
     align-items: center;
@@ -31,15 +36,19 @@
 
   &--triple {
     .objective__item {
-      margin-left: 2%;
-      width: 32%;
+      @include breakpoint('medium') {
+        margin-left: 2%;
+        width: 32%;
+      }
     }
   }
 
   &--double {
     .objective__item {
-      margin-left: 2%;
-      width: 48%;
+      @include breakpoint('medium') {
+        margin-left: 2%;
+        width: 48%;
+      }
     }
   }
 
