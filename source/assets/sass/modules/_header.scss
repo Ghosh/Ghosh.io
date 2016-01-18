@@ -15,9 +15,13 @@
   }
 
   &__nav {
-    float: left;
+    float: right;
     margin-left: 30px;
     margin-top: -2px;
+
+    @include breakpoint('medium') {
+      float: left;
+    };
   }
 
   &__social {
