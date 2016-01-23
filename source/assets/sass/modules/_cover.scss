@@ -1,8 +1,8 @@
 .cover {
   height: 320px;
+  margin-bottom: 60px;
   padding-top: 126px;
   text-align: center;
-  margin-bottom: 40px;
 
   @include breakpoint('medium') {
     height: 540px;
@@ -18,7 +18,6 @@
 
     &:before {
       @include coverer();
-      // background: linear-gradient(to top, #e53935 , #e35d5b);
       background: linear-gradient(to left, #136a8a , #267871);
       content: '';
       mix-blend-mode: multiply;
@@ -42,7 +41,6 @@
 
   // Only project pages
   &__logo-cont {
-    margin-bottom: 20px;
 
     @include breakpoint('medium') {
       margin-bottom: 30px;
@@ -86,7 +84,6 @@
     background-size: contain;
     display: inline-block;
     height: 250px;
-    margin-bottom: 10px;
     text-align: center;
     width: 100%;
 
