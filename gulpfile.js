@@ -38,7 +38,8 @@ var gulp          = require('gulp'),
     deploy        = require('gulp-gh-pages'),
     file          = require('gulp-file'),
     argv          = require('yargs').argv,
-    reload        = browserSync.reload;
+    reload        = browserSync.reload,
+    shell         = require('gulp-shell');
 
 
     var config = {
@@ -164,7 +165,7 @@ var gulp          = require('gulp'),
       browserSync({
         server: {baseDir: 'build' },
         open: argv.open == 1 ? true : false
-      });
+    });
 
       gulp.watch('source/**/*.hbs', ['hbs']);
       gulp.watch('source/assets/svg/**/*.svg', ['svg']);
@@ -174,6 +175,10 @@ var gulp          = require('gulp'),
 
       notify("Watching for changes!");
     });
+    
+    gulp.task('default', shell.task([
+      'gulp go --clean --build --color'
+    ]))
 
     gulp.task('deploy', function () {
       return gulp
