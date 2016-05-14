@@ -176,7 +176,26 @@ var gulp          = require('gulp'),
       notify("Watching for changes!");
     });
     
-    gulp.task('default', shell.task([
+    gulp.task('default', function(callback) {
+      var help = `
+        ${gutil.colors.yellow('Usage:')}
+          gulp [command]
+        
+        ${gutil.colors.yellow('Available commands:')}
+          ${gutil.colors.green('gulp')}             Display this help message.
+          ${gutil.colors.green('gulp dev')}         Compile files in dev mode. Starts server and watch task.
+          ${gutil.colors.green('gulp build')}       Compiles files for productions. Runs optimization asks.
+      `;
+      return setTimeout((function() {
+        return console.log(help);
+      }), 200);
+    });
+    
+    gulp.task('dev', shell.task([
+      'gulp go --clean --color'
+    ]))
+    
+    gulp.task('build', shell.task([
       'gulp go --clean --build --color'
     ]))
 
