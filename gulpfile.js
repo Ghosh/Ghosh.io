@@ -185,6 +185,7 @@ var gulp          = require('gulp'),
           ${gutil.colors.green('gulp')}             Display this help message.
           ${gutil.colors.green('gulp dev')}         Compile files in dev mode. Starts server and watch task.
           ${gutil.colors.green('gulp build')}       Compiles files for productions. Runs optimization asks.
+          ${gutil.colors.green('gulp deploy')}      Deploys files to production.
       `;
       return setTimeout((function() {
         return console.log(help);
