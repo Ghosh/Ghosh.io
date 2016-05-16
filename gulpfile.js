@@ -184,7 +184,7 @@ var gulp          = require('gulp'),
         ${gutil.colors.yellow('Available commands:')}
           ${gutil.colors.green('gulp')}             Display this help message.
           ${gutil.colors.green('gulp dev')}         Compile files in dev mode. Starts server and watch task.
-          ${gutil.colors.green('gulp build')}       Compiles files for productions. Runs optimization asks.
+          ${gutil.colors.green('gulp prod')}        Compiles files for productions. Runs optimization asks.
           ${gutil.colors.green('gulp deploy')}      Deploys files to production.
       `;
       return setTimeout((function() {
@@ -196,7 +196,7 @@ var gulp          = require('gulp'),
       'gulp go --clean --color'
     ]))
     
-    gulp.task('build', shell.task([
+    gulp.task('prod', shell.task([
       'gulp go --clean --build --color'
     ]))
 
