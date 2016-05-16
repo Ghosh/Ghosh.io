@@ -23,7 +23,7 @@ var gulp          = require('gulp'),
     clean         = require('gulp-clean'),
     imagemin      = require('gulp-imagemin'),
     gulpif        = require('gulp-if'),
-    sourcemaps    = require('gulp-sourcemaps')
+    sourcemaps    = require('gulp-sourcemaps'),
     layouts       = require('handlebars-layouts'),
     hb            = require('gulp-hb'),
     browserSync   = require('browser-sync'),
@@ -54,7 +54,7 @@ var gulp          = require('gulp'),
 
     gulp.task('cname', function () {
       return file('CNAME', config.cname, {src: true})
-        .pipe(gulp.dest('build/'))
+        .pipe(gulp.dest('build/'));
     });
 
     gulp.task('svg', function () {
@@ -158,7 +158,7 @@ var gulp          = require('gulp'),
     gulp.task('build', function(callback) {
       (argv.clean == 1) ?
         runSequence('clean:build', 'compile', callback) :
-        runSequence('compile', callback) ;
+        runSequence('compile', callback);
     });
 
     gulp.task('go', ['build'], function() {
@@ -194,11 +194,11 @@ var gulp          = require('gulp'),
     
     gulp.task('dev', shell.task([
       'gulp go --clean --color'
-    ]))
+    ]));
     
     gulp.task('prod', shell.task([
       'gulp go --clean --build --color'
-    ]))
+    ]));
 
     gulp.task('deploy', function () {
       return gulp
