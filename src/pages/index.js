@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../layouts/master"
-import Image from "../components/image"
+import Layout from "@src/layouts/master"
+import Image from "@comps/image"
 
 const IndexPage = () => (
   <Layout title="Home">
@@ -12,7 +12,7 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/404/">Go to page 2</Link>
   </Layout>
 )
 
