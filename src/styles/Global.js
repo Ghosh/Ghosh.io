@@ -49,7 +49,10 @@ const GlobalStyle = createGlobalStyle`
 
   /* Custom Styles */
   body {
+    min-height: 100vh;
     background-color: #EBEEF7;
+    ${'' /* background-color: #29375C; */}
+    ${'' /* background-color: #1E273E; */}
   }
 `
 export default GlobalStyle
