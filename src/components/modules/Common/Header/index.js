@@ -10,12 +10,13 @@ import styled from 'styled-components'
 const Wrap = styled.header`
   margin-top: 20px;
 
-  ${ Breakpoints.greaterThan('tabletL')`
+
+  ${ Breakpoints.greaterThan('laptop')`
     margin-top: 40px;
   ` };
 
-  ${ Breakpoints.greaterThan('laptop')`
-    margin-top: 80px;
+  ${ Breakpoints.greaterThan('desktop')`
+    margin-top: 0;
   ` };
 `
 
@@ -24,10 +25,9 @@ const Header = () => {
     <Wrap>
       <Flex middle between>
         <Flex middle>
-          <Logo />
+          <Logo fill="#3366cc"/>
           <p>Nav here</p>
         </Flex>
-
         <p>Twitter</p>
       </Flex>
     </Wrap>

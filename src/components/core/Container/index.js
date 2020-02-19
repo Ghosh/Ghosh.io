@@ -12,6 +12,10 @@ const MaxWidth = styled.div`
   ${ Breakpoints.greaterThan('laptop')`
     padding: 0 32px;
   ` };
+
+  ${ Breakpoints.greaterThan('desktop')`
+    padding: 0 16px;
+  ` };
 `
 
 const Container = ({ children }) => {
