@@ -2,5 +2,10 @@
   "extends": [
     "ghosh/standard",
     "ghosh/react"
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
