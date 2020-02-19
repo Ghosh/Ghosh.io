@@ -5,13 +5,18 @@ import Layout from "@src/layouts/master"
 import Image from "@comps/image"
 
 import Container from "@comps/core/Container"
+import Header from "@comps/core/Header"
+import Flex from "@comps/core/Flex"
 
 const IndexPage = () => (
   <Layout title="Home">
     <Container>
+    <Header />
     <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Flex row>
+        <p>Welcome.</p>
+        <p>You.</p>
+    </Flex>
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}
