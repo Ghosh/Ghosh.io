@@ -11,19 +11,22 @@ import { ReactComponent as Logo } from './icons/logo.svg'
 const Wrap = styled.header`
   padding-top: 20px;
 
+  ${ Breakpoints.greaterThan('tabletP')`
+      padding-top: 24px;
+  ` };
+
   ${ Breakpoints.greaterThan('laptop')`
-    margin-top: 40px;
+      padding-top: 30px;
   ` };
 
   ${ Breakpoints.greaterThan('desktop')`
-      margin-top: 0;
-      padding-top: 0;
+      padding-top: 40px;
   ` };
 `
 
 const Twitter = styled.p`
   font-size: 1.5rem;
-  color: #1da1f2;
+  color: #00a3f9;
   display: none;
 
     ${ Breakpoints.greaterThan('tabletL')`

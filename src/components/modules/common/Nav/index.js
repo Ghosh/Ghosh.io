@@ -14,7 +14,7 @@ const List = styled.ul`
 
 const Item = styled.li`
   list-style-type: none;
-  margin-right: 16px;
+  margin-right: 28px;
   font-size: 1.5rem;
 `
 
