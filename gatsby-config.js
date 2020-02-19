@@ -35,7 +35,8 @@ module.exports = {
           '@src': './src',
           '@root': './',
           '@comps': './src/components/',
-          '@breakpoints': './src/styles/breakpoints'
+          '@mods': './src/components/modules/',
+          '@breakpoints': './src/styles/breakpoints/'
         },
         extensions: []
       }

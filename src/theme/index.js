@@ -1,5 +1,6 @@
 const theme = {
-  maxWidth: '1440px'
+  maxWidth: '960px',
+  wrappedWidth: '1040px'
 }
 
 export default theme

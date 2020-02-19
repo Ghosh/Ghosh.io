@@ -14,7 +14,7 @@ const MaxWidth = styled.div`
   ` };
 
   ${ Breakpoints.greaterThan('desktop')`
-    padding: 0 16px;
+    padding: 0;
   ` };
 `
 
