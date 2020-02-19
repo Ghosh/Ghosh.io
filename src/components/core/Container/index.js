@@ -18,6 +18,7 @@ const MaxWidth = styled.div`
   ` };
 `
 
+// TODO: Investgate if Wrapper and Container can be the same component
 const Container = ({ children }) => {
   return (
     <MaxWidth>{children}</MaxWidth>

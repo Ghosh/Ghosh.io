@@ -24,6 +24,17 @@ const Wrap = styled.header`
   ` };
 `
 
+const Dynamic = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  ${ Breakpoints.greaterThan('tabletL')`
+    justify-content: start;
+  ` };
+`
+
 const Twitter = styled.p`
   font-size: 1.5rem;
   color: #00a3f9;
@@ -38,10 +49,10 @@ const Header = () => {
   return (
     <Wrap>
       <Flex middle between>
-        <Flex middle>
+        <Dynamic>
           <Logo fill="#3366cc"/>
           <Nav />
-        </Flex>
+        </Dynamic>
         <Twitter>@_ighosh</Twitter>
       </Flex>
     </Wrap>
