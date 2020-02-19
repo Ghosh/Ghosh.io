@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -51,8 +51,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     background-color: #EBEEF7;
-    ${'' /* background-color: #29375C; */}
-    ${'' /* background-color: #1E273E; */}
+    ${ '' /* background-color: #29375C; */}
+    ${ '' /* background-color: #1E273E; */}
   }
 `
 export default GlobalStyle

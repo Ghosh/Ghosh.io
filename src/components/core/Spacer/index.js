@@ -1,37 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, {css} from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
 
 const Space = styled.div`
   display: block;
 
   /* mt */
-  ${props =>
+  ${ props =>
     props.mt && css`
       margin-top: ${ props.mt * 4 }px;
-    `}
+    ` }
 
   /* mb */
-  ${props =>
+  ${ props =>
     props.mb && css`
       margin-bottom: ${ props.mb * 4 }px;
-    `}
+    ` }
 
   /* pt */
-  ${props =>
+  ${ props =>
     props.pt && css`
       padding-top: ${ props.pt * 4 }px;
-    `}
+    ` }
 
   /* pb */
-  ${props =>
+  ${ props =>
     props.pb && css`
       padding-bottom: ${ props.pb * 4 }px;
-    `}
+    ` }
 
 `
 
-const Spacer = ({mt, mb, pt, pb}) => {
+const Spacer = ({ mt, mb, pt, pb }) => {
   return <Space mt={mt} mb={mb} pt={pt} pb={pb} />
 }
 

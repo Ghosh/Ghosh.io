@@ -1,171 +1,171 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
 
 const Flexbox = styled.div`
-  display: ${props => (props.inline ? 'inline-flex' : 'flex')};
+  display: ${ props => (props.inline ? 'inline-flex' : 'flex') };
 
   /* Row */
-  ${props =>
+  ${ props =>
     props.row &&
     css`
       flex-direction: row;
-    `}
+    ` }
 
   /* Column */
-  ${props =>
+  ${ props =>
     props.column &&
     css`
       flex-direction: column;
-    `}
+    ` }
 
 
   /* Row Reverse */
-  ${props =>
+  ${ props =>
     props.rowReverse &&
     css`
       flex-direction: row-reverse;
-    `}
+    ` }
 
 
   /* Column Reverse */
-  ${props =>
+  ${ props =>
     props.columnReverse &&
     css`
       flex-direction: column-reverse;
-    `}
+    ` }
 
 
   /* No Wrap */
-  ${props =>
+  ${ props =>
     props.nowrap &&
     css`
       flex-wrap: nowrap;
-    `}
+    ` }
 
 
   /* Wrap */
-  ${props =>
+  ${ props =>
     props.wrap &&
     css`
       flex-wrap: wrap;
-    `}
+    ` }
 
 
   /* Wrap Reverse */
-  ${props =>
+  ${ props =>
     props.wrapReverse &&
     css`
       flex-wrap: wrap-reverse;
-    `}
+    ` }
 
 
   /* Auto */
-  ${props =>
+  ${ props =>
     props.auto &&
     css`
       flex: 1 1 auto;
-    `}
+    ` }
 
   /* One */
-  ${props =>
+  ${ props =>
     props.one &&
     css`
       flex: 1 1 0%;
-    `}
+    ` }
 
 
   /* None */
-  ${props =>
+  ${ props =>
     props.none &&
     css`
       flex: none;
-    `}
+    ` }
 
 
   /* No Shrink */
-  ${props =>
+  ${ props =>
     props.noShrink &&
     css`
       flex-shrink: 0;
-    `}
+    ` }
 
 
   /* Strech */
-  ${props =>
+  ${ props =>
     props.noShrink &&
     css`
       align-items: strech;
-    `}
+    ` }
 
 
   /* Top */
-  ${props =>
+  ${ props =>
     props.top &&
     css`
       align-items: flex-start;
-    `}
+    ` }
 
   /* Middle */
-  ${props =>
+  ${ props =>
     props.middle &&
     css`
       align-items: center;
-    `}
+    ` }
 
   /* Bottom */
-  ${props =>
+  ${ props =>
     props.bottom &&
     css`
       align-items: flex-end;
-    `}
+    ` }
 
 
   /* Start */
-  ${props =>
+  ${ props =>
     props.start &&
     css`
       justify-content: flex-start;
-    `}
+    ` }
 
   /* End */
-  ${props =>
+  ${ props =>
     props.end &&
     css`
       justify-content: flex-end;
-    `}
+    ` }
 
 
   /* Center */
-  ${props =>
+  ${ props =>
     props.center &&
     css`
       justify-content: center;
-    `}
+    ` }
 
 
   /* Between */
-  ${props =>
+  ${ props =>
     props.between &&
     css`
       justify-content: space-between;
-    `}
+    ` }
 
   /* Around */
-  ${props =>
+  ${ props =>
     props.around &&
     css`
       justify-content: space-around;
-    `}
+    ` }
 
-`;
+`
 
 const Flex = ({ children, ...rest }) => {
-  return <Flexbox {...rest}>{children}</Flexbox>;
-};
+  return <Flexbox {...rest}>{children}</Flexbox>
+}
 
 Flex.propTypes = {
   children: PropTypes.node.isRequired
-};
+}
 
-export default Flex;
+export default Flex

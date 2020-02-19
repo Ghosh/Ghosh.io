@@ -1,8 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { ThemeProvider } from "styled-components";
-
-
+import React from 'react'
+import PropTypes from 'prop-types'
+import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from '../styles/global'
 import SEO from './seo'
@@ -20,6 +18,11 @@ const Layout = ({ children, title }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string
+}
+
+Layout.defaultProps = {
+  title: 'Title'
 }
 
 export default Layout

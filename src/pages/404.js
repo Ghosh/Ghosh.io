@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import Layout from "../layouts/master"
+import Layout from '../layouts/master'
 
 const NotFoundPage = () => (
   <Layout title="404: Not Found">
