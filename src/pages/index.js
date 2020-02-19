@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '@src/layouts/master'
-import Image from '@comps/image'
 
 import Container from '@comps/core/Container'
 import Flex from '@comps/core/Flex'
