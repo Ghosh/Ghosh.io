@@ -34,7 +34,8 @@ module.exports = {
         alias: {
           "@src": './src',
           "@root": './',
-          "@comps": './src/components/'
+          "@comps": './src/components/',
+          "@breakpoints": './src/styles/breakpoints'
         },
         extensions: []
       }

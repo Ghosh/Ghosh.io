@@ -5,8 +5,9 @@ import Layout from "@src/layouts/master"
 import Image from "@comps/image"
 
 import Container from "@comps/core/Container"
-import Header from "@comps/core/Header"
 import Flex from "@comps/core/Flex"
+
+import Header from "../components/modules/Common/Header"
 
 const IndexPage = () => (
   <Layout title="Home">

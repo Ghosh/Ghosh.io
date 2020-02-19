@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Breakpoints from '@src/styles/breakpoints'
+import Breakpoints from '@breakpoints'
 
 const MaxWidth = styled.div`
   max-width: ${props => props.theme.maxWidth};
