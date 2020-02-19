@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '@src/layouts/master'
 import Container from '@comps/core/Container'
-import Header from '@mods/Common/Header'
+import Header from '@mods/common/Header'
 
 const IndexPage = () => (
   <Layout title="Home">
