@@ -37,7 +37,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "eslint --fix src/ --ext .js",
+    "format": "eslint --fix src --ext .js",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
