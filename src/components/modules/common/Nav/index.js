@@ -16,6 +16,7 @@ const Item = styled.li`
   list-style-type: none;
   margin-right: 28px;
   font-size: 1.5rem;
+  font-weight: 500;
 `
 
 const Nav = () => {

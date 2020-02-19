@@ -20,7 +20,7 @@ const Wrap = styled.header`
   ` };
 
   ${ Breakpoints.greaterThan('desktop')`
-      padding-top: 40px;
+      padding-top: 30px;
   ` };
 `
 
