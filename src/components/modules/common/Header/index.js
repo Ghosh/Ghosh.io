@@ -7,6 +7,7 @@ import Flex from '@comps/core/Flex'
 import Nav from '@mods/common/Nav'
 
 import { ReactComponent as Logo } from './icons/logo.svg'
+import { ReactComponent as TwitterLogo } from './icons/twitter.svg'
 
 const Wrap = styled.header`
   padding-top: 20px;
@@ -35,14 +36,21 @@ const Dynamic = styled.div`
   ` };
 `
 
-const Twitter = styled.p`
-  font-size: 1.5rem;
-  color: #00a3f9;
+const TwitterWrapper = styled.a`
   display: none;
+  text-decoration: none;
+  cursor: pointer;
 
     ${ Breakpoints.greaterThan('tabletL')`
-      display: inline-block;
+      display: flex;
+      align-items: center
   ` };
+`
+
+const Twitter = styled.span`
+  margin-left: 8px;
+  font-size: 1.5rem;
+  color: #00a3f9;
 `
 
 const Header = () => {
@@ -53,7 +61,10 @@ const Header = () => {
           <Logo fill="#3366cc"/>
           <Nav />
         </Dynamic>
-        <Twitter>@_ighosh</Twitter>
+        <TwitterWrapper href="https://twitter.com/_ighosh">
+          <TwitterLogo width="18" fill="#00a3f9" />
+          <Twitter>@_ighosh</Twitter>
+        </TwitterWrapper>
       </Flex>
     </Wrap>
   )
