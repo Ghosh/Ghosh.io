@@ -48,6 +48,7 @@ const TwitterWrapper = styled.a`
 `
 
 const Twitter = styled.span`
+  margin-top: -2px;
   margin-left: 8px;
   font-size: 1.5rem;
   color: #00a3f9;
