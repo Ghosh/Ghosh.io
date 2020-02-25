@@ -50,7 +50,6 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 62.5%; /* Hack to make 1.4rem = 14px */
-    background-color: #EBEEF7;
     ${ '' /* background-color: #29375C; */}
     ${ '' /* background-color: #1E273E; */}
   }

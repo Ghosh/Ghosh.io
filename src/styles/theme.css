@@ -1,0 +1,7 @@
+body {
+  --bg-main: #EBEEF7;
+}
+
+body.dark {
+  --bg-main: #1e2431;
+}
