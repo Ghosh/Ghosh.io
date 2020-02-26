@@ -8,5 +8,8 @@
     "react": {
       "version": "detect"
     }
+  },
+  "globals": {
+    "localStorage": true
   }
 }

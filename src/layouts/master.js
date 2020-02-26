@@ -2,10 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 
+import '../styles/theme.css'
+
 import Wrapper from '@comps/core/Wrapper'
 import GlobalStyle from '@src/styles/global'
 import SEO from './seo'
 import theme from '@src/theme'
+
+import { DarkModeProvider } from '../hooks/useDarkMode'
 
 const Layout = ({ children, title }) => {
   return (
@@ -13,7 +17,9 @@ const Layout = ({ children, title }) => {
       <Wrapper>
         <SEO title={title}/>
         <GlobalStyle />
-        {children}
+        <DarkModeProvider>
+          {children}
+        </DarkModeProvider>
       </Wrapper>
     </ThemeProvider>
   )
