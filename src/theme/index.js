@@ -1,4 +1,15 @@
+
+// In a separate const, so that it can be exported separately
+export const breakpoints = [
+  '480px',
+  '768px',
+  '992px',
+  '1200px',
+  '1440px'
+]
+
 const theme = {
+  breakpoints: breakpoints,
   colors: {
     midnight: [
       '#EBEEF7',
