@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 
-import '../styles/theme.css'
+import '../theme/theme.css'
 
 import Wrapper from '@comps/core/Wrapper'
 import GlobalStyle from '@src/styles/global'
