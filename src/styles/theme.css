@@ -1,7 +1,11 @@
-body {
-  --bg-main: #EBEEF7;
+:root {
+  --bg-lighter: #e7ecf7;
+  --bg-regular: #EBEEF7;
+  --bg-darker: #dee3ee;
 }
 
 body.dark {
-  --bg-main: #1e2431;
+  --bg-lighter: #222835;
+  --bg-regular: #1e2431;
+  --bg-darker: #191e28;
 }

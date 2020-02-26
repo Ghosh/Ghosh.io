@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+import Breakpoints from '@breakpoints'
+
 const GlobalStyle = createGlobalStyle`
   /* CSS Reset */
   html, body, div, span, applet, object, iframe,
@@ -57,8 +59,12 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font: caption;
-    background-color: var( --bg-main, slategrey );
+    background-color: var( --bg-regular, slategrey );
     min-height: 100vh;
+
+  ${ Breakpoints.greaterThan('desktop')`
+    background-color: var( --bg-darker, slategrey );
+  ` };
   }
 `
 export default GlobalStyle
