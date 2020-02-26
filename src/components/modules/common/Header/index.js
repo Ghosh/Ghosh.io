@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Breakpoints from '@breakpoints'
-
 import Flex from '@comps/core/Flex'
 import Nav from '@mods/common/Nav'
 
+import Breakpoints from '@breakpoints'
+
+import ThemeToggle from './ThemeToggle'
+
 import { ReactComponent as Logo } from './icons/logo.svg'
 import { ReactComponent as TwitterLogo } from './icons/twitter.svg'
-
-import { useDarkMode } from '../../../../hooks/useDarkMode'
 
 const Wrap = styled.header`
   padding-top: 20px;
@@ -57,8 +57,6 @@ const Twitter = styled.span`
 `
 
 const Header = () => {
-  const { toggleMode } = useDarkMode()
-
   return (
     <Wrap>
       <Flex middle between>
@@ -70,11 +68,7 @@ const Header = () => {
           <TwitterLogo width="18" fill="#00a3f9" />
           <Twitter>@_ighosh</Twitter>
         </TwitterWrapper>
-        <button
-          onClick={() => toggleMode()}
-        >
-          Toggle theme
-        </button>
+        <ThemeToggle />
       </Flex>
     </Wrap>
   )

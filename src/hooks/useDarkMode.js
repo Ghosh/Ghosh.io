@@ -23,6 +23,8 @@ const DarkModeProvider = ({ children, ...props }) => {
 
   const toggleMode = () => setDarkMode(prev => !prev)
 
+  const isDarkMode = darkMode
+
   // Save mode in localstorage
   useEffect(() => {
     localStorage.setItem('canIHazDarkMode', JSON.stringify(darkMode))
@@ -51,7 +53,7 @@ const DarkModeProvider = ({ children, ...props }) => {
   }
 
   return (
-    <DarkModeContext.Provider value={{ toggleMode }} {...props}>
+    <DarkModeContext.Provider value={{ toggleMode, isDarkMode }} {...props}>
       <Helmet
         bodyAttributes={{
           class: `${ darkMode ? 'dark' : '' }`
@@ -74,9 +76,10 @@ const useDarkMode = () => {
     throw new Error('useDarkMode must be used within a DarkModeProvider')
   }
 
-  const { toggleMode } = context
+  const { toggleMode, isDarkMode } = context
   return {
-    toggleMode
+    toggleMode,
+    isDarkMode
   }
 }
 
