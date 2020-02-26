@@ -10,12 +10,10 @@ import { ReactComponent as Moon } from './icons/moon.svg'
 const Toggle = styled.button`
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  outline: 0;
+  margin-left: 12px;
 `
 
 const ThemeToggle = () => {
@@ -23,8 +21,8 @@ const ThemeToggle = () => {
 
   return (
     <Toggle onClick={() => toggleMode()}>
-      { isDarkMode && <Sun width="30" fill="yellow" /> }
-      {!isDarkMode && <Moon width="22" fill="slategrey" /> }
+      {isDarkMode && <Sun width="24" fill="#ffc800" /> }
+      {!isDarkMode && <Moon height="24" fill="#8ba5af" /> }
     </Toggle>
   )
 }
