@@ -10,7 +10,7 @@ export const breakpoints = [
 
 const theme = {
   breakpoints: breakpoints,
-  space: [0, 4, 8, 16, 20, 24, 28, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 16, 20, 24, 28, 32, 64, 128, 192, 256, 512],
   colors: {
     midnight: [
       '#EBEEF7',
