@@ -33,6 +33,7 @@ module.exports = {
       options: {
         alias: {
           '@src': './src',
+          '@hooks': './src/hooks/',
           '@root': './',
           '@comps': './src/components/',
           '@mods': './src/components/modules/',

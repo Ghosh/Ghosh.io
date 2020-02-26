@@ -5,7 +5,7 @@ const Breakpoints = generateMedia({
   tabletP: '768px',
   tabletL: '992px',
   laptop: '1200px',
-  desktop: '2880px'
+  desktop: '1440px'
 })
 
 export default Breakpoints

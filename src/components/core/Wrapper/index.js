@@ -4,8 +4,7 @@ import styled from 'styled-components'
 
 import Breakpoints from '@breakpoints'
 
-const XLWrapper = styled.div`
-
+const SiteWrapper = styled.div`
 
   ${ Breakpoints.greaterThan('desktop')`
     max-width: ${ props => props.theme.wrappedWidth };
@@ -14,7 +13,7 @@ const XLWrapper = styled.div`
     min-height: 100vh;
     padding: 40px;
     box-shadow: rgba(8, 11, 14, 0.06) 0px 0px 1px 0px, rgba(8, 11, 14, 0.1) 0px 16px 16px -1px;
-    /* background-color: white; */
+    background-color: var(--bg-regular);
     /* border-radius: 8px; */
     /* margin-top: 40px; */
   ` };
@@ -22,9 +21,9 @@ const XLWrapper = styled.div`
 
 const Wrapper = ({ children }) => {
   return (
-    <XLWrapper>
+    <SiteWrapper>
       {children}
-    </XLWrapper>
+    </SiteWrapper>
   )
 }
 
