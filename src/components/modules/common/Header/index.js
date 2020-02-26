@@ -11,6 +11,10 @@ import ThemeToggle from './ThemeToggle'
 import { ReactComponent as Logo } from './icons/logo.svg'
 import { ReactComponent as TwitterLogo } from './icons/twitter.svg'
 
+const Ghosh = styled(Logo)`
+  fill: var(--accent-1)
+`
+
 const Wrap = styled.header`
   padding-top: 20px;
 
@@ -61,7 +65,7 @@ const Header = () => {
     <Wrap>
       <Flex middle between>
         <Dynamic>
-          <Logo fill="#3366cc"/>
+          <Ghosh />
           <Nav />
         </Dynamic>
         <TwitterWrapper href="https://twitter.com/_ighosh">

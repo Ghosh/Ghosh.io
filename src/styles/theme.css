@@ -1,11 +1,25 @@
-:root {
-  --bg-lighter: #e7ecf7;
-  --bg-regular: #EBEEF7;
-  --bg-darker: #dee3ee;
+body {
+
+  --text-primary: #3b4857;
+  --text-secondary: #4c5f75;
+  --text-tertiary: #6c829d;
+
+  --bg-lighter: #f6fafb;
+  --bg-regular: #e1e8f1;
+  --bg-darker: #c9d5e0;
+
+  --accent-1: #3366cc;
 }
 
 body.dark {
-  --bg-lighter: #222835;
-  --bg-regular: #1e2431;
-  --bg-darker: #191e28;
+
+  --text-primary: #dbdfea;
+  --text-secondary: #fafafa;
+  --text-tertiary: #95a8d7;
+
+  --bg-lighter: #404b69;
+  --bg-regular: #2e3955;
+  --bg-darker: #283149;
+
+  --accent-1: #fdcd6f;
 }

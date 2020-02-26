@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Custom Styles */
   html {
+    font: caption;
     box-sizing: border-box;
     font-size: 62.5%; /* Hack to make 1.4rem = 14px */
 
@@ -58,7 +59,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font: caption;
     background-color: var( --bg-regular, slategrey );
     min-height: 100vh;
 
