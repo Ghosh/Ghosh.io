@@ -1,5 +1,9 @@
 body {
 
+  --text-primary: #283149;
+  --text-secondary: #2e3955;
+  --text-tertiary: #404b69;
+
   --text-primary: #3b4857;
   --text-secondary: #4c5f75;
   --text-tertiary: #6c829d;
@@ -13,9 +17,13 @@ body {
 
 body.dark {
 
-  --text-primary: #dbdfea;
+  --text-primary: #f6fafb;
+  --text-secondary: #e1e8f1;
+  --text-tertiary: #6a7797;
+
+  /* --text-primary: #dbdfea;
   --text-secondary: #fafafa;
-  --text-tertiary: #95a8d7;
+  --text-tertiary: #95a8d7; */
 
   --bg-lighter: #404b69;
   --bg-regular: #2e3955;
