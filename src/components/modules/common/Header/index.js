@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Flex from '@comps/core/Flex'
+import Flex from '@core/Flex'
 import Nav from '@mods/common/Nav'
 
 import Breakpoints from '@breakpoints'

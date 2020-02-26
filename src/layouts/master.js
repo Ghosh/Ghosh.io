@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 
 import '../theme/theme.css'
 
-import Wrapper from '@comps/core/Wrapper'
+import Wrapper from '@core/Wrapper'
 import GlobalStyle from '@src/styles/global'
 import SEO from './seo'
 import theme from '@src/theme'

@@ -32,11 +32,11 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
+          '@root': './',
           '@src': './src',
           '@hooks': './src/hooks/',
-          '@root': './',
-          '@comps': './src/components/',
           '@mods': './src/components/modules/',
+          '@core': './src/components/core/',
           '@breakpoints': './src/styles/breakpoints/'
         },
         extensions: []
