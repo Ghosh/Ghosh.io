@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Flex from '@core/Flex'
+import Box from '@core/Box'
 import Nav from '@mods/common/Nav'
 
 import Breakpoints from '@breakpoints'
@@ -63,17 +63,19 @@ const Twitter = styled.span`
 const Header = () => {
   return (
     <Wrap>
-      <Flex middle between>
+      <Box display="flex" alignItems="center" justifyContent="space-between">
         <Dynamic>
           <Ghosh />
           <Nav />
         </Dynamic>
-        <TwitterWrapper href="https://twitter.com/_ighosh">
-          <TwitterLogo width="18" fill="#00a3f9" />
-          <Twitter>@_ighosh</Twitter>
-        </TwitterWrapper>
-        <ThemeToggle />
-      </Flex>
+        <Box display="flex">
+          <TwitterWrapper href="https://twitter.com/_ighosh">
+            <TwitterLogo width="18" fill="#00a3f9" />
+            <Twitter>@_ighosh</Twitter>
+          </TwitterWrapper>
+          <ThemeToggle />
+        </Box>
+      </Box>
     </Wrap>
   )
 }
