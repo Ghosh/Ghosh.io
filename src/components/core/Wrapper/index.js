@@ -11,7 +11,7 @@ const SiteWrapper = styled.div`
     margin: auto;
     box-sizing: border-box;
     min-height: 100vh;
-    padding: 40px;
+    padding: 40px 0;
     box-shadow: rgba(8, 11, 14, 0.06) 0px 0px 1px 0px, rgba(8, 11, 14, 0.1) 0px 16px 16px -1px;
     background-color: var(--bg-regular);
     /* border-radius: 8px; */
