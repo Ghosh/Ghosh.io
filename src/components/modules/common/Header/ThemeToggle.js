@@ -21,8 +21,8 @@ const ThemeToggle = () => {
 
   return (
     <Toggle onClick={() => toggleMode()}>
-      {isDarkMode && <Sun width="24" fill="#ffc800" /> }
-      {!isDarkMode && <Moon height="24" fill="#8ba5af" /> }
+      {isDarkMode && <Sun width="24" style={{ fill: 'var(--accent-1)' }} /> }
+      {!isDarkMode && <Moon height="24" style={{ fill: 'var(--accent-1)' }} />}
     </Toggle>
   )
 }
