@@ -25,8 +25,6 @@ const DarkModeProvider = ({ children, ...props }) => {
 
   const isDarkMode = darkMode
 
-  const windowPreset = typeof window !== `undefined`
-
   // Save mode in localstorage
   useEffect(() => {
     if (typeof window !== `undefined`) {
