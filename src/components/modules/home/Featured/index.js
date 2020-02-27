@@ -10,6 +10,7 @@ import Breakpoints from '@breakpoints'
 const Divider = styled.span`
   height: 1px;
   width: 100px;
+  opacity: 0.6;
   background-color: var(--text-tertiary);
 
   ${ Breakpoints.greaterThan('tabletL')`
@@ -25,6 +26,7 @@ const Featured = () => {
           <Text
             fontSize={['10px', '12px']}
             letterSpacing={2}
+            fontWeight="500"
             mr={2}
             css="color: var(--text-tertiary); text-transform: uppercase;">
             Featured Project

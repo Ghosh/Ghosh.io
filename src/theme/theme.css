@@ -1,6 +1,6 @@
 body {
   --text-primary: #1B2128;
-  --text-secondary: #2A323D;
+  --text-secondary: #3e4d5e;
   --text-tertiary: #6F829D;
 
   --bg-lighter: #f6fafb;
@@ -12,7 +12,7 @@ body {
 
 body.dark {
   --text-primary: #f6fafb;
-  --text-secondary: #e1e8f1;
+  --text-secondary: #c9d6dd;
   --text-tertiary: #6a7797;
 
   --bg-lighter: #404b69;
