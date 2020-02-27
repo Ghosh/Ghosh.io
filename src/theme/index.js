@@ -10,7 +10,8 @@ export const breakpoints = [
 
 const theme = {
   breakpoints: breakpoints,
-  space: [0, 4, 8, 16, 20, 24, 28, 32, 64, 128, 192, 256, 512],
+  space: [0, 4, 8, 16, 20, 24, 28, 32, 64, 128, 160, 256, 512],
+  fontSizes: ['12px', '14px', '16px', '18px', '24px', '28px', '32px', '38px'],
   colors: {
     midnight: [
       '#EBEEF7',

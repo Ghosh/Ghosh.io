@@ -34,9 +34,38 @@ const Featured = () => {
           <Divider />
         </Box>
       </Container>
-      <div>
-      Hello
-      </div>
+      <Box
+        mt={[3, 4, 6]}
+        css="background-color: var(--bg-darker)"
+      >
+        <Container>
+          <Box
+            py={['7', '8', '9', '11']}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+          >
+            <Text
+              fontSize={[3, 4, 5]}
+              fontWeight="500"
+              lineHeight={1.7}
+              css="color: var(--text-primary)"
+            >
+              Building a design system for Cleartrip
+            </Text>
+            <Text
+              mt={2}
+              fontSize={[1, 2, 3]}
+              fontWeight="400"
+              lineHeight={1.6}
+              css="color: var(--text-secondary)"
+              width={['100%', '90%', '80%', '50%']}
+            >
+              Conceptualised the first version of a design system which now powers most of Cleartrip's desktop products
+            </Text>
+          </Box>
+        </Container>
+      </Box>
     </>
   )
 }

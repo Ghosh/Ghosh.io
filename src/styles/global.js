@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Custom Styles */
   html {
-    font: caption;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,Arial,sans-serif;
     box-sizing: border-box;
     font-size: 62.5%; /* Hack to make 1.4rem = 14px */
 
