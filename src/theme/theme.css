@@ -1,4 +1,5 @@
-body {
+body,
+body.light {
   --text-primary: #1B2128;
   --text-secondary: #3e4d5e;
   --text-tertiary: #6F829D;
