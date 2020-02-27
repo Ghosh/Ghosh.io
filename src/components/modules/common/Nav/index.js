@@ -24,6 +24,7 @@ const Anchor = styled(Link)`
   text-decoration: none;
   font-weight: 400;
   color: var(--text-tertiary);
+  transition: color 0.1s ease-in-out;
 
   &::after {
     position: absolute;
@@ -37,6 +38,7 @@ const Anchor = styled(Link)`
   }
 
   &:hover {
+    color: var(--text-primary);
     &::after {
       background-color: var(--text-tertiary);
     }

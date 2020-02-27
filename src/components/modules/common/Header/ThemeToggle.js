@@ -12,8 +12,18 @@ const Toggle = styled.button`
   border: none;
   display: flex;
   align-items: center;
+  align-self: center;
   cursor: pointer;
   margin-left: 12px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  padding-left: 4px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--bg-darker);
+  }
 `
 
 const ThemeToggle = () => {
@@ -23,15 +33,16 @@ const ThemeToggle = () => {
     <Toggle onClick={() => toggleMode()}>
       {isDarkMode &&
         <Sun
-          width="24"
-          height="24"
-          style={{ fill: 'var(--accent-1)' }}
+          width="23"
+          style={{
+            fill: 'var(--accent-1)'
+          }}
         />
       }
       {!isDarkMode &&
         <Moon
-          height="20"
           width="24"
+          height="20"
           style={{ fill: 'var(--accent-1)' }}
         />
       }

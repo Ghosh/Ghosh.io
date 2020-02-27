@@ -17,17 +17,17 @@ const Hero = () => {
         as="h1"
         css="color: var(--text-primary)"
       >
-        Hello, I am Indrashish
+        Hi, I am Indrashish
       </Text>
       <Text
         fontSize={[2, 3, 4]}
         fontWeight="300"
-        lineHeight={1.5}
+        lineHeight={1.6}
         mt={[2, 3]}
         width={['100%', '100%', '75%', '60%', '60%']}
         css="color: var(--text-secondary)"
       >
-        I am a Product Designer who enjoys designing and building experiences for the next billion users
+        A Product Designer who enjoys designing and building experiences for the next billion users
       </Text>
     </Box>
   )
