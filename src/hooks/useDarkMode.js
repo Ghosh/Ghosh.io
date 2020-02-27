@@ -27,10 +27,12 @@ const DarkModeProvider = ({ children, ...props }) => {
 
   // Save mode in localstorage
   useEffect(() => {
+    if (!window.localStorage) return
     localStorage.setItem('canIHazDarkMode', JSON.stringify(darkMode))
   }, [darkMode])
 
   function getInitialMode () {
+    if (!window.localStorage) return
     const isReturningUser = 'canIHazDarkMode' in localStorage
     const hasDarkModePreference = getPreferredColorScheme()
     const savedMode = JSON.parse(localStorage.getItem('canIHazDarkMode'))
