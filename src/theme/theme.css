@@ -9,6 +9,8 @@ body.light {
   --bg-darker: #c9d5e0;
 
   --accent-1: #3366cc;
+
+  --text-button: var(--bg-lighter);
 }
 
 body.dark {
@@ -21,4 +23,6 @@ body.dark {
   --bg-darker: #283149;
 
   --accent-1: #fdcd6f;
+
+  --text-button: var(--bg-darker);
 }

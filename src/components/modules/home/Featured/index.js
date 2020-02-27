@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Text from '@core/Text'
 import Box from '@core/Box'
+import Button from '@core/Button'
 import Container from '@core/Container'
 
 import Breakpoints from '@breakpoints'
@@ -44,6 +45,7 @@ const Featured = () => {
             display="flex"
             flexDirection="column"
             justifyContent="center"
+            alignItems="flex-start"
           >
             <Text
               fontSize={[3, 4, 5]}
@@ -54,7 +56,7 @@ const Featured = () => {
               Building a design system for Cleartrip
             </Text>
             <Text
-              mt={2}
+              mt={[2, 3]}
               fontSize={[1, 2, 3]}
               fontWeight="400"
               lineHeight={1.6}
@@ -63,6 +65,9 @@ const Featured = () => {
             >
               Conceptualised the first version of a design system which now powers most of Cleartrip{`‘`}s desktop products
             </Text>
+            <Button mt={[3, 4, 6]}>
+              Read case study
+            </Button>
           </Box>
         </Container>
       </Box>
