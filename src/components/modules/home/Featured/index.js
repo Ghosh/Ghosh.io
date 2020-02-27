@@ -36,7 +36,7 @@ const Featured = () => {
       </Container>
       <Box
         mt={[3, 4, 6]}
-        css="background-color: var(--bg-darker)"
+        css="background-color: var(--bg-lighter)"
       >
         <Container>
           <Box

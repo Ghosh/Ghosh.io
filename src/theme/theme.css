@@ -1,10 +1,10 @@
 body,
 body.light {
   --text-primary: #1B2128;
-  --text-secondary: #3e4d5e;
+  --text-secondary: #5b6d82;
   --text-tertiary: #6F829D;
 
-  --bg-lighter: #f6fafb;
+  --bg-lighter: #e8ecf2;
   --bg-regular: #e1e8f1;
   --bg-darker: #c9d5e0;
 
