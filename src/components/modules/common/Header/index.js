@@ -46,6 +46,7 @@ const TwitterWrapper = styled.a`
   display: none;
   text-decoration: none;
   cursor: pointer;
+  margin-right: 12px;
 
     ${ Breakpoints.greaterThan('tabletL')`
       display: flex;

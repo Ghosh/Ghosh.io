@@ -61,7 +61,7 @@ const Featured = () => {
               css="color: var(--text-secondary)"
               width={['100%', '90%', '80%', '50%']}
             >
-              Conceptualised the first version of a design system which now powers most of Cleartrip's desktop products
+              Conceptualised the first version of a design system which now powers most of Cleartrip{`‘`}s desktop products
             </Text>
           </Box>
         </Container>

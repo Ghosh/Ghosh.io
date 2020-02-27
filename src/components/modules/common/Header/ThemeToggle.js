@@ -46,17 +46,20 @@ const ThemeToggle = () => {
     <Toggle onClick={() => toggle()}>
       {theme === 'dark' &&
         <Sun
-          width="23"
+          width="24"
           style={{
             fill: 'var(--accent-1)'
           }}
         />
       }
-      {theme !== 'dark' &&
+      {theme === 'light' &&
         <Moon
-          width="24"
-          height="20"
-          style={{ fill: 'var(--accent-1)' }}
+          width="18"
+          height="18"
+          style={{
+            fill: 'var(--accent-1)',
+            paddingLeft: '2px'
+          }}
         />
       }
     </Toggle>
