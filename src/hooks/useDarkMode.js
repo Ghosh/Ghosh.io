@@ -25,22 +25,24 @@ const DarkModeProvider = ({ children, ...props }) => {
 
   const isDarkMode = darkMode
 
+  const windowPreset = typeof window !== `undefined`
+
   // Save mode in localstorage
   useEffect(() => {
-    if (!window.localStorage) return
-    localStorage.setItem('canIHazDarkMode', JSON.stringify(darkMode))
+    windowPreset && localStorage.setItem('canIHazDarkMode', JSON.stringify(darkMode))
   }, [darkMode])
 
   function getInitialMode () {
-    if (!window.localStorage) return
-    const isReturningUser = 'canIHazDarkMode' in localStorage
-    const hasDarkModePreference = getPreferredColorScheme()
-    const savedMode = JSON.parse(localStorage.getItem('canIHazDarkMode'))
+    if (windowPreset) {
+      const isReturningUser = 'canIHazDarkMode' in localStorage
+      const hasDarkModePreference = getPreferredColorScheme()
+      const savedMode = JSON.parse(localStorage.getItem('canIHazDarkMode'))
 
-    // Has saved in local storage
-    if (isReturningUser) return savedMode
-    // Has preference for dark mode
-    if (hasDarkModePreference) return true
+      // Has saved in local storage
+      if (isReturningUser) return savedMode
+      // Has preference for dark mode
+      if (hasDarkModePreference) return true
+    }
     // Default light mode
     return false
   }
@@ -49,7 +51,7 @@ const DarkModeProvider = ({ children, ...props }) => {
    * Get preffered color scheme of user
    */
   function getPreferredColorScheme () {
-    if (!window.matchMedia) return
+    if (!windowPreset) return
     const pref = window.matchMedia('(prefers-color-scheme: dark)')
     return pref.matches
   }
