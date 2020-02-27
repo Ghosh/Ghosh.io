@@ -9,17 +9,13 @@ import GlobalStyle from '@src/styles/global'
 import SEO from './seo'
 import theme from '@src/theme'
 
-import { DarkModeProvider } from '../hooks/useDarkMode'
-
 const Layout = ({ children, title }) => {
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
         <SEO title={title}/>
         <GlobalStyle />
-        <DarkModeProvider>
-          {children}
-        </DarkModeProvider>
+        {children}
       </Wrapper>
     </ThemeProvider>
   )

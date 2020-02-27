@@ -1,8 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-
-import { useDarkMode } from '@hooks/useDarkMode'
 
 import { ReactComponent as Sun } from './icons/sun.svg'
 import { ReactComponent as Moon } from './icons/moon.svg'
@@ -26,12 +23,29 @@ const Toggle = styled.button`
   }
 `
 
+const isBrowser = (typeof window !== `undefined`)
+
 const ThemeToggle = () => {
-  const { toggleMode, isDarkMode } = useDarkMode()
+  const [theme, setTheme] = useState(null)
+
+  useEffect(() => {
+    if (isBrowser) {
+      setTheme(window.__theme)
+      console.log(theme)
+      console.log('Setting theme to', window.__theme)
+      window.__onThemeChange = () => setTheme(window.__theme)
+    }
+  }, [])
+
+  const toggle = () => {
+    if (theme === 'light') return window.__setPreferredTheme('dark')
+    if (theme === 'dark') return window.__setPreferredTheme('light')
+    window.__setPreferredTheme('dark')
+  }
 
   return (
-    <Toggle onClick={() => toggleMode()}>
-      {isDarkMode &&
+    <Toggle onClick={() => toggle()}>
+      {theme === 'dark' &&
         <Sun
           width="23"
           style={{
@@ -39,7 +53,7 @@ const ThemeToggle = () => {
           }}
         />
       }
-      {!isDarkMode &&
+      {theme !== 'dark' &&
         <Moon
           width="24"
           height="20"
@@ -48,10 +62,6 @@ const ThemeToggle = () => {
       }
     </Toggle>
   )
-}
-
-ThemeToggle.propTypes = {
-  toggleMode: PropTypes.func
 }
 
 export default ThemeToggle
