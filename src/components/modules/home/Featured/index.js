@@ -45,6 +45,7 @@ const Featured = () => {
           >
             <Text
               fontSize={[3, 4, 5]}
+              fontWeight="500"
               lineHeight={1.7}
               css="color: var(--text-primary)"
             >
