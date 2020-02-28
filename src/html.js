@@ -17,7 +17,7 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes} className="light">
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
               (function() {
@@ -47,6 +47,13 @@ export default class HTML extends React.Component {
                 });
                 setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
               })();
+            `
+            }}
+          /> */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              !function(){function e(e){window.__theme=e,n=e,document.body.className=e,window.__onThemeChange(e),window.__onSkinChange(e)}var n;window.__onThemeChange=function(){},window.__onSkinChange=function(){},window.__setPreferredTheme=function(n){e(n);try{localStorage.setItem("theme",n)}catch(e){}};try{n=localStorage.getItem("theme")}catch(e){}var t=window.matchMedia("(prefers-color-scheme: dark)");t.addListener(function(e){window.__setPreferredTheme(e.matches?"dark":"light")}),e(n||(t.matches?"dark":"light"))}();
             `
             }}
           />
