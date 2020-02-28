@@ -8,6 +8,8 @@ body.light {
   --bg-regular: #e1e8f1;
   --bg-darker: #c9d5e0;
 
+  --bg-contrast-light: #a4b6c6;
+
   --accent-1: #3366cc;
 
   /* Aliases */
@@ -22,6 +24,8 @@ body.dark {
   --bg-lighter: #404b69;
   --bg-regular: #2e3955;
   --bg-darker: #283149;
+
+  --bg-contrast-light: #3f4a68;
 
   --accent-1: #fdcd6f;
 

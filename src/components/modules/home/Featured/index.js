@@ -15,7 +15,7 @@ const Circle = styled(Box)`
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background-color: var(--text-primary);
+  background-color: var(--bg-contrast-light);
 `
 
 const Divider = styled.span`
@@ -53,12 +53,12 @@ const Featured = () => {
       >
         <Container>
 
-          <Box css="opacity: 0.3">
+          <Box>
             <Text
               fontSize={['24px', '38px', '48px']}
               fontWeight="800"
               lineHeight={1.7}
-              css="color: var(--text-primary)"
+              css="color: var(--bg-contrast-light);"
             >
                 Aa
             </Text>
@@ -66,9 +66,9 @@ const Featured = () => {
               <Circle css="opacity: 1"/>
               <Circle ml="-20px" css="opacity: 0.8;"/>
               <Circle ml="-20px" css="opacity: 0.6;" />
+              <Circle ml="-20px" css="opacity: 0.5;" />
               <Circle ml="-20px" css="opacity: 0.4;" />
               <Circle ml="-20px" css="opacity: 0.3;" />
-              <Circle ml="-20px" css="opacity: 0.1;" />
             </Box>
           </Box>
 
