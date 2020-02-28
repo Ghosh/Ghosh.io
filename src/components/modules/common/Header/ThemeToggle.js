@@ -31,7 +31,6 @@ const ThemeToggle = () => {
   useEffect(() => {
     if (isBrowser) {
       setTheme(window.__theme)
-      console.log('Setting theme to', window.__theme)
       window.__onThemeChange = () => setTheme(window.__theme)
     }
   }, [])

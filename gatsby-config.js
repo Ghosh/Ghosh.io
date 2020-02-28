@@ -37,7 +37,8 @@ module.exports = {
           '@hooks': './src/hooks/',
           '@mods': './src/components/modules/',
           '@core': './src/components/core/',
-          '@breakpoints': './src/styles/breakpoints/'
+          '@breakpoints': './src/styles/breakpoints/',
+          '@skin': './src/theme/useSkin'
         },
         extensions: []
       }

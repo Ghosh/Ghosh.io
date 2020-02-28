@@ -7,6 +7,7 @@ import Button from '@core/Button'
 import Container from '@core/Container'
 
 import Breakpoints from '@breakpoints'
+import useSkin from '@skin'
 
 const Divider = styled.span`
   height: 1px;
@@ -20,6 +21,8 @@ const Divider = styled.span`
 `
 
 const Featured = () => {
+  const theme = useSkin()
+  console.log('Destructured theme: ', theme)
   return (
     <>
       <Container >
@@ -42,7 +45,16 @@ const Featured = () => {
         <Container>
           <Box py={['7', '8', '9', '11']}>
             <Box>
-              <h1>Grapghic</h1>
+              <Text
+                fontSize={[3, 4, 5]}
+                fontWeight="500"
+                lineHeight={1.7}
+                css="color: var(--text-primary)"
+              >
+                {theme === 'dark' && 'Dark'}
+                {theme === 'light' && 'Light'}
+                {theme !== 'light' && theme !== 'dark' && 'hang on...'}
+              </Text>
             </Box>
             <Box
               display="flex"

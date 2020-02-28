@@ -22,6 +22,7 @@ export default class HTML extends React.Component {
               __html: `
               (function() {
                 window.__onThemeChange = function() {};
+                window.__onSkinChange = function() {};
                 window.__setPreferredTheme = function(newTheme) {
                   setTheme(newTheme);
                   try {
@@ -33,6 +34,7 @@ export default class HTML extends React.Component {
                   preferredTheme = newTheme;
                   document.body.className = newTheme;
                   window.__onThemeChange(newTheme);
+                  window.__onSkinChange(newTheme);
                 }
 
                 var preferredTheme;
