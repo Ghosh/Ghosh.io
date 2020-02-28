@@ -29,7 +29,7 @@ const BaseButton = styled.button`
   }
 
   &:active {
-    opacity: 95%;
+    opacity: 100%;
   }
 `
 
