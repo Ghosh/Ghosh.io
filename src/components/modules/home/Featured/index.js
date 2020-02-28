@@ -48,21 +48,21 @@ const Featured = () => {
 
       <Box
         mt={[3, 4, 6]}
-        py={['7', '8', '9', '11']}
+        py={['7', '8']}
         css="background-color: var(--bg-darker)"
       >
         <Container>
 
-          <Box>
+          <Box display={['none', 'none', 'block']}>
             <Text
               fontSize={['24px', '38px', '48px']}
               fontWeight="800"
-              lineHeight={1.7}
+              lineHeight={1}
               css="color: var(--bg-contrast-light);"
             >
                 Aa
             </Text>
-            <Box display="flex" mt="-10px">
+            <Box display="flex" mt="8px">
               <Circle css="opacity: 1"/>
               <Circle ml="-20px" css="opacity: 0.8;"/>
               <Circle ml="-20px" css="opacity: 0.6;" />
@@ -77,6 +77,7 @@ const Featured = () => {
             flexDirection="column"
             justifyContent="center"
             alignItems="flex-start"
+            mt={[7, 8, 9, 10]}
           >
             <Text
               fontSize={[3, 4, 5]}
@@ -84,7 +85,7 @@ const Featured = () => {
               lineHeight={1.7}
               css="color: var(--text-primary)"
             >
-              Building a design system for Cleartrip
+              Building a design system from scratch
             </Text>
             <Text
               mt={[2, 3]}
@@ -99,10 +100,14 @@ const Featured = () => {
             <Button mt={[3, 4, 6]}>
               Read case study
             </Button>
-          </Box>
 
-          <Box>
-            <Label>Design</Label>
+            <Box
+              display={['none', 'none', 'flex']}
+              mt={[4, 7, 9, 10]}
+            >
+              <Label>Design</Label>
+              <Label>Code</Label>
+            </Box>
           </Box>
 
         </Container>
