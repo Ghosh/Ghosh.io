@@ -10,6 +10,8 @@ import Container from '@core/Container'
 
 import Label from './Label'
 
+import { ReactComponent as Logo } from './icons/cleartrip.svg'
+
 // TODO: Copy rendered colors and change to z-index stack
 const Circle = styled(Box)`
   width: 40px;
@@ -60,7 +62,7 @@ const Featured = () => {
               lineHeight={1}
               css="color: var(--bg-contrast-light);"
             >
-                Aa
+              Aa
             </Text>
             <Box display="flex" mt="8px">
               <Circle css="opacity: 1"/>
@@ -77,7 +79,7 @@ const Featured = () => {
             flexDirection="column"
             justifyContent="center"
             alignItems="flex-start"
-            mt={[7, 8, 9, 10]}
+            mt={[0, 0, 8, 9, 10]}
           >
             <Text
               fontSize={[3, 4, 5]}
@@ -102,11 +104,16 @@ const Featured = () => {
             </Button>
 
             <Box
-              display={['none', 'none', 'flex']}
-              mt={[4, 7, 9, 10]}
+              display={['none', 'none', 'block']}
+              mt={[4, 7, 9, 10, 10]}
             >
-              <Label>Design</Label>
-              <Label>Code</Label>
+              <Box mb={[3]}>
+                <Logo fill="#fff" width="100"/>
+              </Box>
+              <Box display={['flex']}>
+                <Label>Design Systems</Label>
+                <Label>React Components</Label>
+              </Box>
             </Box>
           </Box>
 
