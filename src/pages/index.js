@@ -6,6 +6,7 @@ import Header from '@mods/common/Header'
 
 import Hero from '@mods/home/Hero'
 import Featured from '@mods/home/Featured'
+import Gallery from '@mods/home/Gallery'
 
 const IndexPage = () => (
   <Layout title="Home">
@@ -14,6 +15,7 @@ const IndexPage = () => (
       <Hero />
     </Container>
     <Featured />
+    <Gallery />
   </Layout>
 )
 
