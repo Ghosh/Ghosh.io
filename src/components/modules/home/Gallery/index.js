@@ -11,13 +11,13 @@ const Wrapper = styled.div`
   margin-bottom: 100px;
   display: grid;
   grid-gap: 24px;
-  grid-template-areas:
-    "item-1 item-1 item-2 item-2"
-    "item-1 item-1 item-3 item-4"
+  grid-template-areas: "item-1";
 
-  /* ${ Breakpoints.greaterThan('tabletP')`
-      padding-top: 24px;
-  ` }; */
+  ${ Breakpoints.greaterThan('tabletP')`
+    grid-template-areas:
+      "item-1 item-1 item-2 item-2"
+      "item-1 item-1 item-3 item-4";
+  ` };
 `
 
 const Item = styled(Box)`
@@ -33,15 +33,30 @@ const Item1 = styled(Item)`
 `
 
 const Item2 = styled(Item)`
-  grid-area: item-2;
+  display: none;
+
+  ${ Breakpoints.greaterThan('tabletP')`
+    grid-area: item-2;
+    display:block;
+  ` };
 `
 
 const Item3 = styled(Item)`
-  grid-area: item-3;
+  display: none;
+
+  ${ Breakpoints.greaterThan('tabletP')`
+    grid-area: item-3;
+    display:block;
+  ` };
 `
 
 const Item4 = styled(Item)`
-  grid-area: item-4;
+  display: none;
+
+  ${ Breakpoints.greaterThan('tabletP')`
+    grid-area: item-4;
+    display:block;
+  ` };
 `
 
 const Gallery = () => {

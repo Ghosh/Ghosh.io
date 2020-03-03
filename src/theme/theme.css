@@ -1,3 +1,5 @@
+/* TODO: Change lighter and darker to light and dark respectively */
+/* TODO: Add lighter and darker (for borders) */
 body,
 body.light {
   --text-primary: #1B2128;
