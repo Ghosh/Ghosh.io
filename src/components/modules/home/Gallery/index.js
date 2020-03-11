@@ -109,7 +109,7 @@ const Gallery = () => {
             </Button>
           </Box>
           <Box
-            display={['flex']}
+            display={['none', 'none', 'none', 'flex']}
             flexDirection="column"
             mt={[2, 3, 4]}
             css={{
