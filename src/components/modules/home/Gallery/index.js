@@ -26,6 +26,7 @@ const Wrapper = styled.div`
 
 const Item = styled(Box)`
   background-color: var(--bg-darker);
+  border-radius: 4px;
   /* display: flex;
   justify-content: center;
   align-items: center; */
