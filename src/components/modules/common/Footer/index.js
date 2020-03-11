@@ -8,10 +8,8 @@ const Footer = () => {
   return (
     <Container mb="300px">
       <Flex justifyContent="space-between">
-        <Box></Box>
-        <Box>
-          RHS
-        </Box>
+        <Box>LHS</Box>
+        <Box>RHS</Box>
       </Flex>
     </Container>
   )
