@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Layout from '@src/layouts/master'
-import Container from '@core/Container'
 import Header from '@mods/common/Header'
 
 import Hero from '@mods/home/Hero'
@@ -12,9 +11,7 @@ import Sides from '@mods/home/Sides'
 const IndexPage = () => (
   <Layout title="Home">
     <Header />
-    <Container>
-      <Hero />
-    </Container>
+    <Hero />
     <Featured />
     <Gallery />
     <Sides/>
