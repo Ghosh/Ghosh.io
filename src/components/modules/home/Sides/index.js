@@ -14,10 +14,9 @@ const Wrapper = styled(Box)`
   display: grid;
   grid-gap: 24px;
   grid-template-areas:
-    "item-1"
-    "item-2"
-    "item-3"
-  ;
+    'item-1'
+    'item-2'
+    'item-3';
 
   ${ Breakpoints.greaterThan('tabletP')`
     grid-template-areas:
@@ -70,24 +69,17 @@ const Sides = () => {
         width={['100%', '90%', '80%', '60%']}
         css="color: var(--text-secondary)"
       >
-        I love side projects. It gives me a chance to flex creatively outside the confines of my daily work. Here are some of my favourites:-
+        I love side projects. It gives me a chance to flex creatively outside the confines of my daily work. Here are
+        some of my favourites:-
       </Text>
 
       <Wrapper mt="4">
-        <Item1>
-          1
-        </Item1>
-        <Item2>
-          2
-        </Item2>
-        <Item3>
-          3
-        </Item3>
+        <Item1>1</Item1>
+        <Item2>2</Item2>
+        <Item3>3</Item3>
       </Wrapper>
 
-      <Button mt={[3, 4, 6]}>
-        See all projects
-      </Button>
+      <Button mt={[3, 4, 6]}>See all projects</Button>
     </Container>
   )
 }

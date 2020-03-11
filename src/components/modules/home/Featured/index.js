@@ -5,6 +5,7 @@ import Breakpoints from '@breakpoints'
 
 import Text from '@core/Text'
 import Box from '@core/Box'
+import Flex from '@core/Flex'
 import Button from '@core/Button'
 import Container from '@core/Container'
 
@@ -34,14 +35,19 @@ const Divider = styled.span`
 const Featured = () => {
   return (
     <>
-      <Container >
-        <Box display="flex" alignItems="center" mt={[8, 9, 10]}>
+      <Container>
+        <Box
+          display="flex"
+          alignItems="center"
+          mt={[8, 9, 10]}
+        >
           <Text
             fontSize={['10px', '12px']}
             letterSpacing={2}
             fontWeight="500"
             mr={2}
-            css="color: var(--text-tertiary); text-transform: uppercase;">
+            css="color: var(--text-tertiary); text-transform: uppercase;"
+          >
             Featured Project
           </Text>
           <Divider />
@@ -54,7 +60,6 @@ const Featured = () => {
         css="background-color: var(--bg-darker)"
       >
         <Container>
-
           <Box display={['none', 'none', 'block']}>
             <Text
               fontSize={['24px', '38px', '48px']}
@@ -65,8 +70,8 @@ const Featured = () => {
               Aa
             </Text>
             <Box display="flex" mt="8px">
-              <Circle css="opacity: 1"/>
-              <Circle ml="-20px" css="opacity: 0.8;"/>
+              <Circle css="opacity: 1" />
+              <Circle ml="-20px" css="opacity: 0.8;" />
               <Circle ml="-20px" css="opacity: 0.6;" />
               <Circle ml="-20px" css="opacity: 0.5;" />
               <Circle ml="-20px" css="opacity: 0.4;" />
@@ -97,26 +102,24 @@ const Featured = () => {
               css="color: var(--text-secondary)"
               width={['100%', '90%', '80%', '50%']}
             >
-              Conceptualised and built the first version of a design system which now powers Cleartrip{`‘`}s desktop products
+              Conceptualised and built the first version of a design system which now powers Cleartrip
+              {`‘`}s desktop products
             </Text>
-            <Button mt={[3, 4, 6]}>
-              Read case study
-            </Button>
+            <Button mt={[3, 4, 6]}>Read case study</Button>
 
             <Box
               display={['none', 'none', 'block']}
               mt={[4, 7, 9, 10, 10]}
             >
               <Box mb={[3]}>
-                <Logo fill="#fff" width="100"/>
+                <Logo fill="#fff" width="100" />
               </Box>
-              <Box display={['flex']}>
+              <Flex>
                 <Label>Design Systems</Label>
                 <Label ml={[7]}>React Components</Label>
-              </Box>
+              </Flex>
             </Box>
           </Box>
-
         </Container>
       </Box>
     </>

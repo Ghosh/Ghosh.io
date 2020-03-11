@@ -7,9 +7,11 @@ import Box from '@core/Box'
 const Footer = () => {
   return (
     <Container mb="300px">
-      <Flex>
-        <Box>LHS</Box>
-        <Box>RHS</Box>
+      <Flex justifyContent="space-between">
+        <Box></Box>
+        <Box>
+          RHS
+        </Box>
       </Flex>
     </Container>
   )
