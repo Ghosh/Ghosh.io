@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '@src/layouts/master'
 import Header from '@mods/common/Header'
+import Footer from '@mods/common/Footer'
 
 import Hero from '@mods/home/Hero'
 import Featured from '@mods/home/Featured'
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Featured />
     <Gallery />
     <Sides/>
+    <Footer />
   </Layout>
 )
 

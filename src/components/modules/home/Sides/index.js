@@ -53,7 +53,7 @@ const Item3 = styled(Item)`
 
 const Sides = () => {
   return (
-    <Container mb="5">
+    <Container mb="400px">
       <Text
         fontSize={[3, 4, 5]}
         fontWeight="500"

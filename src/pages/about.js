@@ -6,8 +6,9 @@ import Header from '@mods/common/Header'
 
 const NotFoundPage = () => (
   <Layout title="About">
+
+    <Header />
     <Container>
-      <Header />
       <h1>About</h1>
       <p>This si the abor age</p>
     </Container>
