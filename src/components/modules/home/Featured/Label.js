@@ -13,9 +13,9 @@ const Circle = styled.div`
   background-color: var(--accent-1);
 `
 
-const Label = ({ children }) => {
+const Label = ({ children, ...rest }) => {
   return (
-    <Box display="flex" alignItems="center" mr="4">
+    <Box display="flex" alignItems="center" {...rest}>
       <Circle />
       <Text
         fontSize="0"

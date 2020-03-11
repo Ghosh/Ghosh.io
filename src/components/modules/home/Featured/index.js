@@ -112,7 +112,7 @@ const Featured = () => {
               </Box>
               <Box display={['flex']}>
                 <Label>Design Systems</Label>
-                <Label>React Components</Label>
+                <Label ml={[7]}>React Components</Label>
               </Box>
             </Box>
           </Box>
