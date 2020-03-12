@@ -4,34 +4,9 @@
     "ghosh/react",
     "plugin:jsx-a11y/recommended"
   ],
-  "rules": {
-    "react/jsx-max-props-per-line": [
-      1,
-      {
-        "maximum": 1,
-        "when": "multiline"
-      }
-    ],
-    "react/jsx-closing-bracket-location": [
-      1,
-      "tag-aligned"
-    ],
-    "react/jsx-curly-spacing": [
-      2,
-      {
-        "when": "never",
-        "spacing": {
-          "objectLiterals": "never"
-        }
-      }
-    ]
-  },
   "settings": {
     "react": {
       "version": "detect"
     }
-  },
-  "globals": {
-    "localStorage": true
   }
 }

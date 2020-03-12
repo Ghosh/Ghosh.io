@@ -4682,10 +4682,10 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-ghosh@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-ghosh/-/eslint-config-ghosh-0.1.3.tgz#97536a7c660e6b46947f768cdc5dbc554af475a8"
-  integrity sha512-v8XIYADMYwVB35B0q6QMXaL82JRy7IStOUR8x/JT9px8dZr1asQzMgskqrfilo3BiiWh7/y7wbAIl/Ue5w7udQ==
+eslint-config-ghosh@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-ghosh/-/eslint-config-ghosh-0.1.4.tgz#a512f577d57d3091fb57da0386433650d65d7a8b"
+  integrity sha512-e0/kPMxkh/IFgPiBDcEmhnoqNHvMsNtpZV6vJiA0QDVBmOYL+PPeqoXdZKYm14scJtQwCke/lgrXvk1u02XUfw==
   dependencies:
     eslint-config-standard "^12.0.0"
     eslint-plugin-import "^2.17.2"
