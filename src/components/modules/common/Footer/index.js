@@ -7,6 +7,8 @@ import Box from '@core/Box'
 import Text from '@core/Text'
 import Link from '@core/Link'
 
+import Breakpoints from '@breakpoints'
+
 import { ReactComponent as Wave } from './wave.svg'
 
 const Waves = styled(Wave)`
@@ -14,10 +16,16 @@ const Waves = styled(Wave)`
   fill: var(--bg-darker)
 `
 
+const Menu = styled.div`
+  display: none;
+  ${ Breakpoints.greaterThan('tabletP')`
+    display: block
+  ` };
+`
 const Footer = () => {
   return (
     <>
-      <Container mb="300px">
+      <Container mb="160px">
         <Flex justifyContent="space-between">
           <Box>
             <Text
@@ -60,71 +68,75 @@ const Footer = () => {
             </Text>
           </Box>
 
-          <Flex>
+          <Menu>
+            <Flex
+              css="flex: 1; margin-top: 10px;"
+              justifyContent="flex-end"
+            >
 
-            <Flex flexDirection="column" mr="8">
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+              <Flex flexDirection="column" mr="9">
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               Home
-              </Link>
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+                </Link>
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               About
-              </Link>
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+                </Link>
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               Labs
-              </Link>
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+                </Link>
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               Contact
-              </Link>
-            </Flex>
+                </Link>
+              </Flex>
 
-            <Flex flexDirection="column" mr="8">
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+              <Flex flexDirection="column">
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               Twitter
-              </Link>
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+                </Link>
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               Github
-              </Link>
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+                </Link>
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               Instagram
-              </Link>
-              <Link
-                href="/"
-                fontSize={[2]}
-                mb="3"
-              >
+                </Link>
+                <Link
+                  href="/"
+                  fontSize={[2]}
+                  mb="5"
+                >
               Youtube?
-              </Link>
+                </Link>
+              </Flex>
             </Flex>
-
-          </Flex>
+          </Menu>
         </Flex>
       </Container>
       <Waves />
