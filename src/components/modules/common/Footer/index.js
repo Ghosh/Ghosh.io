@@ -45,7 +45,9 @@ const Footer = () => {
               css="color: var(--text-secondary)"
               mb="2"
             >
-            Feel free to reach out for any collaboration or just for a friendly hello
+              {/* Feel free to reach out for any collaboration or just
+            for a friendly hello */}
+              I enjoy connecting with friendly folks who are passionate about what they do. Feel free to reach out for a collaboration or just a friendly hello
             </Text>
             <Text
               fontSize={[1, 2, 3]}
@@ -64,7 +66,7 @@ const Footer = () => {
               width={['100%', '90%', '60%']}
               css="color: var(--text-tertiary)"
             >
-            Created with love, sweat and loads of coffee
+              Website made with Gatsby and hosted on Netlify
             </Text>
           </Box>
 
