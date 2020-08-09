@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "ghosh/standard",
+    "ghosh/react",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
