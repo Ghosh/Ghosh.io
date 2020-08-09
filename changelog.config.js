@@ -1,5 +1,5 @@
 module.exports = {
-  "disableEmoji": false,
+  "disableEmoji": true,
   "list": [
     "refactor",
     "style",
@@ -15,6 +15,5 @@ module.exports = {
     "type",
     "subject",
   ],
-
 }
 
