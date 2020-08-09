@@ -20,11 +20,6 @@
     "git-cz": "^4.7.0",
     "husky": "^4.2.5"
   },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook --disable-emoji || true"
-    }
-  },
   "config": {
     "commitizen": {
       "path": "git-cz"
