@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Ghosh",
   "scripts": {
-    "commit": "npx git-cz",
     "dev": "next",
     "build": "next build",
     "start": "next start"
