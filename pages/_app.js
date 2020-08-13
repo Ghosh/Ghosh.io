@@ -3,17 +3,13 @@ import App from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import Normalize from '@stylekit/ui/Normalize'
 
-const theme = {
-  colors: {
-    primary: '#0070f3'
-  }
-}
+import Theme from '../Theme.js'
 
 export default class MyApp extends App {
   render () {
     const { Component, pageProps } = this.props
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={Theme}>
         <Normalize />
         <Component {...pageProps} />
       </ThemeProvider>
