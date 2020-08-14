@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Box from '@stylekit/ui/Box'
 import Flex from '@stylekit/ui/Flex'
+import Burger from '@stylekit/ui/Burger'
 
 import Wrapper from 'components/Wrapper'
 
@@ -13,23 +13,25 @@ import Logo from './svg/logo.svg'
 const Twitter = styled.a`
   color: #3A73B5;
   text-decoration: none;
+  margin-right: 24px;
 `
 
 const Header = () => {
   return (
     <Wrapper>
-      <Box height="140px" width="100%" vCentered>
-        <Flex justifyContent="between">
-          <Flex>
-            <Logo width="65" />
-            <Nav />
-          </Flex>
-
-          <Flex justifyContent="end" alignItems="center">
-            <Twitter>@_ighosh</Twitter>
-          </Flex>
+      <Flex justifyContent="between" alignItems="center" height="140px">
+        {/* Logo */}
+        <Flex alignItems="center">
+          <Logo width="65" />
+          <Nav />
         </Flex>
-      </Box>
+
+        {/* Nav */}
+        <Flex alignItems="center" justifyContent="end">
+          <Twitter>@_ighosh</Twitter>
+          <Burger />
+        </Flex>
+      </Flex>
     </Wrapper>
   )
 }

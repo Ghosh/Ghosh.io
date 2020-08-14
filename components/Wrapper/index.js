@@ -4,7 +4,8 @@ import styled from 'styled-components'
 
 const BaseWrapper = styled.div`
   margin: auto;
-  max-width: ${ props => props.theme.layout.maxWidth }
+  max-width: ${ props => props.theme.layout.maxWidth };
+  padding: 0 16px;
 `
 
 /**
