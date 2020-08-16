@@ -4,15 +4,15 @@ const theme = {
     outerWidth: '1440px'
   },
   fontSizes: {
-    h900: '35px',
-    h800: '29px',
-    h700: '24px',
-    h600: '20px',
-    h500: '16px',
-    h400: '14px',
-    h300: '12px',
-    h200: '11px',
-    h100: '10px'
+    h900: '3.5rem',
+    h800: '2.9rem',
+    h700: '2.4rem',
+    h600: '2rem',
+    h500: '1.6rem',
+    h400: '1.4rem',
+    h300: '1.2rem',
+    h200: '1.1rem',
+    h100: '1rem'
   },
   breakpoints: [
     '480px',

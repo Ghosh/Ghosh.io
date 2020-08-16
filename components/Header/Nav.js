@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
+import Text from '@stylekit/ui/Text'
+
 const List = styled.ul`
   list-style-type: none;
   padding-left: 0;
@@ -21,12 +23,12 @@ const Item = styled.li`
  * @TODO: Add path to all links
  * @TODO: Add hover and active states
  */
-const Anchor = styled.a`
+
+const Anchor = styled(Text)`
+  font-size: ${ props => props.theme.fontSizes.h500 };
   text-decoration: none;
   color: inherit;
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 `
 
 const Nav = () => {
@@ -34,20 +36,34 @@ const Nav = () => {
     <List>
       <Item>
         <Link href="/">
-          <Anchor>Home</Anchor>
+          <Anchor as="a">
+            Home
+          </Anchor>
         </Link>
       </Item>
 
       <Item>
-        Lab
+        <Link href="/">
+          <Anchor as="a">
+            Lab
+          </Anchor>
+        </Link>
       </Item>
 
       <Item>
-        About
+        <Link href="/">
+          <Anchor as="a">
+            About
+          </Anchor>
+        </Link>
       </Item>
 
       <Item>
-        Contact
+        <Link href="/">
+          <Anchor as="a">
+            Contact
+          </Anchor>
+        </Link>
       </Item>
     </List>
   )
