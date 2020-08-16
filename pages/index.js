@@ -14,9 +14,10 @@ const Home = () => {
         <Text
           as="h1"
           color="saddlebrown"
-          fontSize="35px"
+          fontSize="h900"
           fontWeight="600"
-          m="0"
+          mt="0"
+          mb="4"
         >
           Home
         </Text>
