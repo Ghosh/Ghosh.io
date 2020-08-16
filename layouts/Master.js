@@ -9,6 +9,7 @@ const Master = ({ children }) => {
   return (
     <>
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>Ghosh - Portfolio of Indrashish Ghosh</title>
         <meta name="description" content="Design, Developer, Maker. Indrashish Ghosh Protfolio" />
