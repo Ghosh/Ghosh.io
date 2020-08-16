@@ -22,7 +22,7 @@ const Header = () => {
       <Flex justifyContent="space-between" alignItems="center" height="140px" >
         {/* Logo */}
         <Flex alignItems="center">
-          <Logo width="65" />
+          <Logo width="65" fill="#2C7A7B" />
           <Nav />
         </Flex>
 
