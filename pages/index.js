@@ -1,21 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
+
+import Text from '@stylekit/ui/Text'
 
 import Master from 'layouts/Master'
 import Header from 'components/Header'
 import Wrapper from 'components/Wrapper'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: papayawhip;
-`
 
 const Home = () => {
   return (
     <Master>
       <Header />
       <Wrapper>
-        <Title>Home</Title>
+        <Text
+          as="h1"
+          color="saddlebrown"
+          fontSize="35px"
+          fontWeight="600"
+          m="0"
+        >
+          Home
+        </Text>
       </Wrapper>
     </Master>
   )

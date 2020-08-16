@@ -1,12 +1,13 @@
 {
   "name": "@stylekit/ui",
-  "version": "0.1.0+675933f0",
+  "version": "0.1.0+889a9e68",
   "main": "dist/index.js",
   "license": "MIT",
   "sideEffects": false,
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "test": "jest",
+    "test:watch": "jest --watch",
     "stats": "serve stats",
     "deploy": "node ./scripts/deploy.js",
     "lint:js": "./node_modules/.bin/eslint . --ext .js",
@@ -15,17 +16,21 @@
     "afterpublish": "node ./scripts/postpublish.js"
   },
   "peerDependencies": {
+    "@styled-system/prop-types": "^5.1.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1",
-    "styled-is": "^1.3.0"
+    "styled-is": "^1.3.0",
+    "styled-system": "^5.1.5"
   },
   "dependencies": {
+    "@styled-system/prop-types": "^5.1.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1",
-    "styled-is": "^1.3.0"
+    "styled-is": "^1.3.0",
+    "styled-system": "^5.1.5"
   }
 }

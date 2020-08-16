@@ -19,7 +19,7 @@ const Twitter = styled.a`
 const Header = () => {
   return (
     <Wrapper>
-      <Flex justifyContent="between" alignItems="center" height="140px">
+      <Flex justifyContent="space-between" alignItems="center" height="140px" >
         {/* Logo */}
         <Flex alignItems="center">
           <Logo width="65" />
@@ -27,7 +27,7 @@ const Header = () => {
         </Flex>
 
         {/* Nav */}
-        <Flex alignItems="center" justifyContent="end">
+        <Flex alignItems="center" justifyContent="flex-end">
           <Twitter>@_ighosh</Twitter>
           <Burger />
         </Flex>
@@ -35,5 +35,7 @@ const Header = () => {
     </Wrapper>
   )
 }
+
+Header.displayName = 'Header'
 
 export default Header
