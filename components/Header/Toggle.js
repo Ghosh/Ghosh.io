@@ -31,7 +31,6 @@ const Toggle = () => {
   }, [])
 
   const toggle = () => {
-    console.log('Click Toggle')
     if (theme === 'light') return window.__setPreferredTheme('dark')
     if (theme === 'dark') return window.__setPreferredTheme('light')
     window.__setPreferredTheme('dark')
