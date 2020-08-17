@@ -6,7 +6,7 @@ import Spacer from '@stylekit/ui/Spacer'
 const Hero = () => {
   return (
     <>
-      <Spacer my="6" />
+      <Spacer mt="100px" />
 
       <Text fontSize={['20px', '24px', '30px']}>
         <span role="img" aria-label="wave">👋</span>
@@ -27,7 +27,7 @@ const Hero = () => {
         fontSize="h700"
         lineHeight="4.2rem"
         fontWeight="300"
-        width="55%"
+        width={['100%', '85%', '53%']}
         m="0"
       >
         I am a Product Designer who enjoys designing and building experiences for the next billion users

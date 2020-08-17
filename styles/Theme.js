@@ -1,6 +1,7 @@
 const theme = {
   layout: {
-    maxWidth: '1040px'
+    innerWidth: '960px',
+    outerWidth: '1440px'
   },
   fontSizes: {
     h900: '35px',
