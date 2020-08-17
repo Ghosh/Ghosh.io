@@ -4,7 +4,7 @@
   window.__setPreferredTheme = function (newTheme) {
     setTheme(newTheme)
     try {
-      localStorage.setItem('theme', newTheme)
+      window.localStorage.setItem('theme', newTheme)
     } catch (err) { }
   }
   function setTheme (newTheme) {
@@ -16,7 +16,7 @@
   }
   var preferredTheme
   try {
-    preferredTheme = localStorage.getItem('theme')
+    preferredTheme = window.localStorage.getItem('theme')
     console.log('Preffered theme', preferredTheme)
   } catch (err) { }
   var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')

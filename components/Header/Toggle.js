@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Flex from '@stylekit/ui/Flex'
 import styled from 'styled-components'
 
@@ -16,19 +16,39 @@ const Area = styled(Flex)`
   &:hover {
     background-color: #eaeaea;
   }
-`
+  `
+
+const isBrowser = (typeof window !== `undefined`)
 
 const Toggle = () => {
-  return (
-    <Area>
-      <Moon
-        width="14"
-        fill="#3366cc"
-      />
+  const [theme, setTheme] = useState(null)
 
-      {false &&
+  useEffect(() => {
+    if (isBrowser) {
+      setTheme(window.__theme)
+      window.__onThemeChange = () => setTheme(window.__theme)
+    }
+  }, [])
+
+  const toggle = () => {
+    console.log('Click Toggle')
+    if (theme === 'light') return window.__setPreferredTheme('dark')
+    if (theme === 'dark') return window.__setPreferredTheme('light')
+    window.__setPreferredTheme('dark')
+  }
+
+  return (
+    <Area onClick={() => toggle()}>
+      {theme === 'dark' &&
         <Sun
           width="20"
+          fill="#3366cc"
+        />
+      }
+
+      {theme === 'light' &&
+        <Moon
+          width="14"
           fill="#3366cc"
         />
       }
