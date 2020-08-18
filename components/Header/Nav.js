@@ -7,7 +7,7 @@ import Text from '@stylekit/ui/Text'
 const List = styled.ul`
   list-style-type: none;
   padding-left: 0;
-  margin-left: 60px;
+  margin: 0;
 `
 
 const Item = styled.li`

@@ -2,21 +2,32 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Flex from '@stylekit/ui/Flex'
 
+import Breakpoints from '@/breakpoints'
+
 import Moon from './svg/moon.svg'
 import Sun from './svg/sun.svg'
 
 const Area = styled(Flex)`
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   border-radius: 4px;
+  margin-right: -24px;
 
-  &:hover {
-    background-color: var(--bg-2);
+  ${ Breakpoints.greaterThan('tabletL')`
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+  ` };
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--bg-2);
+    }
   }
-  `
+`
 
 const isBrowser = (typeof window !== `undefined`)
 

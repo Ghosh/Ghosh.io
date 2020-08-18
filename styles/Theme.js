@@ -21,6 +21,10 @@ const theme = {
     '1200px',
     '1440px'
   ],
+  fonts: {
+    'serif': '"New York", Georgia, Cambria, "Times New Roman", Times, serif',
+    'sans': '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";'
+  },
   colors: {
     'neutral': {
       100: '#F7FAFC',
