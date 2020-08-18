@@ -25,10 +25,13 @@ const Item = styled(Box)`
   background-color: var(--bg-2);
   border-radius: 4px;
   height: 188px;
+
+  ${ Breakpoints.greaterThan('tabletP')`
+    height: 400px;
+  ` };
 `
 
 const Item1 = styled(Item)`
-  height: 400px;
   grid-area: item-1;
 `
 
@@ -38,6 +41,11 @@ const Item2 = styled(Item)`
     grid-area: item-2;
     display:block;
   ` };
+
+  ${ Breakpoints.greaterThan('tabletP')`
+    height: 188px;
+  ` };
+
 `
 
 const Item3 = styled(Item)`
@@ -45,6 +53,7 @@ const Item3 = styled(Item)`
   ${ Breakpoints.greaterThan('tabletP')`
     grid-area: item-3;
     display:block;
+    height: 188px;
   ` };
 `
 
@@ -53,6 +62,7 @@ const Item4 = styled(Item)`
   ${ Breakpoints.greaterThan('tabletP')`
     grid-area: item-4;
     display:block;
+    height: 188px;
   ` };
 `
 
