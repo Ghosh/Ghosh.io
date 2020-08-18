@@ -1,7 +1,7 @@
 import React from 'react'
 
+import Box from '@stylekit/ui/Box'
 import Flex from '@stylekit/ui/Flex'
-import Burger from '@stylekit/ui/Burger'
 import Spacer from '@stylekit/ui/Spacer'
 
 import Wrapper from 'components/Wrapper'
@@ -14,22 +14,34 @@ import Toggle from './Toggle'
 const Header = () => {
   return (
     <Wrapper>
-      <Flex justifyContent="space-between" alignItems="center" height="140px" >
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        height={['80px', '100px', '140px']}
+      >
         {/* Left */}
         <Flex alignItems="center">
           <Ghosh />
-          <Nav />
+          <Spacer ml={['0px', '35px', '50px']} />
+          <Box display={['none', 'none', 'block']}>
+            <Nav />
+          </Box>
         </Flex>
 
         {/* Right */}
         <Flex alignItems="center" justifyContent="flex-end">
           <Twitter />
-          <Spacer mx={2} />
+          <Spacer mx={3} />
           <Toggle />
-          <Spacer mx={2} />
-          <Burger />
         </Flex>
       </Flex>
+
+      <Box
+        mt={['0px', '-10px', '-20px']}
+        display={['block', 'block', 'none']}
+      >
+        <Nav />
+      </Box>
     </Wrapper>
   )
 }

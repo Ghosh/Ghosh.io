@@ -6,17 +6,18 @@ import Spacer from '@stylekit/ui/Spacer'
 const Hero = () => {
   return (
     <>
-      <Spacer mt="100px" />
+      <Spacer mt={['70px', '80px', '100px']} />
 
-      <Text fontSize={['20px', '24px', '30px']}>
+      <Text fontSize={['24px', '30px']} m="0">
         <span role="img" aria-label="wave">
           👋
         </span>
       </Text>
 
+      <Spacer mt={['3', '3', '4']} />
+
       <Text
-        as="h1"
-        fontSize="h900"
+        fontSize={['h700', 'h800', 'h900']}
         fontWeight="600"
         m="0"
         css={`
@@ -26,12 +27,12 @@ const Hero = () => {
         Hi, I am Indrashish Ghosh
       </Text>
 
-      <Spacer my="3" />
+      <Spacer my={['2', '3']} />
 
       <Text
-        fontSize="h700"
-        lineHeight="4.2rem"
-        fontWeight="300"
+        fontSize={['h600', 'h600', 'h700']}
+        lineHeight={['2.9rem', '2.9rem', '4.2rem']}
+        fontWeight="400"
         width={['100%', '85%', '53%']}
         m="0"
         css={`

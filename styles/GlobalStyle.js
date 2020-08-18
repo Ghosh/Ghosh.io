@@ -12,10 +12,12 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 1.6rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,Arial,sans-serif;
     color: ${ theme.colors.neutral[700] }
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,Arial,sans-serif;
     color: ${ theme.colors.neutral[900] }
   }
 `
