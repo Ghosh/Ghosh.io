@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Flex from '@stylekit/ui/Flex'
 import styled from 'styled-components'
+import Flex from '@stylekit/ui/Flex'
 
 import Moon from './svg/moon.svg'
 import Sun from './svg/sun.svg'
@@ -39,7 +39,6 @@ const Toggle = () => {
   return (
     <Area onClick={() => toggle()}>
       {theme === 'dark' && <Sun width="20" fill="#fcc419" />}
-
       {theme === 'light' && <Moon width="14" fill="#1c7ed6" />}
     </Area>
   )
