@@ -9,7 +9,9 @@ const Hero = () => {
       <Spacer mt="100px" />
 
       <Text fontSize={['20px', '24px', '30px']}>
-        <span role="img" aria-label="wave">👋</span>
+        <span role="img" aria-label="wave">
+          👋
+        </span>
       </Text>
 
       <Text
@@ -17,6 +19,9 @@ const Hero = () => {
         fontSize="h900"
         fontWeight="600"
         m="0"
+        css={`
+          color: var(--text-1-color);
+        `}
       >
         Hi, I am Indrashish Ghosh
       </Text>
@@ -29,8 +34,12 @@ const Hero = () => {
         fontWeight="300"
         width={['100%', '85%', '53%']}
         m="0"
+        css={`
+          color: var(--text-2-color);
+        `}
       >
-        I am a Product Designer who enjoys designing and building experiences for the next billion users
+        I am a Product Designer who enjoys designing and building experiences
+        for the next billion users
       </Text>
 
       <Spacer mb="7" />

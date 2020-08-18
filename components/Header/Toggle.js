@@ -14,7 +14,7 @@ const Area = styled(Flex)`
   border-radius: 4px;
 
   &:hover {
-    background-color: #eaeaea;
+    background-color: var(--bg-2);
   }
   `
 
@@ -38,9 +38,9 @@ const Toggle = () => {
 
   return (
     <Area onClick={() => toggle()}>
-      {theme === 'dark' && <Sun width="20" fill="#3366cc" />}
+      {theme === 'dark' && <Sun width="20" fill="#fcc419" />}
 
-      {theme === 'light' && <Moon width="14" fill="#3366cc" />}
+      {theme === 'light' && <Moon width="14" fill="#1c7ed6" />}
     </Area>
   )
 }

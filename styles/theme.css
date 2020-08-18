@@ -17,12 +17,32 @@ body.light {
   background-color: var(--neutral-100);
 
   --site-bg: var(--neutral-100);
-  --wrapper-bg: var(--neutral-0)
+  --wrapper-bg: var(--neutral-0);
+
+  --text-1-color: var(--neutral-900);
+  --text-2-color: var(--neutral-700);
+  --text-2-color: var(--neutral-600);
+
+  --bg-1: var(--neutral-100);
+  --bg-2: var(--neutral-200);
+
+  --border-1: var(--neutral-200);
+  --border-2: var(--neutral-300);
 }
 
 body.dark {
   background-color: var(--neutral-1000);
 
   --site-bg: var(--neutral-1000);
-  --wrapper-bg: var(--neutral-900)
+  --wrapper-bg: var(--neutral-900);
+
+  --text-1-color: var(--neutral-0);
+  --text-2-color: var(--neutral-500);
+  --text-2-color: var(--neutral-600);
+
+  --bg-1: var(--neutral-800);
+  --bg-2: var(--neutral-700);
+
+  --border-1: var(--neutral-700);
+  --border-2: var(--neutral-600);
 }

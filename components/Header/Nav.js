@@ -23,9 +23,10 @@ const Item = styled.li`
  */
 const Anchor = styled.a`
   text-decoration: none;
-  color: inherit;
+  color: var(--text-2-color);
   &:hover {
     cursor: pointer;
+    color: var(--text-1-color);
   }
 `
 
@@ -39,15 +40,21 @@ const Nav = () => {
       </Item>
 
       <Item>
-        Lab
+        <Link href="/">
+          <Anchor>Lab</Anchor>
+        </Link>
       </Item>
 
       <Item>
-        About
+        <Link href="/">
+          <Anchor>About</Anchor>
+        </Link>
       </Item>
 
       <Item>
-        Contact
+        <Link href="/">
+          <Anchor>Contact</Anchor>
+        </Link>
       </Item>
     </List>
   )
