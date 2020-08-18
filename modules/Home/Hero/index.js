@@ -51,7 +51,7 @@ const Hero = () => {
         for the next billion users
       </Text> */}
 
-      <Spacer mb="7" />
+      <Spacer mb={['70px', 6, 6, 7]} />
     </>
   )
 }
