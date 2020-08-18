@@ -1,5 +1,5 @@
 import React from 'react'
-import Document from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -27,5 +27,20 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  render () {
+    return (
+      <Html>
+        <Head>
+          <link rel="stylesheet" type="text/css" href="/variables.css" />
+        </Head>
+        <body>
+          <script type="text/javascript" src="/darkmode.js"></script>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }

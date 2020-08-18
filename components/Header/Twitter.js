@@ -4,6 +4,11 @@ import Flex from '@stylekit/ui/Flex'
 
 import TwitterLogo from './svg/twitter.svg'
 
+const Link = styled(Flex)`
+  box-sizing: border-box;
+  text-decoration: none;
+`
+
 const Handle = styled.span`
   box-sizing: border-box;
   color: #3A73B5;
@@ -16,12 +21,6 @@ const Icon = styled(TwitterLogo)`
   fill: #3A73B5;
   width: 18px;
   margin-bottom: -4px
-`
-
-const Link = styled(Flex)`
-  box-sizing: border-box;
-  text-decoration: none;
-  margin-right: 24px;
 `
 
 const Twitter = () => {

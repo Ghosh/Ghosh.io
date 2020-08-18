@@ -1,4 +1,3 @@
-/* eslint jsx-a11y/anchor-is-valid: 0 */
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
@@ -27,8 +26,11 @@ const Item = styled.li`
 const Anchor = styled(Text)`
   font-size: ${ props => props.theme.fontSizes.h500 };
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+  color: var(--text-2-color);
+  &:hover {
+    cursor: pointer;
+    color: var(--text-1-color);
+  }
 `
 
 const Nav = () => {
@@ -36,9 +38,7 @@ const Nav = () => {
     <List>
       <Item>
         <Link href="/">
-          <Anchor as="a">
-            Home
-          </Anchor>
+          <Anchor as="a">Home</Anchor>
         </Link>
       </Item>
 
