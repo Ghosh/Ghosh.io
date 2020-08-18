@@ -11,6 +11,8 @@ import Icon from 'components/Icon'
 import Subheader from './Subheader'
 import Gallery from './Gallery'
 
+import Cleartrip from './svg/cleartrip.svg'
+
 /**
  * @BUG: as="h2" styles text differently
  */
@@ -28,10 +30,8 @@ const Featured = () => {
       >
         <Wrapper>
           <Text
-            as="h2"
             fontWight="400"
             fontSize={['h600', 'h700', 'h800']}
-            fontFamily="serif"
             lineHeight="1.4"
             m="0"
             color="var(--text-1-color)"
@@ -43,8 +43,8 @@ const Featured = () => {
           <Gallery />
           <Spacer mb={[3, 4]} />
 
-          <Flex width={['100%', '50%']}>
-            <Box>
+          <Flex justifyContent="space-between">
+            <Box width={['50%']}>
               <Text
                 fontSize={['h500', 'h600']}
                 lineHeight="1.6"
@@ -56,7 +56,7 @@ const Featured = () => {
               <Spacer mb={[3]} />
               <Flex alignItems="center">
                 <Text
-                  fontSize={['h500', 'h600']}
+                  fontSize={['h400', 'h500']}
                   color="cyan"
                   m="0"
                 >
@@ -70,6 +70,10 @@ const Featured = () => {
                   />
                 </Box>
               </Flex>
+            </Box>
+
+            <Box>
+              <Cleartrip />
             </Box>
           </Flex>
 
