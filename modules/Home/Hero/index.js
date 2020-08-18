@@ -3,10 +3,15 @@ import React from 'react'
 import Text from '@stylekit/ui/Text'
 import Spacer from '@stylekit/ui/Spacer'
 
+const byline = [
+  'Hi, I am Indrashish Ghosh. A product designer who enjoys designing and building experiences for the next billion users',
+  'Hi, I am Indrashish Ghosh. A product design generalist specializing in design systems and progressive web apps.'
+]
+
 const Hero = () => {
   return (
     <>
-      <Spacer mt={['70px', '80px', '100px']} />
+      <Spacer mt={['70px', '80px', '80px', '80px', '100px']} />
 
       <Text fontSize={['18px', '24px', '30px']} m="0">
         <span role="img" aria-label="wave">
@@ -27,8 +32,7 @@ const Hero = () => {
           color: var(--text-1-color);
         `}
       >
-        Hi, I am Indrashish Ghosh. A product designer who enjoys designing and
-        building experiences for the next billion users
+        {byline[1]}
       </Text>
 
       {/* <Spacer my={['2', '3']} />
