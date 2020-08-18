@@ -44,7 +44,7 @@ const Featured = () => {
           <Spacer mb={[3, 4]} />
 
           <Flex justifyContent="space-between">
-            <Box width={['50%']}>
+            <Box width={['100%', '100%', '50%']}>
               <Text
                 fontSize={['h500', 'h600']}
                 lineHeight="1.6"
@@ -72,8 +72,8 @@ const Featured = () => {
               </Flex>
             </Box>
 
-            <Box>
-              <Cleartrip />
+            <Box display={['none', 'none', 'block']}>
+              <Cleartrip width="100px" />
             </Box>
           </Flex>
 
