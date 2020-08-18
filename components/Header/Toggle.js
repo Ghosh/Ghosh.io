@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Flex from '@stylekit/ui/Flex'
 
+import Breakpoints from '@/breakpoints'
+
 import Moon from './svg/moon.svg'
 import Sun from './svg/sun.svg'
 
@@ -13,6 +15,12 @@ const Area = styled(Flex)`
   cursor: pointer;
   border-radius: 4px;
   margin-right: -24px;
+
+  ${ Breakpoints.greaterThan('tabletL')`
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+  ` };
 
   @media (hover: hover) {
     &:hover {

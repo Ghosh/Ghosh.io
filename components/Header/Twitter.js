@@ -4,10 +4,16 @@ import Flex from '@stylekit/ui/Flex'
 
 import TwitterLogo from './svg/twitter.svg'
 
+import Breakpoints from '@/breakpoints'
+
 const Link = styled(Flex)`
   box-sizing: border-box;
   text-decoration: none;
   margin-right: -24px;
+
+  ${ Breakpoints.greaterThan('tabletL')`
+    margin-right: 0;
+  ` };
 `
 
 const Handle = styled.span`

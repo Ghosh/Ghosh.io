@@ -37,7 +37,7 @@ const Header = () => {
       </Flex>
 
       <Box
-        mt={['0px', '-10px', '-20px']}
+        mt={['-5px', '-10px']}
         display={['block', 'block', 'none']}
       >
         <Nav />
