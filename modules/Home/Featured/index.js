@@ -30,6 +30,7 @@ const Featured = () => {
       >
         <Wrapper>
           <Text
+            as="h2"
             fontWight="400"
             fontSize={['h600', 'h700', 'h800']}
             lineHeight="1.4"

@@ -6,6 +6,7 @@ import Wrapper from 'components/Wrapper'
 
 import Hero from 'modules/Home/Hero'
 import Featured from 'modules/Home/Featured'
+import PWA from 'modules/Home/PWA'
 
 const Home = () => {
   return (
@@ -15,6 +16,9 @@ const Home = () => {
         <Hero />
       </Wrapper>
       <Featured />
+      <Wrapper>
+        <PWA />
+      </Wrapper>
     </Master>
   )
 }
