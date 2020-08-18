@@ -7,6 +7,7 @@ import TwitterLogo from './svg/twitter.svg'
 const Link = styled(Flex)`
   box-sizing: border-box;
   text-decoration: none;
+  margin-right: -24px;
 `
 
 const Handle = styled.span`
