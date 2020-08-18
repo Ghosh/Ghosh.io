@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%; /* Hack to make 1.4rem = 14px */
 
-    background-color: ${ theme.colors.neutral[200] }
+    background-color: var(--site-bg)
   }
 
   body {

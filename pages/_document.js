@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" type="text/css" href="/theme.css" />
+          {/* <link rel="stylesheet" type="text/css" href="/theme.css" /> */}
         </Head>
         <body>
           <script type="text/javascript" src="/darkmode.js"></script>

@@ -16,9 +16,13 @@ body,
 body.light {
   background-color: var(--neutral-100);
 
+  --site-bg: var(--neutral-100);
   --wrapper-bg: var(--neutral-0)
 }
 
 body.dark {
   background-color: var(--neutral-1000);
+
+  --site-bg: var(--neutral-1000);
+  --wrapper-bg: var(--neutral-900)
 }

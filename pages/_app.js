@@ -6,6 +6,8 @@ import Normalize from '@stylekit/ui/Normalize'
 import Theme from '../styles/Theme'
 import GlobalStyle from '../styles/GlobalStyle'
 
+import '../styles/theme.css'
+
 export default class MyApp extends App {
   render () {
     const { Component, pageProps } = this.props
