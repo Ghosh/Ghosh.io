@@ -4,8 +4,8 @@ import Text from '@stylekit/ui/Text'
 import Spacer from '@stylekit/ui/Spacer'
 
 const byline = [
-  'Hi, I am Indrashish Ghosh. A product designer who enjoys designing and building experiences for the next billion users',
-  'Hi, I am Indrashish Ghosh. A product design generalist specializing in design systems and progressive web apps.'
+  'A product designer who enjoys designing and building experiences for the next billion users',
+  'A product design generalist specializing in design systems and progressive web apps.'
 ]
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
       <Text
         fontSize={['h600', 'h700', 'h800', 'h900']}
         fontWeight="500"
-        fontFamily="serif"
+        fontFamily="sans"
         width={['100%', '95%', '90%', '85%', '80%']}
         lineHeight="1.4"
         m="0"
@@ -32,10 +32,10 @@ const Hero = () => {
           color: var(--text-1-color);
         `}
       >
-        {byline[1]}
+        Hi, I am Indrashish Ghosh
       </Text>
 
-      {/* <Spacer my={['2', '3']} />
+      <Spacer my={['2', '2']} />
 
       <Text
         fontSize={['h600', 'h600', 'h700']}
@@ -47,9 +47,8 @@ const Hero = () => {
           color: var(--text-2-color);
         `}
       >
-        A product designer who enjoys designing and building experiences
-        for the next billion users
-      </Text> */}
+        {byline[1]}
+      </Text>
 
       <Spacer mb={['70px', 6, 6, 7]} />
     </>
