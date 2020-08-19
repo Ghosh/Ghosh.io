@@ -8,6 +8,7 @@ import Hero from 'modules/Home/Hero'
 import Featured from 'modules/Home/Featured'
 import PWA from 'modules/Home/PWA'
 import Past from 'modules/Home/Past'
+import Sides from 'modules/Home/Sides'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Wrapper>
         <PWA />
         <Past />
+        <Sides />
       </Wrapper>
     </Master>
   )
