@@ -8,6 +8,7 @@ import Flex from '@stylekit/ui/Flex'
 const Grad = styled.span`
   background: var(--text-grad);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
 
@@ -22,7 +23,9 @@ const Circle = styled.div`
 const byline = [
   'A product designer who enjoys designing and building experiences for the next billion users',
   'A product design generalist specializing in design systems and progressive web apps',
-  'Welcome to my portfolio. As a designer, developer and maker - I love being involved in all stages of solutioning'
+  'Welcome to my portfolio. As a designer, developer and maker - I love being involved in all stages of deriving solution',
+  'Over the past 8 years, I have been privileged to have influenced design decisions that have impacted millions of users',
+  'Thank you for visiting my portfolio. I am a product designer with 8 years of experience, who happens to code. Lately been focusing on Design Systems'
 ]
 
 const Hero = () => {
@@ -59,7 +62,7 @@ const Hero = () => {
         m="0"
         color="var(--text-2-color)"
       >
-        {byline[2]}
+        {byline[4]}
       </Text>
 
       <Spacer my={['4']} />

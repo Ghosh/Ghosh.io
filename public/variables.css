@@ -40,7 +40,7 @@ body.dark {
   --site-bg: var(--neutral-1000);
   --wrapper-bg: var(--neutral-900);
 
-  --text-grad: linear-gradient(to right, #f80759, #bc4e9c 70%);
+  --text-grad: linear-gradient(to right, #36D1DC, #5B86E5 70%);
 
   --text-1-color: var(--neutral-0);
   --text-2-color: var(--neutral-500);
@@ -48,7 +48,7 @@ body.dark {
 
   /* --bg-1: var(--neutral-800); */
   --bg-1: #25292d;
-  --bg-2: var(--neutral-700);
+  --bg-2: #2a2e33;
 
   /* --border-1: var(--neutral-700); */
   --border-1: #32373c;
