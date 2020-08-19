@@ -21,7 +21,7 @@ const Featured = () => {
     <>
       <Subheader />
       <Box
-        py={[4, 4, 4, 5]}
+        py={[4, 4, 4, 5, 6]}
         bg="var(--bg-1)"
         css={`
           border-top: solid 1px var(--border-1);
@@ -30,6 +30,7 @@ const Featured = () => {
       >
         <Wrapper>
           <Text
+            as="h2"
             fontWight="400"
             fontSize={['h600', 'h700', 'h800']}
             lineHeight="1.4"
@@ -44,7 +45,7 @@ const Featured = () => {
           <Spacer mb={[3, 4]} />
 
           <Flex justifyContent="space-between">
-            <Box width={['100%', '100%', '50%']}>
+            <Box width={['100%', '100%', '60%']}>
               <Text
                 fontSize={['h500', 'h600']}
                 lineHeight="1.6"
