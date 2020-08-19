@@ -13,8 +13,8 @@ import Cleartrip from './svg/cleartrip.svg'
 
 const PWA = () => {
   return (
-    <>
-      <Spacer my={5}/>
+    <Box py={[4, 4, 5]}>
+      <Spacer my={[1, 2, 4, 5]} />
       <Text
         as="h2"
         fontWight="400"
@@ -31,14 +31,14 @@ const PWA = () => {
       <Spacer mb={[3, 4]} />
 
       <Flex justifyContent="space-between">
-        <Box width={['100%', '100%', '50%']}>
+        <Box width={['100%', '100%', '65%']}>
           <Text
             fontSize={['h500', 'h600']}
             lineHeight="1.6"
             color="var(--text-2-color)"
             m="0"
           >
-            We identified the need of and then applied a design system in all of Cleartrip verticals
+            Given that majority of India does not have decent data speeds on mobile networks, speed and performance become an integral part of  browsing experience
           </Text>
           <Spacer mb={[3]} />
           <Flex alignItems="center">
@@ -63,9 +63,7 @@ const PWA = () => {
           <Cleartrip width="100px" />
         </Box>
       </Flex>
-
-      <Spacer my={5} />
-    </>
+    </Box>
   )
 }
 
