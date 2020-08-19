@@ -17,7 +17,7 @@ const Header = () => {
       <Flex
         justifyContent="space-between"
         alignItems="center"
-        height={['80px', '100px', '140px']}
+        height={['80px', '100px', '120px']}
       >
         {/* Left */}
         <Flex alignItems="center">

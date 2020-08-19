@@ -25,7 +25,7 @@ const Footer = () => {
             <Stack gap="16px">
               <Text
                 as="h4"
-                fontWight="600"
+                fontWeight="600"
                 fontSize={['h600', 'h700']}
                 m="0"
                 color="var(--text-1-color)"

@@ -14,7 +14,7 @@ const Past = () => {
     <Box>
       <Text
         as="h2"
-        fontWight="400"
+        fontWeight="500"
         fontSize={['h600', 'h700', 'h800']}
         lineHeight="1.4"
         m="0"
@@ -34,23 +34,16 @@ const Past = () => {
           color="var(--text-2-color)"
           m="0"
         >
-          I love side projects. It gives me a chance to flex creatively outside the confines of my daily work. Here are some of my favourites:-
+          I love side projects. It gives me a chance to flex creatively outside
+          the confines of my daily work. Here are some of my favourites:-
         </Text>
         <Spacer mb={[3]} />
         <Flex alignItems="center">
-          <Text
-            fontSize={['h400', 'h500']}
-            color="var(--accent-1)"
-            m="0"
-          >
+          <Text fontSize={['h400', 'h500']} color="var(--accent-1)" m="0">
             Read case study
           </Text>
           <Box mt="6px" ml="6px">
-            <Icon
-              label="right"
-              width="20px"
-              stroke="var(--accent-1)"
-            />
+            <Icon label="right" width="20px" stroke="var(--accent-1)" />
           </Box>
         </Flex>
       </Box>

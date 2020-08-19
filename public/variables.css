@@ -19,6 +19,8 @@ body.light {
   --site-bg: var(--neutral-100);
   --wrapper-bg: var(--neutral-0);
 
+  --text-grad: linear-gradient(to right, #4a00e0, #8e2de2 70%);
+
   --text-1-color: var(--neutral-900);
   --text-2-color: var(--neutral-700);
   --text-3-color: var(--neutral-600);
@@ -37,6 +39,8 @@ body.dark {
 
   --site-bg: var(--neutral-1000);
   --wrapper-bg: var(--neutral-900);
+
+  --text-grad: linear-gradient(to right, #f80759, #bc4e9c 70%);
 
   --text-1-color: var(--neutral-0);
   --text-2-color: var(--neutral-500);
