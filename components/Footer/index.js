@@ -22,7 +22,7 @@ const Footer = () => {
       <Wrapper>
         <Flex justifyContent="space-between" pb="6">
           <Box>
-            <Stack gap="12px">
+            <Stack gap="16px">
               <Text
                 as="h4"
                 fontWight="600"
@@ -57,6 +57,7 @@ const Footer = () => {
               fontSize={['h300', 'h400']}
               color="var(--text-3-color)"
               mt={4}
+              lineHeight="1.6"
             >
             Created with love, sweat and lots of coffee - Colophon
             </Text>

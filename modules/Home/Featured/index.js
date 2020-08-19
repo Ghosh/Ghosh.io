@@ -57,7 +57,7 @@ const Featured = () => {
               <Spacer mb={[3]} />
               <Flex alignItems="center">
                 <Text
-                  fontSize={['h400', 'h500']}
+                  fontSize={['h500', 'h600']}
                   color="var(--accent-1)"
                   m="0"
                 >

@@ -11,8 +11,7 @@ import Gallery from './Gallery'
 
 const Past = () => {
   return (
-    <Box mb="6">
-      <Spacer my={[1, 2, 4, 5]} />
+    <Box>
       <Text
         as="h2"
         fontWight="400"
