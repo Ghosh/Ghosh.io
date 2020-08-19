@@ -20,7 +20,7 @@ const Past = () => {
         m="0"
         color="var(--text-1-color)"
       >
-        Side projects
+        Passion projects
       </Text>
 
       <Spacer mt={[3, 4]} />
@@ -34,13 +34,12 @@ const Past = () => {
           color="var(--text-2-color)"
           m="0"
         >
-          I love side projects. It gives me a chance to flex creatively outside
-          the confines of my daily work. Here are some of my favourites:-
+          I love passion projects. It gives me a chance to flex creatively outside the confines of my daily work. Here are some of my favourites:-
         </Text>
         <Spacer mb={[3]} />
         <Flex alignItems="center">
           <Text fontSize={['h400', 'h500']} color="var(--accent-1)" m="0">
-            Read case study
+            See all projects
           </Text>
           <Box mt="6px" ml="6px">
             <Icon label="right" width="20px" stroke="var(--accent-1)" />

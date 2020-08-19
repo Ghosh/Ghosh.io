@@ -33,12 +33,12 @@ const Thumb = styled.div`
 
   ${ Breakpoints.lessThan('tabletP')`
     top: 80px;
-    left: 50%;
-    transform: translate3d(-215px, 0, 0)
+    left: 30px;
+    /* transform: translate3d(-215px, 0, 0) */
   ` };
 
   ${ Breakpoints.greaterThan('tabletP')`
-    bottom: -50px;
+    bottom: -60px;
     left: 40px;
   ` };
 
@@ -46,12 +46,15 @@ const Thumb = styled.div`
   img {
     width: 100%;
     box-shadow: -9px 10px 10px rgba(8,11,14,0.12);
+    transition: all .25s cubic-bezier(0,0,.2,1);
+    backface-visibility: hidden;
+    will-change: transform;
   }
 `
 
 const Item = styled(Box)`
   position: relative;
-  background-color: var(--bg-2);
+  background-color: var(--bg-1);
   border-radius: 4px;
   height: 220px;
   width: 100%;
@@ -61,9 +64,19 @@ const Item = styled(Box)`
     fill: var(--text-2-color);
   }
 
-  &:hover {
-     svg {
-      fill: var(--text-1-color);
+
+  @media (hover: hover) {
+    &:hover {
+
+      background-color: var(--bg-2);
+
+      svg {
+        fill: var(--text-1-color);
+      }
+
+      img {
+        transform: translate3d(-5px, 0,0);
+      }
     }
   }
 
@@ -88,7 +101,7 @@ const Gallery = () => {
   return (
     <Block>
       <Item1 as="a" href="/">
-        <Box centered mt={4}>
+        <Box centered mt="35px">
           <Gradients width="100px" />
         </Box>
         <Thumb>
@@ -96,30 +109,38 @@ const Gallery = () => {
             base="/images/home/sides/"
             name="uigradients.png"
             alt="uiGradients website"
+            width="436px"
+            height="375px"
           />
         </Thumb>
       </Item1>
-      <Item2>
+
+      <Item2 as="a" href="/">
         <Box centered mt={4}>
-          <Filters width="120px"/>
+          <Filters width="110px"/>
         </Box>
         <Thumb>
           <Image
             base="/images/home/sides/"
-            name="uigradients.png"
-            alt="uiGradients website"
+            name="cssfilters.png"
+            alt="cssFilters website"
+            width="436px"
+            height="375px"
           />
         </Thumb>
       </Item2>
-      <Item3>
+
+      <Item3 as="a" href="/">
         <Box centered mt={4}>
           <Scratch width="120px" />
         </Box>
         <Thumb>
           <Image
             base="/images/home/sides/"
-            name="uigradients.png"
-            alt="uiGradients website"
+            name="scratchmap.png"
+            alt="Scratchmap website"
+            width="436px"
+            height="375px"
           />
         </Thumb>
       </Item3>

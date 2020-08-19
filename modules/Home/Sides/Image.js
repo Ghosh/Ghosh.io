@@ -15,7 +15,7 @@ const getParts = (name) => {
   }
 }
 
-const Image = ({ base, name, alt }) => {
+const Image = ({ base, name, alt, width, height, lazy }) => {
   const types = getParts(name)
 
   // return <img src={`${ base }${ types.og }`} alt={alt} />
@@ -37,17 +37,27 @@ const Image = ({ base, name, alt }) => {
         type="image/png"
       />
       <img
+        loading="lazy"
         src={`${ base }${ types.og }`}
         alt={alt}
+        width={width}
+        height={height}
       />
     </picture>
   )
 }
 
 Image.propTypes = {
-  base: PropTypes.string,
-  name: PropTypes.string,
-  alt: PropTypes.string
+  base: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+  lazy: PropTypes.bool
+}
+
+Image.defaultProps = {
+  lazy: true
 }
 
 export default Image
