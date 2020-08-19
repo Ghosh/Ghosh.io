@@ -28,6 +28,8 @@ body.light {
 
   --border-1: var(--neutral-200);
   --border-2: var(--neutral-300);
+
+  --accent-1: #4c6ef5;
 }
 
 body.dark {
@@ -47,4 +49,6 @@ body.dark {
   /* --border-1: var(--neutral-700); */
   --border-1: #32373c;
   --border-2: var(--neutral-600);
+
+  --accent-1: #748ffc;
 }

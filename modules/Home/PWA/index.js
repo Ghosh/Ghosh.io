@@ -44,7 +44,7 @@ const PWA = () => {
           <Flex alignItems="center">
             <Text
               fontSize={['h400', 'h500']}
-              color="cyan"
+              color="var(--accent-1)"
               m="0"
             >
               Read case study
@@ -53,7 +53,7 @@ const PWA = () => {
               <Icon
                 label="right"
                 width="20px"
-                stroke="cyan"
+                stroke="var(--accent-1)"
               />
             </Box>
           </Flex>
