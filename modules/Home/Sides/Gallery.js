@@ -27,31 +27,6 @@ const Block = styled.div`
   ` }
 `
 
-const Thumb = styled.div`
-  width: 430px;
-  position: absolute;
-
-  ${ Breakpoints.lessThan('tabletP')`
-    top: 80px;
-    left: 30px;
-    /* transform: translate3d(-215px, 0, 0) */
-  ` };
-
-  ${ Breakpoints.greaterThan('tabletP')`
-    bottom: -60px;
-    left: 40px;
-  ` };
-
-  picture,
-  img {
-    width: 100%;
-    box-shadow: -9px 10px 10px rgba(8,11,14,0.12);
-    transition: all .25s cubic-bezier(0,0,.2,1);
-    backface-visibility: hidden;
-    will-change: transform;
-  }
-`
-
 const Item = styled(Box)`
   position: relative;
   background-color: var(--bg-1);
@@ -59,6 +34,10 @@ const Item = styled(Box)`
   height: 220px;
   width: 100%;
   overflow: hidden;
+
+  transition: background-color .25s cubic-bezier(0,0,.2,1);
+  backface-visibility: hidden;
+  will-change: transform;
 
   svg {
     fill: var(--text-2-color);
@@ -96,6 +75,31 @@ const Item2 = styled(Item)`
 const Item3 = styled(Item)`
   grid-area: item-3;
 `
+
+const Thumb = styled.div`
+    width: 430px;
+    position: absolute;
+
+    ${ Breakpoints.lessThan('tabletP')`
+      top: 80px;
+      left: 30px;
+      /* transform: translate3d(-215px, 0, 0) */
+    ` };
+
+    ${ Breakpoints.greaterThan('tabletP')`
+      bottom: -60px;
+      left: 40px;
+    ` };
+
+    picture,
+    img {
+      width: 100%;
+      box-shadow: -9px 10px 10px rgba(8,11,14,0.12);
+      transition: all .25s cubic-bezier(0,0,.2,1);
+      backface-visibility: hidden;
+      will-change: transform;
+    }
+  `
 
 const Gallery = () => {
   return (
