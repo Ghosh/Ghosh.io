@@ -7,6 +7,7 @@ import Wrapper from 'components/Wrapper'
 import Hero from 'modules/Home/Hero'
 import Featured from 'modules/Home/Featured'
 import PWA from 'modules/Home/PWA'
+import Past from 'modules/Home/Past'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Featured />
       <Wrapper>
         <PWA />
+        <Past />
       </Wrapper>
     </Master>
   )
