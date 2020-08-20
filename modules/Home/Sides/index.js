@@ -11,7 +11,7 @@ import Gallery from './Gallery'
 
 const Past = () => {
   return (
-    <Box>
+    <Box as="section">
       <Text
         as="h2"
         fontWeight="500"

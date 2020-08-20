@@ -23,7 +23,7 @@ const Footer = () => {
         <Flex justifyContent="space-between" pb="6">
           <Box>
             <Text
-              as="h4"
+              as="h3"
               fontWeight="600"
               fontSize={['h600', 'h700']}
               m="0"

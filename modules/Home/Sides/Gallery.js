@@ -13,6 +13,10 @@ import Image from 'components/Image'
 // 436 * 375
 // 872 * 748
 
+/**
+ * @TODO: Add one line description to projects
+ * link in past work section
+ */
 const Block = styled.div`
   display: grid;
   grid-gap: 24px;
@@ -43,6 +47,29 @@ const Item = styled(Box)`
     fill: var(--text-1-color);
   }
 
+
+
+  picture,
+  img {
+
+    ${ Breakpoints.lessThan('tabletP')`
+      top: 40px;
+      left: 10px;
+      right: 0;
+      margin: auto
+    ` };
+
+    ${ Breakpoints.greaterThan('tabletP')`
+      bottom: -30px;
+      left: 20px;
+    ` };
+
+    position: absolute;
+    box-shadow: -9px 10px 10px rgba(8,11,14,0.12);
+    transition: all .25s cubic-bezier(0,0,.2,1);
+    backface-visibility: hidden;
+    will-change: transform;
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -76,30 +103,6 @@ const Item3 = styled(Item)`
   grid-area: item-3;
 `
 
-const Thumb = styled.div`
-    position: absolute;
-
-    ${ Breakpoints.lessThan('tabletP')`
-      top: 80px;
-      left: 0;
-      right: 0;
-      margin: auto
-    ` };
-
-    ${ Breakpoints.greaterThan('tabletP')`
-      bottom: -60px;
-      left: 40px;
-    ` };
-
-    picture,
-    img {
-      box-shadow: -9px 10px 10px rgba(8,11,14,0.12);
-      transition: all .25s cubic-bezier(0,0,.2,1);
-      backface-visibility: hidden;
-      will-change: transform;
-    }
-  `
-
 const Gallery = () => {
   return (
     <Block>
@@ -107,45 +110,39 @@ const Gallery = () => {
         <Box centered mt="35px">
           <Gradients width="100px" />
         </Box>
-        <Thumb>
-          <Image
-            base="/images/home/sides/"
-            name="uigradients.png"
-            alt="uiGradients website"
-            width="436px"
-            height="375px"
-          />
-        </Thumb>
+        <Image
+          base="/images/home/sides/"
+          name="uigradients.png"
+          alt="uiGradients website"
+          width="436px"
+          height="375px"
+        />
       </Item1>
 
       <Item2 as="a" href="/">
         <Box centered mt={4}>
           <Filters width="110px"/>
         </Box>
-        <Thumb>
-          <Image
-            base="/images/home/sides/"
-            name="cssfilters.png"
-            alt="cssFilters website"
-            width="436px"
-            height="375px"
-          />
-        </Thumb>
+        <Image
+          base="/images/home/sides/"
+          name="cssfilters.png"
+          alt="cssFilters website"
+          width="436px"
+          height="375px"
+        />
       </Item2>
 
       <Item3 as="a" href="/">
         <Box centered mt={4}>
           <Scratch width="120px" />
         </Box>
-        <Thumb>
-          <Image
-            base="/images/home/sides/"
-            name="scratchmap.png"
-            alt="Scratchmap website"
-            width="436px"
-            height="375px"
-          />
-        </Thumb>
+        <Image
+          base="/images/home/sides/"
+          name="scratchmap.png"
+          alt="Scratchmap website"
+          width="436px"
+          height="375px"
+        />
       </Item3>
     </Block>
   )
