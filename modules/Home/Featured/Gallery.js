@@ -82,6 +82,7 @@ const Gallery = () => {
     <>
       <Parts>
         <Image
+          strat="eager"
           base="/images/home/bento/"
           name="parts.png"
           alt="Bento system components"
@@ -93,6 +94,7 @@ const Gallery = () => {
       <Block>
         <Item1>
           <Image
+            strat="eager"
             base="/images/home/bento/"
             name="tokens.png"
             alt="Representative image of bento tokens"
@@ -102,6 +104,7 @@ const Gallery = () => {
         </Item1>
         <Item2>
           <Image
+            strat="eager"
             base="/images/home/bento/"
             name="components.png"
             alt="Examples of Bento components"
@@ -111,6 +114,7 @@ const Gallery = () => {
         </Item2>
         <Item3>
           <Image
+            strat="eager"
             base="/images/home/bento/"
             name="utility.png"
             alt="css utility classes"
@@ -120,6 +124,7 @@ const Gallery = () => {
         </Item3>
         <Item4>
           <Image
+            strat="eager"
             base="/images/home/bento/"
             name="icons.png"
             alt="Image of the icon library"
