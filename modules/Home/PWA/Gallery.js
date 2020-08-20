@@ -24,15 +24,25 @@ const Block = styled.div`
 `
 
 const Item = styled(Box)`
-  background-color: var(--bg-2);
+  background-color: var(--bg-1);
   border-radius: 4px;
   overflow: hidden;
   height: 400px;
   position: relative;
 
+  transition: background-color .25s cubic-bezier(0,0,.2,1);
+  backface-visibility: hidden;
+  will-change: transform;
+
   ${ Breakpoints.greaterThan('tabletL')`
     height: 400px;
   ` };
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--bg-2);
+    }
+  }
 
   picture,
   img {
@@ -61,6 +71,12 @@ const Item1 = styled(Item)`
       top: 20px;
       left: 20px;
     ` };
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translate3d(0, -2px, 0);
+      }
+    }
   }
 `
 
@@ -83,6 +99,12 @@ const ItemFaux2 = styled(Item)`
       top: 20px;
       left: 20px;
     ` };
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translate3d(0, -2px, 0);
+      }
+    }
   }
 `
 
@@ -102,6 +124,12 @@ const Item2 = styled(Item)`
     right: 0;
     margin: auto;
     object-fit: cover;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
   }
 `
 
@@ -112,6 +140,15 @@ const Item3 = styled(Item)`
     display:block;
     height: 188px;
   ` };
+
+  picture,
+  img {
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
 `
 
 const Item4 = styled(Item)`
@@ -129,6 +166,12 @@ const Item4 = styled(Item)`
     right: 0;
     margin: auto;
     object-fit: cover;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
   }
 `
 
