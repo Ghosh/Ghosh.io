@@ -55,7 +55,6 @@ const Item1 = styled(Item)`
       left: 10px;
       right: 0;
       margin: auto;
-      object-fit: cover;
     ` };
 
     ${ Breakpoints.greaterThan('tabletP')`
@@ -122,6 +121,15 @@ const Item4 = styled(Item)`
     display:block;
     height: 188px;
   ` };
+
+  picture,
+  img {
+    top: 34px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    object-fit: cover;
+  }
 `
 
 const Gallery = () => {
@@ -154,8 +162,24 @@ const Gallery = () => {
           height="170px"
         />
       </Item2>
-      <Item3>3</Item3>
-      <Item4>4</Item4>
+      <Item3>
+        <Image
+          base="/images/home/pwa/"
+          name="map.png"
+          alt="Image of a map"
+          width="178px"
+          height="218px"
+        />
+      </Item3>
+      <Item4>
+        <Image
+          base="/images/home/pwa/"
+          name="button.png"
+          alt="Image of a button denoting the touch feedback"
+          width="178px"
+          height="58px"
+        />
+      </Item4>
     </Block>
   )
 }
