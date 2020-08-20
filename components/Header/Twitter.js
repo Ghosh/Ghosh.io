@@ -22,6 +22,7 @@ const Handle = styled.span`
   text-decoration: none;
   margin-left: 8px;
   text-decoration: none;
+  font-size: 1.6rem;
 `
 
 const Icon = styled(TwitterLogo)`
