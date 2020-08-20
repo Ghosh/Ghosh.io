@@ -23,7 +23,7 @@ const PWA = () => {
         m="0"
         color="var(--text-1-color)"
       >
-        Cleartrip PWA — Designing for Speed
+        Mobile Web – Perception of speed
       </Text>
 
       <Spacer mt={[3, 4]} />
