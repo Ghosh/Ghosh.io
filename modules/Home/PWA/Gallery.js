@@ -7,11 +7,11 @@ import Breakpoints from '@/breakpoints'
 import Image from 'components/Image'
 
 const Block = styled.div`
-  display: grid;
+  display: none;
   grid-gap: 24px;
-  grid-template-areas: "item-1";
 
   ${ Breakpoints.greaterThan('tabletP')`
+    display: grid;
     grid-template-areas:
       "item-1 item-2"
   ` };
@@ -61,15 +61,24 @@ const Item1 = styled(Item)`
     box-shadow: -9px 10px 10px rgba(8,11,14,0.12);
 
     ${ Breakpoints.lessThan('tabletP')`
-      top: 20px;
-      left: 10px;
+      top: 10px;
+      left: 0px;
       right: 0;
       margin: auto;
+      width: 90%;
+      height: auto;
     ` };
 
     ${ Breakpoints.greaterThan('tabletP')`
       top: 20px;
       left: 20px;
+    ` };
+
+    ${ Breakpoints.greaterThan('tabletL')`
+      top: 20px;
+      left: 0px;
+      right: 0;
+      margin: auto;
     ` };
 
     @media (hover: hover) {
@@ -175,55 +184,79 @@ const Item4 = styled(Item)`
   }
 `
 
+const Parts = styled.div`
+  ${ Breakpoints.greaterThan('tabletP')`
+    display: none;
+  ` };
+
+  picture,
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+`
+
 const Gallery = () => {
   return (
-    <Block>
-      <Item1>
+    <>
+      <Parts>
         <Image
           base="/images/home/pwa/"
-          name="flights.png"
+          name="preview.png"
           alt="Screen of the Flight PWA by Cleartrip"
-          width="472px"
-          height="839px"
+          width="700px"
+          height="594px"
         />
-      </Item1>
-      <ItemFaux2>
-        <Image
-          base="/images/home/pwa/"
-          name="hotels.png"
-          alt="Screen of the Hotel PWA by Cleartrip"
-          width="472px"
-          height="839px"
-        />
-      </ItemFaux2>
-      <Item2>
-        <Image
-          base="/images/home/pwa/"
-          name="carousel.png"
-          alt="Image of a carousel component used in the app"
-          width="818px"
-          height="170px"
-        />
-      </Item2>
-      <Item3>
-        <Image
-          base="/images/home/pwa/"
-          name="map.png"
-          alt="Image of a map"
-          width="178px"
-          height="218px"
-        />
-      </Item3>
-      <Item4>
-        <Image
-          base="/images/home/pwa/"
-          name="button.png"
-          alt="Image of a button denoting the touch feedback"
-          width="178px"
-          height="58px"
-        />
-      </Item4>
-    </Block>
+      </Parts>
+      <Block>
+        <Item1>
+          <Image
+            base="/images/home/pwa/"
+            name="flights.png"
+            alt="Screen of the Flight PWA by Cleartrip"
+            width="472px"
+            height="839px"
+          />
+        </Item1>
+        <ItemFaux2>
+          <Image
+            base="/images/home/pwa/"
+            name="hotels.png"
+            alt="Screen of the Hotel PWA by Cleartrip"
+            width="472px"
+            height="839px"
+          />
+        </ItemFaux2>
+        <Item2>
+          <Image
+            base="/images/home/pwa/"
+            name="carousel.png"
+            alt="Image of a carousel component used in the app"
+            width="818px"
+            height="170px"
+          />
+        </Item2>
+        <Item3>
+          <Image
+            base="/images/home/pwa/"
+            name="map.png"
+            alt="Image of a map"
+            width="178px"
+            height="218px"
+          />
+        </Item3>
+        <Item4>
+          <Image
+            base="/images/home/pwa/"
+            name="button.png"
+            alt="Image of a button denoting the touch feedback"
+            width="178px"
+            height="58px"
+          />
+        </Item4>
+      </Block>
+    </>
   )
 }
 
