@@ -10,6 +10,10 @@ import Breakpoints from '@/breakpoints'
 import Zomato from './svg/zomato.svg'
 import Oyo from './svg/oyo.svg'
 
+/**
+ * @TODO: Fix bg color
+ */
+
 const Block = styled.div`
   display: grid;
   grid-gap: 24px;

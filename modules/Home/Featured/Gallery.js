@@ -74,7 +74,9 @@ const Parts = styled.div`
     object-fit: cover;
   }
 `
-
+/**
+ * @TODO: Update hover effects
+ */
 const Gallery = () => {
   return (
     <>
