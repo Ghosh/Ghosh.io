@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-size: 1.6rem;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,Arial,sans-serif;
     color: ${ theme.colors.neutral[700] }
   }

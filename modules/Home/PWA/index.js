@@ -13,7 +13,7 @@ import Cleartrip from './svg/cleartrip.svg'
 
 const PWA = () => {
   return (
-    <Box>
+    <Box as="section">
       <Spacer my={[1, 2, 4, 5]} />
       <Text
         as="h2"
@@ -23,7 +23,7 @@ const PWA = () => {
         m="0"
         color="var(--text-1-color)"
       >
-        Cleartrip PWA — Designing for Speed
+        Mobile Web – Perception of speed
       </Text>
 
       <Spacer mt={[3, 4]} />
@@ -42,9 +42,15 @@ const PWA = () => {
             mobile networks, speed and performance become an integral part of
             browsing experience
           </Text>
+
           <Spacer mb={[3]} />
+
           <Flex alignItems="center">
-            <Text fontSize={['h500', 'h600']} color="var(--accent-1)" m="0">
+            <Text
+              fontSize={['h500', 'h600']}
+              color="var(--accent-1)"
+              m="0"
+            >
               Read case study
             </Text>
             <Box mt="6px" ml="6px">

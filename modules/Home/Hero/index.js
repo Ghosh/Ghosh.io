@@ -39,7 +39,7 @@ const Hero = () => {
       </Text>
       <Spacer mt={['3', '3', '4']} />
       <Text
-        fontSize={['h700', 'h700', '4rem', '5rem']}
+        fontSize={['h700', 'h800', '4rem', '5rem']}
         fontWeight="700"
         fontFamily="sans"
         width={['100%', '95%', '90%', '85%', '80%']}
@@ -55,8 +55,8 @@ const Hero = () => {
       <Spacer my={['2', '2']} />
 
       <Text
-        fontSize={['h600', 'h600', '2.5rem']}
-        lineHeight={['2.9rem', '2.9rem', '4.2rem']}
+        fontSize={['h600', 'h700', '2.5rem']}
+        lineHeight={['2.9rem', '3.4rem', '4.2rem']}
         fontWeight="300"
         width={['100%', '90%', '75%', '70%']}
         m="0"
