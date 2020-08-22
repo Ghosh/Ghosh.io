@@ -25,7 +25,9 @@ const byline = [
   'A product design generalist specializing in design systems and progressive web apps',
   'Welcome to my portfolio. As a designer, developer and maker - I love being involved in all stages of deriving solution',
   'Over the past 8 years, I have been privileged to have influenced design decisions that have impacted millions of users',
-  'Thank you for visiting my portfolio. I am a product designer with 8 years of experience, who happens to code. Lately been focusing on Design Systems'
+  'Thank you for visiting my portfolio. I am a product designer with 8 years of experience, who happens to code. Lately been focusing on Design Systems',
+  'Two parts designer, one part developer. For the last 8 years I have contributed to the growth of billion dollar companies as well as small medium eterprises',
+  'A product designer by trade, I have been crafting purpose-driven experiences for eight years. Recently my focus has been on building Design Systems at Cleartrip'
 ]
 
 const Hero = () => {
@@ -62,7 +64,7 @@ const Hero = () => {
         m="0"
         color="var(--text-2-color)"
       >
-        {byline[4]}
+        {byline[6]}
       </Text>
 
       <Spacer my={['4']} />

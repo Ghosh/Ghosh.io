@@ -10,10 +10,6 @@ import Breakpoints from '@/breakpoints'
 import Zomato from './svg/zomato.svg'
 import Oyo from './svg/oyo.svg'
 
-/**
- * @TODO: Fix bg color
- */
-
 const Block = styled.div`
   display: grid;
   grid-gap: 24px;
@@ -25,7 +21,7 @@ const Block = styled.div`
 
 const Item = styled(Box)`
   position: relative;
-  background-color: var(--bg-2);
+  background-color: var(--bg-1);
   border-radius: 4px;
   overflow: hidden;
   min-height: 400px;
