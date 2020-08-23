@@ -11,17 +11,29 @@ const getParts = (name) => {
     'og': `${ imgName }.${ ext }`,
     'ogRet': `${ imgName }@2x.${ ext }`,
     'webp': `${ imgName }.webp`,
-    'webpRet': `${ imgName }@2x.webp`
+    'webpRet': `${ imgName }@2x.webp`,
+    'avif': `${ imgName }.avif`,
+    'avifRet': `${ imgName }@2x.avif`
   }
 }
 
+/**
+ * @TODO: Convert all images on hompage to JPEG and only export the parts required
+ * @TODO: Allow passing extension for image as well
+ * @TODO: Auto detect extension from the file name
+ */
 const Image = ({ base, name, alt, width, height, strat }) => {
   const types = getParts(name)
 
-  // return <img src={`${ base }${ types.og }`} alt={alt} />
-
   return (
     <picture>
+      <source
+        srcSet={`
+          ${ base }${ types.avif } 1x,
+          ${ base }${ types.avifRet } 2x
+        `}
+        type="image/avif"
+      />
       <source
         srcSet={`
           ${ base }${ types.webp } 1x,
