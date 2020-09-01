@@ -1,0 +1,37 @@
+import Master from 'layouts/Master'
+import Hero from 'modules/Study/Bento/Hero'
+import Header from 'components/Header'
+
+import Text from '@stylekit/ui/Text'
+import Flex from '@stylekit/ui/Flex'
+
+<Master>
+
+<Hero header={<Header />}>
+  <Text
+    as="h1"
+    fontSize={['h500', 'h700', 'h900']}
+    lineHeight={['2.9rem', '3.4rem', '4.2rem']}
+    fontWeight="500"
+    width={['100%', '90%', '75%', '50%']}
+    m="0"
+    color="var(--text-1-color)"
+  >
+    Establishing a design system for Cleartrip
+  </Text>
+  <Text
+    as="h2"
+    fontSize={['h600', 'h700', '2.5rem']}
+    lineHeight={['2.9rem', '3.4rem', '4.2rem']}
+    fontWeight="300"
+    width={['100%', '90%', '75%', '50%']}
+    m="0"
+    color="var(--text-2-color)"
+  >
+    I spent two years at Cleartrip setting up the design systems team
+  </Text>
+</Hero>
+
+# Bento
+
+</Master>

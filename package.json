@@ -12,8 +12,12 @@
     "update:stylekit": "yalc update @stylekit/ui"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.16",
+    "@next/mdx": "^9.5.2",
     "@stylekit/ui": "file:.yalc/@stylekit/ui",
     "next": "^9.5.1",
+    "next-compose-plugins": "^2.2.0",
+    "next-svgr": "^0.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",

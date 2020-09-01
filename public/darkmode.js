@@ -26,6 +26,8 @@
   var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
   // Temp Hack - Spoofing matchMedia to always return light
+  // Delete next 4 lines and uncomment the other 4 to allow
+  // mdeia mathcing
   darkQuery.addListener(function (e) {
     window.__setPreferredTheme('light')
   })

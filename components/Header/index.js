@@ -4,8 +4,6 @@ import Box from '@stylekit/ui/Box'
 import Flex from '@stylekit/ui/Flex'
 import Spacer from '@stylekit/ui/Spacer'
 
-import Wrapper from 'components/Wrapper'
-
 import Nav from './Nav'
 import Ghosh from './Ghosh'
 import Twitter from './Twitter'
@@ -13,7 +11,7 @@ import Toggle from './Toggle'
 
 const Header = () => {
   return (
-    <Wrapper>
+    <>
       <Flex
         justifyContent="space-between"
         alignItems="center"
@@ -42,7 +40,7 @@ const Header = () => {
       >
         <Nav />
       </Box>
-    </Wrapper>
+    </>
   )
 }
 

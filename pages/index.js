@@ -15,8 +15,8 @@ import Sides from 'modules/Home/Sides'
 const Home = () => {
   return (
     <Master>
-      <Header />
       <Wrapper>
+        <Header />
         <Hero />
       </Wrapper>
       <Featured />

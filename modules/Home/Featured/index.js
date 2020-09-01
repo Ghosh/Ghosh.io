@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import Box from '@stylekit/ui/Box'
 import Flex from '@stylekit/ui/Flex'
@@ -56,13 +57,19 @@ const Featured = () => {
               </Text>
               <Spacer mb={[3]} />
               <Flex alignItems="center">
-                <Text
-                  fontSize={['h500', 'h600']}
-                  color="var(--accent-1)"
-                  m="0"
-                >
-                  Read case study
-                </Text>
+                <Link href="/work/bento">
+                  <Text
+                    as="a"
+                    fontSize={['h500', 'h600']}
+                    color="var(--accent-1)"
+                    m="0"
+                    style={{
+                      cursor: 'pointer'
+                    }}
+                  >
+                    Read case study
+                  </Text>
+                </Link>
                 <Box mt="6px" ml="6px">
                   <Icon
                     label="right"
