@@ -24,11 +24,11 @@
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
     "babel-plugin-styled-components": "^1.11.1",
-    "commitizen": "^4.1.2",
+    "commitizen": "^4.2.1",
     "eslint": "^7.6.0",
     "eslint-config-ghosh": "^0.1.4",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "git-cz": "^4.7.0",
+    "git-cz": "^4.7.1",
     "husky": "^4.2.5"
   }
 }
