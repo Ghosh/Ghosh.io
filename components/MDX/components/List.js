@@ -1,12 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import css from '@styled-system/css'
 
 import Text from '@stylekit/ui/Text'
 
-const Unordered = styled.ul`
-  list-style-type: disc;
-`
+const Unordered = styled('ul')(
+  {
+    listStyleType: 'disc'
+  },
+  css({
+    mb: [4],
+    ml: [3]
+  })
+)
 
 const List = ({ children }) => {
   return (
