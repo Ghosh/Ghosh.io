@@ -1,6 +1,6 @@
 {
   "name": "@stylekit/ui",
-  "version": "0.1.0+c4d8e89c",
+  "version": "0.1.0+85fdc51f",
   "main": "dist/index.js",
   "license": "MIT",
   "sideEffects": false,
