@@ -4,6 +4,7 @@ import Master from 'layouts/Master'
 import Wrapper from 'components/Wrapper'
 
 import Hero from './Hero'
+import MDX from './MDX'
 
 import Content from './bento.mdx'
 
@@ -12,7 +13,9 @@ const Bento = () => {
     <Master>
       <Hero />
       <Wrapper>
-        <Content />
+        <MDX>
+          <Content />
+        </MDX>
       </Wrapper>
     </Master>
   )

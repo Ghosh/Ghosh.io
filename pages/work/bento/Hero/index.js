@@ -11,13 +11,14 @@ const Hero = () => {
     <Box
       height="640px"
       bg="var(--bg-2)"
+      style={{ borderBottom: 'solid 1px var(--border-1)' }}
     >
       <Wrapper>
         <Header />
         <Text
           as="h1"
           fontSize={['h500', 'h700', 'h900']}
-          lineHeight={['2.9rem', '3.4rem', '4.6rem']}
+          lineHeight={['2.9rem', '3.4rem', '4.8rem']}
           fontWeight="500"
           width={['100%', '90%', '75%', '50%']}
           mt={['6']}
@@ -29,7 +30,7 @@ const Hero = () => {
         <Text
           as="h2"
           fontSize={['h600', 'h700', '2.5rem']}
-          lineHeight={['2.9rem', '3.4rem', '4.2rem']}
+          lineHeight={['2.9rem', '3.4rem', '4rem']}
           fontWeight="300"
           width={['100%', '90%', '75%', '50%']}
           m="0"
