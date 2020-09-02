@@ -8,7 +8,6 @@ import Para from './components/Para'
 import List from './components/List'
 
 const Wrapper = styled.div`
-  max-width: 600px;
   margin: auto;
 `
 

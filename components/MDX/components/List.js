@@ -5,13 +5,16 @@ import css from '@styled-system/css'
 
 import Text from '@stylekit/ui/Text'
 
-const Unordered = styled('ul')(
-  {
-    listStyleType: 'disc'
-  },
+const UL = styled.ul`
+  list-style-type: disc;
+  max-width: ${ props => props.theme.layout.textWidth };
+  margin: auto;
+`
+
+const Unordered = styled(UL)(
   css({
     mb: [4],
-    ml: [3]
+    pl: [4]
   })
 )
 
