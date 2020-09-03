@@ -9,6 +9,7 @@ import Grid from './Grid'
 import CSSChart from './CSSChart'
 import Border from './Border'
 import Playground from './Playground'
+import Docs from './Docs'
 
 export {
   Scope,
@@ -21,5 +22,6 @@ export {
   Grid,
   CSSChart,
   Border,
-  Playground
+  Playground,
+  Docs
 }

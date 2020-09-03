@@ -51,7 +51,7 @@ const Stats = () => {
 }
 
 Stat.propTypes = {
-  num: PropTypes.num,
+  num: PropTypes.number,
   des: PropTypes.string
 }
 
