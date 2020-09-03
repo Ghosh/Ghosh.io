@@ -19,8 +19,7 @@ const getParts = (name) => {
 
 /**
  * @TODO: Convert all images on hompage to JPEG and only export the parts required
- * @TODO: Allow passing extension for image as well
- * @TODO: Auto detect extension from the file name
+ * @TODO: Allow adding images for different sizes
  */
 const Image = ({ base, name, alt, width, height, strat }) => {
   const types = getParts(name)

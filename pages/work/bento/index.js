@@ -1,7 +1,10 @@
 import React from 'react'
+import Spacer from '@stylekit/ui/Spacer'
 
 import Master from 'layouts/Master'
 import Wrapper from 'components/Wrapper'
+import Footer from 'components/Footer'
+import MDX from 'components/MDX'
 
 import Hero from './Hero'
 
@@ -12,8 +15,13 @@ const Bento = () => {
     <Master>
       <Hero />
       <Wrapper>
-        <Content />
+        <Spacer mb={5} />
+        <MDX>
+          <Content />
+        </MDX>
       </Wrapper>
+      <Spacer mb={8} />
+      <Footer />
     </Master>
   )
 }

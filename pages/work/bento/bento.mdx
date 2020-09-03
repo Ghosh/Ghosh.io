@@ -1,10 +1,157 @@
+import {
+  Grid,
+  Docs,
+  Scope,
+  Audit,
+  Stats,
+  Phase,
+  Border,
+  Matrix,
+  Palette,
+  CSSChart,
+  Inventory,
+  Playground
+} from './Assets'
+
 After many years of existence, Cleartrip’s product evolution had outgrown its current design framework. We started encountering many cases that could not be handled within the constraints of the framework.
 
 This led us to carry out a preliminary audit, which unearthed tremendous design debt in our product:-
 
-- 94 unique text colours
-- 108 unique background colours
-- 48 font sizes
-- 16 different font stacks
+<Stats />
 
 The results were shocking, something needed to change.
+
+<Audit />
+
+After consulting with a few key personnel across teams, we started identifying major red flags in our system:-
+
+- Inconsistent style and visual language across multiple products
+- Performance Issues - Pages were slow to load
+- Lack of documentation/guidelines about the design process, approach or philosophy
+- Longer release cycles, owing to a complex handoff process between design and engineering
+- A difficult, bloating codebase, requiring more manpower to maintain
+
+It became clear to us that we needed a system to manage and guide our design philosophy based on certain principles and best practices. We needed a design system.
+
+## Getting buy-in
+
+It took some time to get buy-in from all stakeholders. I authored a document which was floated to the leadership team.
+After some debate, we finally had the green light.
+
+We assembled a small team and we got to work.
+
+## Defining Scope
+
+Starting a design system from scratch is a massive undertaking. We had to narrow our scope and deliver in phases, to have any realistic hope of executing this.
+
+We decided to add a few constraints, we would focus our efforts only on the desktop web products. No mobile web, no marketing pages, no landing pages.
+
+<Scope />
+
+This gave us a solid direction to get started.
+
+## Setting goals
+
+By this time we had started formulating specific pieces which would be included in our design system ecosystem(say that again)
+
+- **Design tokens** - Encapsulated design decisions which would serve as the source of truth for all other parts of the system
+- **React component library** - A plug and play component library for developers to use without design intervention
+- **CSS utility classes** - To rapidly build prototypes without rewriting CSS all the time
+- **Sketch symbol library** - To allow designers to create interfaces after and spent more time thinking about the solutions
+- **Icon library** - An icon library with a consistent style which designers and developers could pick from when required
+- **Developer sandbox** - A place where developers could experiment with different
+- **Documentation** - A front-facing portal which would document all the above parts
+
+[**image here of the design system ecosystem**]
+
+Next, we needed a feasible roadmap to start building the system
+
+## Roadmap
+
+Early on we had decided to roll out the system in a phased manner. We set hard targets for each phase.
+
+<Phase />
+
+Integrating the system with low visibility products first, gave us and the rest of the stakeholders a chance to validate the benefits of a design system before moving onto more critical products.
+
+For each new phase, we modified common components for the project and carried on.
+
+## Interface Inventory
+
+We spent time combing through our product to identify components and repeating patterns. This process involved a lot of screenshots.
+
+We then cataloged these patterns into groups and added them to different artboards in Sketch.
+
+<Inventory />
+
+After the inventory phase was over we had to prioritize the components or pieces which we would build first.
+
+To do this we turned to a modified version of the Eisenhower Matrix. We plotted each piece on two axes, impact and complexity.
+
+<Matrix />
+
+We built the hight impact, low complexity components first, followed by the high impact high complexity,
+
+## Setup up the baseline
+
+We spent some time thinking about colours and what they mean to our brand. We were sure that we had to retain our brand colours, but the rest was open to change. After some back and forth we finally landed on a colour palette we were happy with.
+
+<Palette />
+
+Next up, our grid system. Our grid system had stayed more or less the same for 10 years. In that time with the advancement in technology monitors and screens had improved drastically. We consulted the screen resolution data from google analytics and decided to increase the grid size to a 24 column grid of 1140px.
+
+<Grid />
+
+We then proceeded to handle typography, images and spacing.
+
+## Building the CSS library
+
+The biggest problem with CSS in the org was that over the years the CSS class names had gotten convoluted and that resulted in developers writing new classes to avoid an override. This lead to massive bloat in the CSS file and slow page load.
+
+We decided to opt into a utility class CSS, because of it’s long term advantages. It eliminates the uncertainty of what each class does.
+
+<CSSChart />
+
+Though it has extra work upfront, overtime the effort required to maintain the library reduces.
+
+<Border />
+
+We decided to adopt a on-demand process for the utility classes. We only created the classes we needed at the time and documented it for future use.
+
+## React components
+
+Choosing React as our tech stack gave us a tremendous advantage over our previous workflow. Now we could make changes in one place and have it updated across the site.
+
+It was important for us that the component API's be consistent and predictable.
+
+<Playground />
+
+We also included storybook as a development playground to experiment and build in isolation, before transitioning to production.
+
+## Icon Library
+
+Or iconography style over the years had become inconsistent. We had an in-house designer work on an icon library which became the source of truth.
+
+It was important for us that these icons be accessible to anyone in the org and not just live in a sketch file.
+
+[**Icon library screenshot**]
+
+That lead to us making a section on the documentation website, where designers could search for and download SVG of individual icons.
+
+## Documentation
+
+We were clear from the beginning that good documentation was an important part of the system.
+
+<Docs />
+
+We spent a significant amount of time writing docs for each part of the system.
+
+## Outcome
+
+This system now powers at least 4 products of Cleartrip with more being added soon. Here are a few screens implementing the new designs
+
+## Learnings & Challenges
+
+- Setting expectations for designers, developers, and product managers before and during the build process
+- Keeping channels of communication open for collaboration amongst the system makers and the system consumers
+- Managing and guiding the team to prioritize and execute parts of the system
