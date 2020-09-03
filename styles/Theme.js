@@ -2,7 +2,8 @@ const theme = {
   layout: {
     innerWidth: '960px',
     outerWidth: '1440px',
-    textWidth: '600px'
+    textWidth: '600px',
+    mediaWidth: '760px'
   },
   fontSizes: {
     h900: '3.5rem',
