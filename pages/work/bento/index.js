@@ -10,6 +10,9 @@ import Hero from './Hero'
 
 import Content from './bento.mdx'
 
+/**
+ * @TODO: Add Bento meta tags React Helmet
+ */
 const Bento = () => {
   return (
     <Master>
