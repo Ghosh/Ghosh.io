@@ -10,6 +10,8 @@ import CSSChart from './CSSChart'
 import Border from './Border'
 import Playground from './Playground'
 import Docs from './Docs'
+import Icons from './Icons'
+import Ecosystem from './Ecosystem'
 
 export {
   Scope,
@@ -23,5 +25,7 @@ export {
   CSSChart,
   Border,
   Playground,
-  Docs
+  Docs,
+  Icons,
+  Ecosystem
 }
