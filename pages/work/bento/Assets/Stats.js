@@ -13,7 +13,7 @@ const Stat = ({ num, des }) => {
       my={3}
     >
       <Text
-        fontSize={['h800']}
+        fontSize="4rem"
         fontWeight="600"
         mb={2}
         color="var(--text-1-color)"

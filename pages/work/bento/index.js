@@ -12,6 +12,7 @@ import Content from './bento.mdx'
 
 /**
  * @TODO: Add Bento meta tags React Helmet
+ * @TODO: Add product shots made with bento
  */
 const Bento = () => {
   return (
