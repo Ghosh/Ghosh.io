@@ -19,23 +19,37 @@ const Scrim = styled.div`
 
   svg {
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+    transition: transform 0.15s ease-in-out
+  }
+
+  &:hover {
+    svg {
+      &:hover {
+        transform: scale(1.1)
+      }
+    }
   }
 `
 
-const Overlay = ({ isPlaying }) => {
+const Overlay = ({ isPlaying, setIsPlaying }) => {
   return (
     <Scrim>
-      {isPlaying && <Pause width="40px" height="40px" fill="#fff" />}
-      {!isPlaying && <Play width="40px" height="40px" fill="#fff" />}
+      {isPlaying && <Pause onClick={() => setIsPlaying(false)}/>}
+      {!isPlaying && <Play onClick={() => setIsPlaying(true)}/>}
     </Scrim>
   )
 }
 
 Overlay.propTypes = {
+  setIsPlaying: PropTypes.func,
   isPlaying: PropTypes.bool
 }
 
 Overlay.defaultProps = {
+  setIsPlaying: () => {},
   isPlaying: false
 }
 
