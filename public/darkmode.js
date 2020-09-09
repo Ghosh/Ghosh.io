@@ -20,7 +20,6 @@
   var preferredTheme
   try {
     preferredTheme = window.localStorage.getItem('theme')
-    console.log('Preffered theme', preferredTheme)
   } catch (err) { }
 
   var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
