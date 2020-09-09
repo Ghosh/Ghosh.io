@@ -8,7 +8,6 @@ const Conversions = () => {
       base="/images/cases/pwa/"
       name="conversions.jpg"
       alt="0.1s improvement of mobile speed increases conversion rates by 10.1%"
-
     />
   )
 }
