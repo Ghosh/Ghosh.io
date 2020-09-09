@@ -43,7 +43,7 @@ const Nav = () => {
       </Item>
 
       <Item>
-        <Link href="/work/bento">
+        <Link href="/work/pwa">
           <Anchor as="a">
             Lab
           </Anchor>

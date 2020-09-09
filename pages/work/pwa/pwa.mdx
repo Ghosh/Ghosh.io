@@ -1,0 +1,100 @@
+import {
+  Logo,
+  Speed,
+  Ripple,
+  Conversions
+} from './Assets'
+
+The mobile web site of Cleartrip had not changed for five years. The experience was slow and clunky. It had started showing its age.
+
+In the meantime, mobile devices had gotten faster and more powerful. Our product offerings had evolved.
+
+For the first time, since the inception of Cleartrip, we had reached a stage where traffic to the mobile site was almost equal to our desktop site.
+
+Updating the mobile experience became a top priority. This provided us with an opportunity to design and build the mobile site from the grounds up.
+
+## Banking on a Progressive Web App
+
+After considering a few different approaches we landed on creating a Progressive Web App.
+
+<Logo />
+
+This gave us a lot of benefits including:-
+
+- Accessible in slower network speeds, this was imperative for us as majority of our users were located in emerging markets.
+- A fast, native app-like browsing and booking experience, a huge step up from our previous site.
+- Faster loading times compared to responsive or m-dot websites, due to service workers and aggressive caching
+
+## Focus on speed
+
+From the beginning, speed was a major area of focus.
+
+As per a [study](https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/) conducted by Google, low page load times have a direct relationship with low bounce rate.
+
+<Speed />
+
+In another [study](https://www.thinkwithgoogle.com/future-of-marketing/creativity/mobile-page-speed-data/), they established that this is especially true in travel sectors as a 0.1-second improvement can increase conversion rates by 10.1%.
+
+<Conversions />
+
+While building the site, we were conscious about adding features and unnecessary bloat which would increase page load times.
+
+## Perceived Speed
+
+As designers we contributed by designing for perceived speed. That is influencing the user to believe the site is faster than it truly is.
+
+Here are a few tactics we employed to that end:-
+
+## Ripple States
+
+Popularised by Material Design, ripple states are an excellent tool to reduce the perceived time between the initiation and the execution of an action.
+
+By introducing a small animation where the user taps, we provide feedback and momentarily capture the users attention while action processes in the background.
+
+Consider the following examples:-
+
+<Ripple />
+
+## Skeleton Screens
+
+This pattern popularised by Facebook acts as a placeholder while the content loads
+
+The shimmer effect simulates movement and activity. This is much better than an empty screen or a loading spinner.
+
+[**image w/ and w/o skeleton screen**]
+
+## Carry Over Content
+
+Carrying over key pieces of content from previous screens is a great way to keep the user engaged. We can utilise the time the user takes to read or scan content to load rest off the page.
+
+This has the added benefit of maintaining context when moving between pages.
+
+[**image w/ and w/o partial content screen**]
+
+## Progress indicators
+
+Progress indicators are useful for longer wait times. It keeps the user informed and reduces the uncertainty by quantifying the waiting period.
+
+This was a perfect fit for our search results page where the api fetched data from multiple sources. This often took a couple of seconds to complete.
+
+[**image w/ and w/o lading bars**]
+
+
+## Transitional States
+
+
+Animation is a useful tool to guide the users eye.
+
+We animated the incoming and outgoing content to communicate the change in state. This is much better than a snap change.
+
+We used these transitional states when populating additional information on the screens, for example, for filters and sorts.
+
+[**image w/ and w/o transitional states**]
+
+## Modal spinners
+
+We employed full-screen modal spinners only as a  last resort when we could not use any other loading indicator due to tech limitations.
+
+Communicating wait times are an essential addition to modal spinners. Wherever possible, we tried to add help text to the spinners.
+
+[**image w/ and w/o explainer texts**]

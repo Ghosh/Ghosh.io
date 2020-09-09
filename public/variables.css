@@ -10,6 +10,12 @@
   --neutral-800 : #343a40;
   --neutral-900 : #212529;
   --neutral-1000 : #1E2124;
+
+  --success: #75D829;
+  --success-light:#EFFDD4;
+
+  --error: #FF3C2B;
+  --error-light: #FFE5D4;
 }
 
 body,

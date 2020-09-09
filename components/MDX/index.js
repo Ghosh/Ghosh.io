@@ -11,6 +11,9 @@ const Wrapper = styled.div`
   margin: auto;
 `
 
+/**
+ * @TODO: Add Link Comp
+ */
 const components = {
   h2: Heading.H2,
   p: Para,
