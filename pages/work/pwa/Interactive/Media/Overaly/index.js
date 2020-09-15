@@ -7,7 +7,7 @@ import Pause from './svg/pause.svg'
 
 const Scrim = styled.div`
   position: absolute;
-  background-color: rgba(0,0,0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   top: 0;
   bottom: 0;
   left: 0;
