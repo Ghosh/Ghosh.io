@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next build && next start",
     "export": "next build && next export -o build",
     "update:stylekit": "yalc update @stylekit/ui"
   },
