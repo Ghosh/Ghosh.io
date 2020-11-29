@@ -18,7 +18,7 @@ const config = {
       {
         source: '/home',
         destination: '/',
-        permanent: false
+        permanent: true
       }
     ]
   }
