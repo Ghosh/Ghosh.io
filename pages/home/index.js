@@ -6,11 +6,11 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Wrapper from 'components/Wrapper'
 
-import Hero from './Hero'
-import Featured from './Featured'
-import PWA from './PWA'
-import Past from './Past'
-import Sides from './Sides'
+import Hero from 'modules/home/Hero'
+import Featured from 'modules/home/Featured'
+import PWA from 'modules/home/PWA'
+import Past from 'modules/home/Past'
+import Sides from 'modules/home/Sides'
 
 /**
  * @TODO: Add Canonical link to index

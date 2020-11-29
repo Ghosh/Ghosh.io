@@ -6,8 +6,8 @@ import Wrapper from 'components/Wrapper'
 import Footer from 'components/Footer'
 import MDX from 'components/MDX'
 
-import Hero from './Hero'
-import Content from './pwa.mdx'
+import Hero from 'modules/work/pwa/Hero'
+import Content from 'modules/work/pwa/pwa.mdx'
 
 /**
  * @TODO: Add Bento meta tags React Helmet
