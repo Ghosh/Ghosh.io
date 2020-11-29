@@ -28,6 +28,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
+    "@babel/helper-regex": "^7.10.5",
     "@svgr/webpack": "^5.4.0",
     "babel-plugin-styled-components": "^1.11.1",
     "commitizen": "^4.2.1",
